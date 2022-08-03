@@ -1,0 +1,21 @@
+{
+  "app": {
+    "environment": "Default",
+    "language": "en",
+    "name": "Shape-Share",
+    "port": 443,
+    "RECAPTCHAV2_secretkey": "6Ldy92QgAAAAAA2-4KX9eNrg8bD7IcKiOZw0CQqX",
+    "RECAPTCHAV2_sitekey": "6Ldy92QgAAAAAESJBMUaktUGRiUTFJZwcO8eJE6U",
+    "site_charset": "UTF-8"
+  },
+  "mariadb": {
+    "charset": "UTF-8",
+    "collation": "utf8_general_ci",
+    "database": "shape_share",
+    "driver": "MySQLi",
+    "hostname": "local.shape-share.com",
+    "password": "T3sl4WardenCliffT0wer@22",
+    "port": 3306,
+    "username": "AgBRAT"
+  }
+}

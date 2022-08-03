@@ -1,0 +1,39 @@
+{
+  "name": "shape-share",
+  "homepage": "https://local.shape-share.com",
+  "description": "Shape-Share is a simple online image sharing platform where members can upload, react, save, and search for images of shapes.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "contributers": [
+    {
+      "name": "Nyki Anderson",
+      "email": "nyki.l.anderson@gmail.com",
+      "role": "developer"
+    }
+  ],
+  "keywords": [
+    "shape",
+    "share",
+    "member",
+    "rate",
+    "subscribe",
+    "search",
+    "php",
+    "json",
+    "css",
+    "jquery",
+    "javascript",
+    "html"
+  ],
+  "main": "index.php",
+  "private": "true",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "browserlist": [
+    "Firefox Developers Edition"
+  ]
+}

@@ -1,0 +1,9 @@
+/* || General Styling || */
+@font-face {
+  font-family: latin_modern;
+  src: url(latin_modern.woff);
+}
+
+body {
+  font-family: "latin_modern", sans-serif;
+}
