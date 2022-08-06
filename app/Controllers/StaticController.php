@@ -2,21 +2,13 @@
 
 namespace Controllers;
 
-use Controllers\Controller;
+use Library\AbstractController;
+use Library\View;
 
-class StaticController extends Controller
+class StaticController extends AbstractController
 {
-  function process()
+  function indexAction()
   {
-    $this->$data =
-    $this->view =
-    $this->head =
-  }
-
-  function loadStaticPage()
-  {
-    $data = [
-      'title' => $page_name
-    ]
+    View::render('static_pages/landing.html');
   }
 }

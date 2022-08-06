@@ -1,5 +1,26 @@
 {
-  "require-dev": {
-    "heroku/heroku-buildpack-php": "^222.0"
-  }
+    "name": "nykianderson/shape-share",
+    "description": "Shape-Share is a simple online image sharing platform where members can upload, react, save, and search for images of shapes.",
+    "type": "website",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nyki-Anderson",
+            "email": "nyki.l.anderson@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+      "psr-4": {
+        "Config\\": "app/Config",
+        "Controllers\\": "app/Controllers",
+        "Entities\\": "app/Entities",
+        "Helpers\\": "app/Helpers",
+        "Library\\": "app/Library",
+        "Models\\": "app/Models",
+        "Vendor\\": "vendor",
+        "Tests\\": "tests"
+      }
+    }
 }

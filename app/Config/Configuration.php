@@ -2,8 +2,10 @@
 
 namespace Config;
 
+use PDO;
+
 /**
- * WebApp Configuration Wrapper Class
+ * Shape-Share Configuration Wrapper Class
 
  * Resource: https://stackoverflow.com/a/34146580/17345694
 
@@ -12,79 +14,49 @@ namespace Config;
  *    - Production
  *    - Testing
  *    - Default (limited configuration)
+ * 
+ * @param array static $config - holds an instance of the private configuration class
+ * @param string $env - holds an array of the configuration variables
  */
 class Configuration
 {
-  // @var string environment - Either 'DEV', 'PROD', 'TEST', or 'DEFAULT'
-  protected static $_instance = null;
-
-  // @var array()
+  private static $_instance = null;
   private static $config;
+  private $directiveValue;
 
-  /**
-   * Configuration constructor, tells server which environment config file to require_once
-   */
-  /**
-   * Returns the environment instance.
-
-   * @static
-   * @return _instance
-   */
-  public static function getInstance(string $environment = 'DEFAULT')
+  public static function getInstance(string $environment)
   {
-    self::getConfiguration($environment);
-
     if (self::$_instance == null) {
 
       self::$_instance = new Self;
+
+      switch ($environment) {
+
+        case 'DEV':
+          self::$config = json_decode(file_get_contents(CONFIG_DIR . 'environment' . DS . 'Development.json'), true);
+          break;
+
+        case 'PROD':
+          self::$config = json_decode(file_get_contents(CONFIG_DIR . 'environment' . DS . 'Production.json'), true);
+          break;
+
+        case 'TEST':
+          self::$config = json_decode(file_get_contents(CONFIG_DIR . 'environment' . DS . 'Testing.json'), true);
+          break;
+
+        default:
+        self::$config = json_decode(file_get_contents(CONFIG_DIR . 'environment' . DS . 'Default.json'), true);
+          break;
+      }
     }
 
     return self::$_instance;
   }
 
-  private function getConfiguration(string $environment = "DEFAULT")
+  public function get(string $directive, string $data)
   {
-    switch ($environment) {
-
-      case 'DEV':
-        self::$config = require_once(FCPATH . '../app/Config/environment/Development.json');
-        break;
-
-      case 'PROD':
-        self::$config = require_once(FCPATH . '../app/Config/environment/Production.json');
-        break;
-
-      case 'TEST':
-        self::$config = require_once(FCPATH . '../app/Config/environment/Testing.json');
-        break;
-
-      default:
-      self::$config = require_once(FCPATH . '../app/Config/environment/Default.json');
-        break;
-    }
-  }
-
-  public function get($directive)
-  {
-    if (isset($directive)) {
-
-      $directive = explode('.', $directive);
-      $config = $this->config;
-
-      foreach ($directive as $key) {
-
-        if (isset($config[$key])) {
-
-          $config = $config[$key];
-        }
-      }
-
-      return $config;
-    }
-  }
-
-  public function __destruct()
-  {
-    self::$_instance = 'DEFAULT';
+    $this->directiveValue = self::$config[$directive][$data];
+    
+    return $this->directiveValue;
   }
 }

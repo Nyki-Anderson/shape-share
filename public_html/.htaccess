@@ -38,12 +38,6 @@ Options All -Indexes
 	ErrorDocument 404 index.php
 </IfModule>
 
-# Password protect configuration files
-AuthType Basic
-AuthName "Authorized Access Only"
-AuthUserFile ../app/Config/.htpasswd
-require valid-user
-
 # Disable server signature start
 	ServerSignature Off
 # Disable server signature end
