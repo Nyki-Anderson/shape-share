@@ -1,0 +1,66 @@
+<Files .htaccess>
+Order Allow,Deny
+Deny from all
+</Files>
+
+# Disable directory browsing
+Options All -Indexes
+
+# ----------------------------------------------------------------------
+# || Rewrite engine ||
+# ----------------------------------------------------------------------
+
+<IfModule mod_rewrite.c>
+	Options +FollowSymlinks
+	RewriteEngine On
+
+  # Redirect all requests to public_html folder
+  RewriteEngine on
+  RewriteRule    ^$    public_html/    [L]
+  RewriteRule    (.*) public_html/$1    [L]
+
+	# Redirect Trailing Slashes...
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_URI} (.+)/$
+	RewriteRule ^ %1 [L,R=301]
+	
+	# Forcing domain to serve securely using HTTPS
+	RewriteCond %{HTTPS} !=on
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+  Header always set Content-Security-Policy "upgrade-insecure-requests;"
+
+  # Prevent hot-linking
+  RewriteCond %{HTTP_REFERER} !^$
+  RewriteCond %{HTTP_REFERER} !^https://local.shape-share.com/.*$ [NC]
+  RewriteRule \.(jpeg|JPEG|jpe|JPE|jpg|JPG|gif|GIF|png|PNG)$ - [F]
+
+  # Disable HTTP TRACE AND HTTP TRACK methods
+  RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
+  RewriteRule .* - [F]
+
+  # Force SSL for SEO purposes
+  RewriteCond %{HTTP_HOST} ^www\.local.shape-share\.COM$ [NC]
+  RewriteCond %{SERVER_PORT} 443
+  RewriteRule ^(.*)$ https://www.local.shape-share.com/$1 [R=301,L]
+</IfModule>
+
+# protect files beginning with .dot
+RedirectMatch 403 /\.(.*)
+
+# These file types are to be displayed not executed as cgi-scripts
+RemoveHandler cgi-script .php .pl .py
+AddType text/plain .php .pl .py
+
+# Allow php to echoed into html
+AddHandler application/x-httpd-php .js .xml .htc
+
+ErrorDocument 404 /error_pages/404_error.html
+
+# Force url to not include .php
+<Files magic>
+	ForceType application/x-httpd-php5
+</Files>
+
+# Disable server signature start
+	ServerSignature Off
+# Disable server signature end

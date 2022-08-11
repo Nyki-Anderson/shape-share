@@ -2,8 +2,6 @@
 
 namespace Config;
 
-use PDO;
-
 /**
  * Shape-Share Configuration Wrapper Class
 

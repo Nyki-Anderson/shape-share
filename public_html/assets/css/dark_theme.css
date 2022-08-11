@@ -1,0 +1,156 @@
+/* || General Styling || */
+
+@font-face {
+  font-family: latin_modern;
+  src: url(latin_modern.woff);
+}
+
+html,
+body {
+  font-family: "latin_modern", sans-serif;
+}
+
+/* || STATIC PAGES || */
+
+.static-page {
+  background-color: black;
+}
+
+.static-page-body {
+  display: flex;
+  max-width: 100%;
+  background-color: black;
+}
+
+.static-page-body a {
+  color: white;
+}
+
+.static-page-image {
+  display: flex;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+  justify-content: center;
+}
+
+.static-page-overlay {
+  position: fixed;
+  display: block;
+  width: 75%;
+  height: auto;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background: #0d136b;
+  opacity: 0.8;
+  border-radius: 4px;
+  top: 10px;
+  bottom: 260px;
+  overflow: scroll;
+}
+
+.static-page-text,
+.static-page-text2 {
+  position: relative;
+  color: white;
+  margin: 0 auto;
+  padding: 20px 20px 20px 20px;
+  line-height: 1.5;
+  font-size: 25px;
+}
+
+.static-page-text2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+/* || PAGE FOOTER || */
+
+footer p {
+  width: 70%;
+}
+
+footer a {
+  color: black;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-main-title,
+footer li {
+  text-align: center;
+}
+
+.footer-form-title {
+  text-align: left;
+}
+
+.footer-container {
+  background-color: #b7c6db;
+  color: black;
+  line-height: 2;
+  left: 0;
+  top: 250px;
+  margin-left: 0px;
+  width: 100%;
+}
+
+.footer-main-section {
+  padding: 2px 2px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.footer-main-item {
+  min-width: 15%;
+  font-size: 18px;
+}
+
+.footer-main-title {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.footer-newsletter-text {
+  line-height: 1.0;
+}
+
+.footer-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-form input[type='email'] {
+  border: none;
+  font-size: 15px;
+  padding: 5px;
+  margin-top: 2px;
+}
+
+.footer-form input[type='submit'] {
+  background-color: #0d136b;
+  color: white;
+  cursor: pointer;
+  padding: 10px 12px;
+  font-size: 20px;
+  border-radius: 4px;
+}
+
+.footer-license {
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+}
