@@ -3,8 +3,8 @@
 mb_internal_encoding('UTF-8'); // String Encoding
 
 define('DS', DIRECTORY_SEPARATOR); // OS Compatible Directory Separator
-define('FCPATH', __DIR__ . DS); //Path to the front controller (this file)
-chdir(FCPATH); // Ensure the cwd is pointing to front controller
+define('ROOT', dirname(dirname(__FILE__))); // Shape-Share Directory
+
 
 /**
  * -------------------------------------------------------------------
@@ -12,37 +12,31 @@ chdir(FCPATH); // Ensure the cwd is pointing to front controller
  * -------------------------------------------------------------------
  */
 
-require_once(FCPATH . '..' . DS . 'app' . DS . 'Config' . DS . 'Bootstrap.php');
+require_once(ROOT . DS . 'app' . DS . 'Bootstrap.php');
+
+unregisterGlobals();
+
+new Libraries\Core();
 
 /**
  * -------------------------------------------------------------------
  *  || Define Routes ||
  * -------------------------------------------------------------------
+ * Besides the default route which is '', the url will always list the controller first (if only). If the next element is not the action, the action defaults to 'index'. Do not name action in the route if it is index! ParamRegexes can be set to the second element onward in the absence of the action.
  * 
  * Routes should be formatted as follows:
  * 
- *  $router->add([
- *    'request' => 'GET', 
- *    'url' => '/', 
- *    'name' => 'landing', 
- *    'filters' => [],
- *  ]);
- * 
- * OR...
- * 
- *  $router->add([<request>, <url>, <name>, <filters>]);
+ *  $router->add(<request>, <url>, <name>, <namespace>);
  */
+$router = new Libraries\Router;
 
- $router = new Config\Router();
-
- $router->add(['GET', '', 'site_landing', null, null]);
-
-
+// Default Router
+$router->add('GET', '', 'site_landing');
 
 /**
  * -------------------------------------------------------------------
  * || Run Application! ||
  * -------------------------------------------------------------------
  */
- $router->dispatch($_SERVER['QUERY_STRING']);
 
+$router->dispatch($_SERVER['QUERY_STRING']);

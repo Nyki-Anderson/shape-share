@@ -10,14 +10,16 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "twig/twig": "^3.0"
+    },
     "autoload": {
       "psr-4": {
         "Config\\": "app/Config",
         "Controllers\\": "app/Controllers",
         "Entities\\": "app/Entities",
         "Helpers\\": "app/Helpers",
-        "Library\\": "app/Library",
+        "Libraries\\": "app/Libraries",
         "Models\\": "app/Models",
         "Vendor\\": "vendor",
         "Tests\\": "tests"

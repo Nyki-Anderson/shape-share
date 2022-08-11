@@ -1,34 +1,29 @@
 <?php
 
-namespace Library;
+namespace Entities;
 
 /**
- * 
- * 
  * All defined routes are mapped having a name, controller, action, params(if any), and method used.
  * 
- * @var string $url - URL request
- * @var array $config - details of the route
- * @var string $method - accepted HTTP methods for route (GET OR POST)
+ * @var string $method - accepted HTTP methods for route ('GET' OR 'POST')
+ * @var string $url - URL request with controller/action/param1/param2 etc (in order)
  * @var string $controller - name of controller for route
  * @var string $action - name of action (method) for route
- * @var array $params - array of params passed thru request URL
- * @var string $targetView - target for this route 
- * @var string $routeName - name of this route (for reverse routing)
+ * @var array $paramsRegex - regex for parameters (if any)
+ * @var string $name - name of this route (for reverse routing)
  * @var string $namespace - namespace excluding app\Controllers
- * @var array $filters - custom param filters for this route
  */
-class Route
+class RouteEntity
 {
   private $route = [
     'method',
     'url',
     'controller',
     'action',
-    'paramsRegex' => [],
+    'paramsRegex',
     'name',
     'namespace',
-    'filters' => [],
+    'filters',
   ];
 
   /**
@@ -38,13 +33,13 @@ class Route
   {
     $this->route['url'] = '';
     $this->route['method'] = 'GET';
-    $this->route['controller'] = 'Static';
+    $this->route['controller'] = 'Pages';
     $this->route['action'] = 'index';
-    $this->route['params'] = [];
+    $this->route['paramsRegex'] = null;
+    $this->route['paramsMap'] = [0,1];
     $this->route['name'] = null;
     $this->route['namespace'] = null;
-    $this->route['regex'] = [];
-    $this->route['filtes'] = [];
+    $this->route['filters'] = [];
   }
 
   /**

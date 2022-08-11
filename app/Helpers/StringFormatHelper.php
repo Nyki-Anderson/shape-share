@@ -46,4 +46,32 @@ class StringFormatHelper
 
     return $string;
   }
+
+  /**
+   * Compares a string to a regex patter that simulates any regex to determine if string is meant to be a regex pattern.
+   *
+   * @param string $string
+   * @return boolean - true if is regex, false if (most likely) string
+   */
+  public static function isRegex(string $string)
+  {
+    $regex = "/^\/[\s\S]+\/$/";
+
+    return preg_match($regex, $string);
+  }
+
+  /**
+   * Detect Magic Quotes and Remove Then (remove backslashes)
+   *
+   * @param array||string $value
+   * @return void
+   */
+  function stripSlashDeep($value) 
+ {
+  $value = is_array($value) ? array_map('stripSlashDeep', $value) : stripslashes($value);
+
+  return $value;
+ }
+
+ 
 }

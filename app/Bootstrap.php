@@ -13,18 +13,21 @@
  *  || Define Constants & Paths ||
  * -------------------------------------------------------------------
  */
-define('PROTOCOL', "https://");
-define('APP_DIR', FCPATH . '..' . DS . 'app' . DS);
+define('APP_DIR', ROOT . DS . 'app' . DS);
+define('FCPATH', ROOT . DS . 'public_html' . DS);
 define('CONFIG_DIR', APP_DIR . 'Config' . DS);
 define('CONTROL_DIR', APP_DIR . 'Controllers' . DS);
+define('MODEL_DIR', APP_DIR . 'Models' . DS);
 define('ENTITY_DIR', APP_DIR . 'Entities' . DS);
 define('HELPER_DIR', APP_DIR . 'Helpers' . DS);
-define('LIB_DIR', APP_DIR . 'Library' . DS);
-define('VENDOR_DIR', FCPATH . '..' . DS . 'vendor' . DS);
-define('WRITE_DIR', FCPATH . '..' . DS . 'writable' . DS);
-define('TEST_DIR', FCPATH . '..' . DS . 'tests' . DS);
-define('VIEWS_DIR', FCPATH . '..' . DS . 'app' . DS . 'Views' . DS);
-define('INI_FILEPATH', CONFIG_DIR . 'environment' . DS . 'shape-share.ini');
+define('LIB_DIR', APP_DIR . 'Libraries' . DS);
+define('VENDOR_DIR', ROOT . DS . 'vendor' . DS);
+define('WRITE_DIR', ROOT . DS . 'writable' . DS);
+define('TEST_DIR', ROOT . DS . 'tests' . DS);
+define('VIEWS_DIR', ROOT . DS . 'app' . DS . 'Views' . DS . DS);
+define('INI_FILEPATH', ROOT . DS . '.user.ini');
+define('URL_ROOT', 'https' . '://' . $_SERVER['HTTP_HOST'] . DS);
+define('SITE_NAME', 'local.shape-share');
 
 /**
  * -------------------------------------------------------------------
@@ -48,16 +51,15 @@ require(VENDOR_DIR . 'autoload.php');
  *    - Production ('PROD') : Full Database, Logging, No Debugging, Vague * Error Messages
  */
 
-
 $config = Config\Configuration::getInstance('DEV');
 
-define('ENV_VAR', $config->get('app', 'environment'));
+define('ENVIRONMENT_VAR', $config->get('app', 'environment'));
 define('LANG_VAR', $config->get('app', 'language'));
 define('CHARSET_VAR', $config->get('app', 'site_charset'));
 
 /**
  * -------------------------------------------------------------------
- *  || Write Configuration Data to shape-share.ini File
+ *  || Write Configuration Data to .user.ini File (.htaccess)
  * -------------------------------------------------------------------
  */
 
@@ -82,6 +84,51 @@ Helpers\PHPIniHelper::write_ini_file($phpConfig, INI_FILEPATH);
 
 /**
  * -------------------------------------------------------------------
- * || Error and Exception Handling ||
+ * || Configure and Extend Twig Template Engine ||
  * -------------------------------------------------------------------
  */
+
+define('TWIG_DEBUG', $config->get('twig', 'debug'));
+define('TWIG_CACHE', $config->get('twig', 'cache'));
+define('TWIG_AUTO_RELOAD', $config->get('twig', 'auto_reload'));
+define('TWIG_STRICT_VARIABLES', $config->get('twig', 'strict_variables'));
+define('TWIG_AUTOESCAPE', $config->get('twig', "autoescape"));
+
+/**
+ * -------------------------------------------------------------------
+ * || Turn OFF! Register Globals ||
+ * -------------------------------------------------------------------
+ * 
+ * When register_globals is on, the next program can access $_GET and $_POST variables direclty as global variables (highly insecure).
+ */
+
+ function unregisterGlobals()
+ {
+  if (ini_get('register_globals')) {
+
+    $array = [
+      '_SESSION',
+      '_POST',
+      '_GET',
+      '_COOKIE',
+      '_REQUEST',
+      '_SERVER',
+      '_ENV',
+      '_FILES'
+    ];
+
+    foreach ($array as $value) {
+
+      // GLOBALS prints all global variables
+      foreach ($GLOBALS[$value] as $key => $var) {
+
+        if ($var === $GLOBALS($key)) {
+
+          unset($GLOBALS[$key]);
+        }
+      }
+    }
+  }
+ }
+
+ 

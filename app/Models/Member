@@ -2,9 +2,15 @@
 
 namespace Models;
 
+use Libraries\Database;
+
 class Member
 {
-  protected $attributes = [
+  private $db;
+
+  private $table = 'members';
+
+  protected $fields = [
     'id'              => null,
     'username'        => null,
     'password'        => null,
@@ -25,6 +31,17 @@ class Member
     'created'         => null,
     'modified'        => null,
   ];
-  // Default Get Method
+  
+  public function __construct()
+  {
+    $this->db = new Database;
+  }
+
+  public function getMembers()
+  {
+    $this->db->query("SELECT * FROM " . $this->table);
+
+    return $this->db->resultSet(); 
+  }
 
 }
