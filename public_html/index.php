@@ -16,8 +16,6 @@ require_once(ROOT . DS . 'app' . DS . 'Bootstrap.php');
 
 unregisterGlobals();
 
-new Libraries\Core();
-
 /**
  * -------------------------------------------------------------------
  *  || Define Routes ||

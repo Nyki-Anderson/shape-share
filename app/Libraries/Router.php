@@ -67,7 +67,7 @@ class Router
    
     $route->method = $request;
     
-    $urlRegex = $url;
+    $urlRegex = filter_var($url, FILTER_SANITIZE_URL);
 
     // Convert url to regex: escape '/'
     $urlRegex = preg_replace('/\//', '\\/', $urlRegex);
@@ -84,7 +84,7 @@ class Router
     $route->url = $urlRegex;
 
     // Explode url into components. Limit set to -1 so that trailing '/' will not be included in array but this also prevents a value error from being thrown if there is nothing else in the url string.
-    $url = $url . '/';
+    $url = filter_var($url, FILTER_SANITIZE_URL) . '/';
 
 
     $urlComponents = explode('/', $url, -1);

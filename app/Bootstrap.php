@@ -28,6 +28,7 @@ define('VIEWS_DIR', ROOT . DS . 'app' . DS . 'Views' . DS . DS);
 define('INI_FILEPATH', ROOT . DS . '.user.ini');
 define('URL_ROOT', 'https' . '://' . $_SERVER['HTTP_HOST'] . DS);
 define('SITE_NAME', 'local.shape-share');
+define('CSS_DIR', URL_ROOT . 'assets' . DS . 'css' . DS);
 
 /**
  * -------------------------------------------------------------------
