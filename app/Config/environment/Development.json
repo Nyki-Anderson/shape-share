@@ -3,7 +3,7 @@
     "environment": "Development",
     "language": "en",
     "name": "Shape-Share-Development",
-    "port": 443,
+    "port": "443",
     "show_errors": "true",
     "RECAPTCHAV2_secretkey": "6Ldy92QgAAAAAA2-4KX9eNrg8bD7IcKiOZw0CQqX",
     "RECAPTCHAV2_sitekey": "6Ldy92QgAAAAAESJBMUaktUGRiUTFJZwcO8eJE6U",
@@ -16,7 +16,7 @@
     "driver": "MySQLi",
     "hostname": "local.shape-share.com",
     "password": "T3sl4WardenCliffT0wer@22",
-    "port": 3306,
+    "port": "3306",
     "username": "AgBRAT"
   },
   "php": {

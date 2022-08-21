@@ -1,30 +1,29 @@
 <?php
 
-namespace Libraries;
+namespace Core\Database;
 
-use Config\Configuration;
 use PDO;
 use PDOException;
 
 /**
  * ----------------------------------------------------------
- * || PDO Database Class ||
+ * PDO Database Class
  * ----------------------------------------------------------
  */
 
-class Database 
+class DatabasePDO
 {
-  private $dbChar = $config->get('mariadb', 'charset');
-  private $dbCollation = $config->get('mariadb', 'collation');
-  private $dbName = $config->get('mariadb', 'database');
-  private $dbDriver = $config->get('mariadb', 'driver');
-  private $dbHost = $config->get('mariadb', 'hostname');
-  private $dbPass =  $config->get('mariadb', 'password');
-  private $dbPort = $config->get('mariadb', 'port');
-  private $dbUser = $config->get('mariadb', 'AgBRAT');
+  private $dbChar = DB_CHARSET;
+  private $dbCollation = DB_COLLATION;
+  private $dbName = DB_NAME;
+  private $dbDriver = DB_DRIVER;
+  private $dbHost = DB_HOST;
+  private $dbPass =  DB_PASS;
+  private $dbPort = DB_PORT;
+  private $dbUser = DB_USER;
 
   // Database handler, we use it whenever we prepare SQL statements
-  private $db;
+  private $dbh;
   private $stmt;
   private $err;
 

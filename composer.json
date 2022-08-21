@@ -17,10 +17,13 @@
       "psr-4": {
         "Config\\": "app/Config",
         "Controllers\\": "app/Controllers",
+        "Core\\": "framework/Core",
+        "Database\\": "framework/Database",
         "Entities\\": "app/Entities",
         "Helpers\\": "app/Helpers",
         "Libraries\\": "app/Libraries",
         "Models\\": "app/Models",
+        "Views\\": "app/Views",
         "Vendor\\": "vendor",
         "Tests\\": "tests"
       }

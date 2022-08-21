@@ -5,8 +5,8 @@
   <head>
     <base href="local.shape-share.com" />
     <meta charset="utf-8" />
-    <title>"<?= $title ?>"</title>
-    <meta name="description" content="<?= $description; ?>" />
+    <title><?= $data['title']; ?></title>
+    <meta name="description" content="<?= $data['description']; ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="nykianderson" />
 
@@ -30,11 +30,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js?v=24" type="text/javascript"
       charset="utf-8"></script>
 
-    <!-- Google ReCaptcha API -->
-    <script src="https://www.google.com/recaptcha/api.js?v=24"></script>
+    <script>
+      function pop_up(url){
+      window.open(url,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=500,height=500,directories=no,location=no') 
+      }
+    </script>
   </head>
 
   <body class="static-page">
+
     <div class="content-container"></div>
 
       <div class="static-page-body">
@@ -68,9 +72,9 @@
             <h2> Want to start sharing? </h2>
 
             <p>
-              <a href="#" title="Register">Register</a>
+              <button href="/register" title="Register" onclick="pop_up(this);" rel="nofollow"> Register </Button>
               for a free Shape-Share membership or
-              <a href="#" title="Login">Login</a>
+              <a href="/login" title="Login">Login</a>
               to continue where you left off.
             </p>
 
@@ -87,7 +91,7 @@
           <h3 class="footer-main-title"> About the Project </h3>
           <ul>
             <li><a href="#" title="Github README.md">
-                <i class="fa-brands fa-github"></i> README.md</a>
+              <i class="fa-solid fa-book-open-reader"></i> README.md</a>
             </li>
             <li><a href="#" title="Development Package">
                 <i class="fa-brands fa-github"></i> Repository</a>
@@ -137,7 +141,7 @@
       </section>
 
       <section class="footer-license">
-        <div class="footer-license-text"> Nyki Anderson 2022 under MIT License </div>
+        <div class="footer-license-text"> Nyki Anderson | 2022 | under MIT License </div>
       </section>
     </footer>
   </body>

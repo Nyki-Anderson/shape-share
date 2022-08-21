@@ -1,0 +1,175 @@
+[Thu Aug 11 11:27:18.041436 2022] [ssl:info] [pid 13676] AH01883: Init: Initialized OpenSSL library
+[Thu Aug 11 11:27:18.042618 2022] [ssl:info] [pid 13676] AH01887: Init: Initializing (virtual) servers for SSL
+[Thu Aug 11 11:27:18.088442 2022] [ssl:info] [pid 13676] AH01876: mod_ssl/2.4.54 compiled against Server: Apache/2.4.54, Library: OpenSSL/1.1.1o
+[Thu Aug 11 11:27:18.105285 2022] [ssl:info] [pid 13676] AH01883: Init: Initialized OpenSSL library
+[Thu Aug 11 11:27:18.105331 2022] [socache_shmcb:debug] [pid 13676] mod_socache_shmcb.c(414): AH00821: shmcb_init allocated 512000 bytes of shared memory
+[Thu Aug 11 11:27:18.105342 2022] [socache_shmcb:debug] [pid 13676] mod_socache_shmcb.c(428): AH00822: for 511912 bytes (512000 including header), recommending 32 subcaches, 88 indexes each
+[Thu Aug 11 11:27:18.105350 2022] [socache_shmcb:debug] [pid 13676] mod_socache_shmcb.c(465): AH00824: shmcb_init_memory choices follow
+[Thu Aug 11 11:27:18.105358 2022] [socache_shmcb:debug] [pid 13676] mod_socache_shmcb.c(467): AH00825: subcache_num = 32
+[Thu Aug 11 11:27:18.105365 2022] [socache_shmcb:debug] [pid 13676] mod_socache_shmcb.c(469): AH00826: subcache_size = 15992
+[Thu Aug 11 11:27:18.105372 2022] [socache_shmcb:debug] [pid 13676] mod_socache_shmcb.c(471): AH00827: subcache_data_offset = 2128
+[Thu Aug 11 11:27:18.105378 2022] [socache_shmcb:debug] [pid 13676] mod_socache_shmcb.c(473): AH00828: subcache_data_size = 13864
+[Thu Aug 11 11:27:18.105385 2022] [socache_shmcb:debug] [pid 13676] mod_socache_shmcb.c(475): AH00829: index_num = 88
+[Thu Aug 11 11:27:18.105447 2022] [socache_shmcb:info] [pid 13676] AH00830: Shared memory socache initialised
+[Thu Aug 11 11:27:18.105455 2022] [ssl:info] [pid 13676] AH01887: Init: Initializing (virtual) servers for SSL
+[Thu Aug 11 11:27:18.107263 2022] [ssl:info] [pid 13676] AH01876: mod_ssl/2.4.54 compiled against Server: Apache/2.4.54, Library: OpenSSL/1.1.1o
+[Thu Aug 11 11:27:18.219191 2022] [mpm_prefork:notice] [pid 13676] AH00163: Apache/2.4.54 (Unix) OpenSSL/1.1.1q configured -- resuming normal operations
+[Thu Aug 11 11:27:18.219237 2022] [mpm_prefork:info] [pid 13676] AH00164: Server built: Jun 11 2022 03:25:57
+[Thu Aug 11 11:27:18.219263 2022] [core:notice] [pid 13676] AH00094: Command line: '/usr/local/opt/httpd/bin/httpd -D FOREGROUND'
+[Thu Aug 11 11:27:18.219314 2022] [core:debug] [pid 13676] log.c(1570): AH02639: Using SO_REUSEPORT: no (1)
+[Thu Aug 11 11:27:18.219345 2022] [mpm_prefork:debug] [pid 13676] prefork.c(970): AH00165: Accept mutex: none (default: sysvsem)
+[Thu Aug 11 11:27:18.220919 2022] [proxy:debug] [pid 13679] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 11:27:18.221029 2022] [proxy:debug] [pid 13681] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 11:27:18.221037 2022] [proxy:debug] [pid 13682] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 11:27:18.220926 2022] [proxy:debug] [pid 13680] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 11:27:18.221066 2022] [proxy:debug] [pid 13679] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 11:27:18.221185 2022] [proxy:debug] [pid 13679] proxy_util.c(2231): AH00931: initialized single connection worker in child 13679 for (*:80)
+[Thu Aug 11 11:27:18.221229 2022] [proxy:debug] [pid 13681] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 11:27:18.221261 2022] [proxy:debug] [pid 13681] proxy_util.c(2231): AH00931: initialized single connection worker in child 13681 for (*:80)
+[Thu Aug 11 11:27:18.221283 2022] [proxy:debug] [pid 13682] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 11:27:18.221310 2022] [proxy:debug] [pid 13682] proxy_util.c(2231): AH00931: initialized single connection worker in child 13682 for (*:80)
+[Thu Aug 11 11:27:18.221383 2022] [proxy:debug] [pid 13680] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 11:27:18.221422 2022] [proxy:debug] [pid 13680] proxy_util.c(2231): AH00931: initialized single connection worker in child 13680 for (*:80)
+[Thu Aug 11 11:27:18.223584 2022] [proxy:debug] [pid 13683] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 11:27:18.223664 2022] [proxy:debug] [pid 13683] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 11:27:18.223687 2022] [proxy:debug] [pid 13683] proxy_util.c(2231): AH00931: initialized single connection worker in child 13683 for (*:80)
+[Thu Aug 11 11:27:25.706472 2022] [proxy:debug] [pid 13694] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 11:27:25.728838 2022] [proxy:debug] [pid 13694] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 11:27:25.728882 2022] [proxy:debug] [pid 13694] proxy_util.c(2231): AH00931: initialized single connection worker in child 13694 for (*:80)
+[Thu Aug 11 11:29:26.634398 2022] [core:info] [pid 13676] AH00096: removed PID file /usr/local/var/run/httpd/httpd.pid (pid=13676)
+[Thu Aug 11 11:29:26.636635 2022] [mpm_prefork:notice] [pid 13676] AH00169: caught SIGTERM, shutting down
+[Thu Aug 11 11:29:27.856440 2022] [ssl:info] [pid 13863] AH01883: Init: Initialized OpenSSL library
+[Thu Aug 11 11:29:27.856828 2022] [ssl:info] [pid 13863] AH01887: Init: Initializing (virtual) servers for SSL
+[Thu Aug 11 11:29:27.876088 2022] [ssl:info] [pid 13863] AH01876: mod_ssl/2.4.54 compiled against Server: Apache/2.4.54, Library: OpenSSL/1.1.1o
+[Thu Aug 11 11:29:27.892488 2022] [ssl:info] [pid 13863] AH01883: Init: Initialized OpenSSL library
+[Thu Aug 11 11:29:27.892535 2022] [socache_shmcb:debug] [pid 13863] mod_socache_shmcb.c(414): AH00821: shmcb_init allocated 512000 bytes of shared memory
+[Thu Aug 11 11:29:27.892546 2022] [socache_shmcb:debug] [pid 13863] mod_socache_shmcb.c(428): AH00822: for 511912 bytes (512000 including header), recommending 32 subcaches, 88 indexes each
+[Thu Aug 11 11:29:27.892554 2022] [socache_shmcb:debug] [pid 13863] mod_socache_shmcb.c(465): AH00824: shmcb_init_memory choices follow
+[Thu Aug 11 11:29:27.892561 2022] [socache_shmcb:debug] [pid 13863] mod_socache_shmcb.c(467): AH00825: subcache_num = 32
+[Thu Aug 11 11:29:27.892568 2022] [socache_shmcb:debug] [pid 13863] mod_socache_shmcb.c(469): AH00826: subcache_size = 15992
+[Thu Aug 11 11:29:27.892575 2022] [socache_shmcb:debug] [pid 13863] mod_socache_shmcb.c(471): AH00827: subcache_data_offset = 2128
+[Thu Aug 11 11:29:27.892581 2022] [socache_shmcb:debug] [pid 13863] mod_socache_shmcb.c(473): AH00828: subcache_data_size = 13864
+[Thu Aug 11 11:29:27.892588 2022] [socache_shmcb:debug] [pid 13863] mod_socache_shmcb.c(475): AH00829: index_num = 88
+[Thu Aug 11 11:29:27.892652 2022] [socache_shmcb:info] [pid 13863] AH00830: Shared memory socache initialised
+[Thu Aug 11 11:29:27.892660 2022] [ssl:info] [pid 13863] AH01887: Init: Initializing (virtual) servers for SSL
+[Thu Aug 11 11:29:27.899652 2022] [ssl:info] [pid 13863] AH01876: mod_ssl/2.4.54 compiled against Server: Apache/2.4.54, Library: OpenSSL/1.1.1o
+[Thu Aug 11 11:29:27.935840 2022] [mpm_prefork:notice] [pid 13863] AH00163: Apache/2.4.54 (Unix) OpenSSL/1.1.1q configured -- resuming normal operations
+[Thu Aug 11 11:29:27.935973 2022] [mpm_prefork:info] [pid 13863] AH00164: Server built: Jun 11 2022 03:25:57
+[Thu Aug 11 11:29:27.936180 2022] [core:notice] [pid 13863] AH00094: Command line: '/usr/local/opt/httpd/bin/httpd -D FOREGROUND'
+[Thu Aug 11 11:29:27.936203 2022] [core:debug] [pid 13863] log.c(1570): AH02639: Using SO_REUSEPORT: no (1)
+[Thu Aug 11 11:29:27.936217 2022] [mpm_prefork:debug] [pid 13863] prefork.c(970): AH00165: Accept mutex: none (default: sysvsem)
+[Thu Aug 11 11:29:27.936736 2022] [proxy:debug] [pid 13867] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 11:29:27.936820 2022] [proxy:debug] [pid 13867] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 11:29:27.936855 2022] [proxy:debug] [pid 13867] proxy_util.c(2231): AH00931: initialized single connection worker in child 13867 for (*:80)
+[Thu Aug 11 11:29:27.937928 2022] [proxy:debug] [pid 13868] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 11:29:27.938182 2022] [proxy:debug] [pid 13868] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 11:29:27.938226 2022] [proxy:debug] [pid 13868] proxy_util.c(2231): AH00931: initialized single connection worker in child 13868 for (*:80)
+[Thu Aug 11 11:29:27.938558 2022] [proxy:debug] [pid 13869] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 11:29:27.938654 2022] [proxy:debug] [pid 13869] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 11:29:27.938686 2022] [proxy:debug] [pid 13869] proxy_util.c(2231): AH00931: initialized single connection worker in child 13869 for (*:80)
+[Thu Aug 11 11:29:27.939366 2022] [proxy:debug] [pid 13870] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 11:29:27.939439 2022] [proxy:debug] [pid 13870] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 11:29:27.939486 2022] [proxy:debug] [pid 13870] proxy_util.c(2231): AH00931: initialized single connection worker in child 13870 for (*:80)
+[Thu Aug 11 11:29:27.941282 2022] [proxy:debug] [pid 13871] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 11:29:27.941352 2022] [proxy:debug] [pid 13871] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 11:29:27.941397 2022] [proxy:debug] [pid 13871] proxy_util.c(2231): AH00931: initialized single connection worker in child 13871 for (*:80)
+[Thu Aug 11 11:29:39.573323 2022] [proxy:debug] [pid 13891] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 11:29:39.573673 2022] [proxy:debug] [pid 13891] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 11:29:39.573704 2022] [proxy:debug] [pid 13891] proxy_util.c(2231): AH00931: initialized single connection worker in child 13891 for (*:80)
+[Thu Aug 11 12:24:37.904653 2022] [proxy:debug] [pid 14606] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 12:24:37.906669 2022] [proxy:debug] [pid 14606] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 12:24:37.906787 2022] [proxy:debug] [pid 14606] proxy_util.c(2231): AH00931: initialized single connection worker in child 14606 for (*:80)
+[Thu Aug 11 14:32:09.847504 2022] [proxy:debug] [pid 16942] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 14:32:09.849923 2022] [proxy:debug] [pid 16942] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 14:32:09.850064 2022] [proxy:debug] [pid 16942] proxy_util.c(2231): AH00931: initialized single connection worker in child 16942 for (*:80)
+[Thu Aug 11 17:01:39.303301 2022] [core:info] [pid 13863] AH00096: removed PID file /usr/local/var/run/httpd/httpd.pid (pid=13863)
+[Thu Aug 11 17:01:39.308401 2022] [mpm_prefork:notice] [pid 13863] AH00169: caught SIGTERM, shutting down
+[Thu Aug 11 17:01:40.484112 2022] [ssl:info] [pid 20023] AH01883: Init: Initialized OpenSSL library
+[Thu Aug 11 17:01:40.484923 2022] [ssl:info] [pid 20023] AH01887: Init: Initializing (virtual) servers for SSL
+[Thu Aug 11 17:01:40.497458 2022] [ssl:info] [pid 20023] AH01876: mod_ssl/2.4.54 compiled against Server: Apache/2.4.54, Library: OpenSSL/1.1.1o
+[Thu Aug 11 17:01:40.515897 2022] [ssl:info] [pid 20023] AH01883: Init: Initialized OpenSSL library
+[Thu Aug 11 17:01:40.515953 2022] [socache_shmcb:debug] [pid 20023] mod_socache_shmcb.c(414): AH00821: shmcb_init allocated 512000 bytes of shared memory
+[Thu Aug 11 17:01:40.515983 2022] [socache_shmcb:debug] [pid 20023] mod_socache_shmcb.c(428): AH00822: for 511912 bytes (512000 including header), recommending 32 subcaches, 88 indexes each
+[Thu Aug 11 17:01:40.516003 2022] [socache_shmcb:debug] [pid 20023] mod_socache_shmcb.c(465): AH00824: shmcb_init_memory choices follow
+[Thu Aug 11 17:01:40.516012 2022] [socache_shmcb:debug] [pid 20023] mod_socache_shmcb.c(467): AH00825: subcache_num = 32
+[Thu Aug 11 17:01:40.516049 2022] [socache_shmcb:debug] [pid 20023] mod_socache_shmcb.c(469): AH00826: subcache_size = 15992
+[Thu Aug 11 17:01:40.516056 2022] [socache_shmcb:debug] [pid 20023] mod_socache_shmcb.c(471): AH00827: subcache_data_offset = 2128
+[Thu Aug 11 17:01:40.516060 2022] [socache_shmcb:debug] [pid 20023] mod_socache_shmcb.c(473): AH00828: subcache_data_size = 13864
+[Thu Aug 11 17:01:40.516064 2022] [socache_shmcb:debug] [pid 20023] mod_socache_shmcb.c(475): AH00829: index_num = 88
+[Thu Aug 11 17:01:40.516142 2022] [socache_shmcb:info] [pid 20023] AH00830: Shared memory socache initialised
+[Thu Aug 11 17:01:40.516197 2022] [ssl:info] [pid 20023] AH01887: Init: Initializing (virtual) servers for SSL
+[Thu Aug 11 17:01:40.518584 2022] [ssl:info] [pid 20023] AH01876: mod_ssl/2.4.54 compiled against Server: Apache/2.4.54, Library: OpenSSL/1.1.1o
+[Thu Aug 11 17:01:40.543244 2022] [mpm_prefork:notice] [pid 20023] AH00163: Apache/2.4.54 (Unix) OpenSSL/1.1.1q configured -- resuming normal operations
+[Thu Aug 11 17:01:40.543283 2022] [mpm_prefork:info] [pid 20023] AH00164: Server built: Jun 11 2022 03:25:57
+[Thu Aug 11 17:01:40.543306 2022] [core:notice] [pid 20023] AH00094: Command line: '/usr/local/opt/httpd/bin/httpd -D FOREGROUND'
+[Thu Aug 11 17:01:40.543318 2022] [core:debug] [pid 20023] log.c(1570): AH02639: Using SO_REUSEPORT: no (1)
+[Thu Aug 11 17:01:40.543325 2022] [mpm_prefork:debug] [pid 20023] prefork.c(970): AH00165: Accept mutex: none (default: sysvsem)
+[Thu Aug 11 17:01:40.544062 2022] [proxy:debug] [pid 20026] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 17:01:40.544143 2022] [proxy:debug] [pid 20026] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 17:01:40.544168 2022] [proxy:debug] [pid 20026] proxy_util.c(2231): AH00931: initialized single connection worker in child 20026 for (*:80)
+[Thu Aug 11 17:01:40.544157 2022] [proxy:debug] [pid 20027] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 17:01:40.544219 2022] [proxy:debug] [pid 20027] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 17:01:40.544247 2022] [proxy:debug] [pid 20027] proxy_util.c(2231): AH00931: initialized single connection worker in child 20027 for (*:80)
+[Thu Aug 11 17:01:40.544648 2022] [proxy:debug] [pid 20028] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 17:01:40.544716 2022] [proxy:debug] [pid 20028] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 17:01:40.544749 2022] [proxy:debug] [pid 20028] proxy_util.c(2231): AH00931: initialized single connection worker in child 20028 for (*:80)
+[Thu Aug 11 17:01:40.546068 2022] [proxy:debug] [pid 20029] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 17:01:40.546152 2022] [proxy:debug] [pid 20029] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 17:01:40.546180 2022] [proxy:debug] [pid 20029] proxy_util.c(2231): AH00931: initialized single connection worker in child 20029 for (*:80)
+[Thu Aug 11 17:01:40.547505 2022] [proxy:debug] [pid 20030] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 17:01:40.547587 2022] [proxy:debug] [pid 20030] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 17:01:40.547617 2022] [proxy:debug] [pid 20030] proxy_util.c(2231): AH00931: initialized single connection worker in child 20030 for (*:80)
+[Thu Aug 11 17:02:00.489377 2022] [proxy:debug] [pid 20081] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 17:02:00.489958 2022] [proxy:debug] [pid 20081] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 17:02:00.489990 2022] [proxy:debug] [pid 20081] proxy_util.c(2231): AH00931: initialized single connection worker in child 20081 for (*:80)
+[Thu Aug 11 17:03:52.827405 2022] [proxy:debug] [pid 20114] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 17:03:52.828935 2022] [proxy:debug] [pid 20114] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 17:03:52.828983 2022] [proxy:debug] [pid 20114] proxy_util.c(2231): AH00931: initialized single connection worker in child 20114 for (*:80)
+[Thu Aug 11 17:07:33.879443 2022] [core:info] [pid 20023] AH00096: removed PID file /usr/local/var/run/httpd/httpd.pid (pid=20023)
+[Thu Aug 11 17:07:33.880793 2022] [mpm_prefork:notice] [pid 20023] AH00169: caught SIGTERM, shutting down
+[Thu Aug 11 17:07:35.105759 2022] [ssl:info] [pid 20303] AH01883: Init: Initialized OpenSSL library
+[Thu Aug 11 17:07:35.106399 2022] [ssl:info] [pid 20303] AH01887: Init: Initializing (virtual) servers for SSL
+[Thu Aug 11 17:07:35.110073 2022] [ssl:info] [pid 20303] AH01876: mod_ssl/2.4.54 compiled against Server: Apache/2.4.54, Library: OpenSSL/1.1.1o
+[Thu Aug 11 17:07:35.122749 2022] [ssl:info] [pid 20303] AH01883: Init: Initialized OpenSSL library
+[Thu Aug 11 17:07:35.122787 2022] [socache_shmcb:debug] [pid 20303] mod_socache_shmcb.c(414): AH00821: shmcb_init allocated 512000 bytes of shared memory
+[Thu Aug 11 17:07:35.122797 2022] [socache_shmcb:debug] [pid 20303] mod_socache_shmcb.c(428): AH00822: for 511912 bytes (512000 including header), recommending 32 subcaches, 88 indexes each
+[Thu Aug 11 17:07:35.122805 2022] [socache_shmcb:debug] [pid 20303] mod_socache_shmcb.c(465): AH00824: shmcb_init_memory choices follow
+[Thu Aug 11 17:07:35.122812 2022] [socache_shmcb:debug] [pid 20303] mod_socache_shmcb.c(467): AH00825: subcache_num = 32
+[Thu Aug 11 17:07:35.122818 2022] [socache_shmcb:debug] [pid 20303] mod_socache_shmcb.c(469): AH00826: subcache_size = 15992
+[Thu Aug 11 17:07:35.122825 2022] [socache_shmcb:debug] [pid 20303] mod_socache_shmcb.c(471): AH00827: subcache_data_offset = 2128
+[Thu Aug 11 17:07:35.122832 2022] [socache_shmcb:debug] [pid 20303] mod_socache_shmcb.c(473): AH00828: subcache_data_size = 13864
+[Thu Aug 11 17:07:35.122838 2022] [socache_shmcb:debug] [pid 20303] mod_socache_shmcb.c(475): AH00829: index_num = 88
+[Thu Aug 11 17:07:35.122898 2022] [socache_shmcb:info] [pid 20303] AH00830: Shared memory socache initialised
+[Thu Aug 11 17:07:35.122905 2022] [ssl:info] [pid 20303] AH01887: Init: Initializing (virtual) servers for SSL
+[Thu Aug 11 17:07:35.125176 2022] [ssl:info] [pid 20303] AH01876: mod_ssl/2.4.54 compiled against Server: Apache/2.4.54, Library: OpenSSL/1.1.1o
+[Thu Aug 11 17:07:35.140822 2022] [mpm_prefork:notice] [pid 20303] AH00163: Apache/2.4.54 (Unix) OpenSSL/1.1.1q configured -- resuming normal operations
+[Thu Aug 11 17:07:35.140867 2022] [mpm_prefork:info] [pid 20303] AH00164: Server built: Jun 11 2022 03:25:57
+[Thu Aug 11 17:07:35.140893 2022] [core:notice] [pid 20303] AH00094: Command line: '/usr/local/opt/httpd/bin/httpd -D FOREGROUND'
+[Thu Aug 11 17:07:35.140909 2022] [core:debug] [pid 20303] log.c(1570): AH02639: Using SO_REUSEPORT: no (1)
+[Thu Aug 11 17:07:35.140921 2022] [mpm_prefork:debug] [pid 20303] prefork.c(970): AH00165: Accept mutex: none (default: sysvsem)
+[Thu Aug 11 17:07:35.142105 2022] [proxy:debug] [pid 20306] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 17:07:35.142208 2022] [proxy:debug] [pid 20306] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 17:07:35.142276 2022] [proxy:debug] [pid 20306] proxy_util.c(2231): AH00931: initialized single connection worker in child 20306 for (*:80)
+[Thu Aug 11 17:07:35.142295 2022] [proxy:debug] [pid 20307] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 17:07:35.142361 2022] [proxy:debug] [pid 20307] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 17:07:35.142388 2022] [proxy:debug] [pid 20307] proxy_util.c(2231): AH00931: initialized single connection worker in child 20307 for (*:80)
+[Thu Aug 11 17:07:35.142783 2022] [proxy:debug] [pid 20308] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 17:07:35.142884 2022] [proxy:debug] [pid 20308] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 17:07:35.143014 2022] [proxy:debug] [pid 20308] proxy_util.c(2231): AH00931: initialized single connection worker in child 20308 for (*:80)
+[Thu Aug 11 17:07:35.143151 2022] [proxy:debug] [pid 20309] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 17:07:35.143225 2022] [proxy:debug] [pid 20309] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 17:07:35.143250 2022] [proxy:debug] [pid 20309] proxy_util.c(2231): AH00931: initialized single connection worker in child 20309 for (*:80)
+[Thu Aug 11 17:07:35.144996 2022] [proxy:debug] [pid 20310] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 17:07:35.145074 2022] [proxy:debug] [pid 20310] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 17:07:35.145121 2022] [proxy:debug] [pid 20310] proxy_util.c(2231): AH00931: initialized single connection worker in child 20310 for (*:80)
+[Thu Aug 11 17:07:45.691969 2022] [proxy:debug] [pid 20327] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 17:07:45.692444 2022] [proxy:debug] [pid 20327] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 17:07:45.692482 2022] [proxy:debug] [pid 20327] proxy_util.c(2231): AH00931: initialized single connection worker in child 20327 for (*:80)
+[Thu Aug 11 17:09:27.684790 2022] [proxy:debug] [pid 20384] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 17:09:27.685545 2022] [proxy:debug] [pid 20384] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 17:09:27.685590 2022] [proxy:debug] [pid 20384] proxy_util.c(2231): AH00931: initialized single connection worker in child 20384 for (*:80)
+[Thu Aug 11 18:12:42.164874 2022] [proxy:debug] [pid 21448] proxy_util.c(2123): AH00925: initializing worker proxy:reverse shared
+[Thu Aug 11 18:12:42.166040 2022] [proxy:debug] [pid 21448] proxy_util.c(2183): AH00927: initializing worker proxy:reverse local
+[Thu Aug 11 18:12:42.166111 2022] [proxy:debug] [pid 21448] proxy_util.c(2231): AH00931: initialized single connection worker in child 21448 for (*:80)
+[Thu Aug 11 19:34:28.801764 2022] [core:info] [pid 20303] AH00096: removed PID file /usr/local/var/run/httpd/httpd.pid (pid=20303)
+[Thu Aug 11 19:34:28.804258 2022] [mpm_prefork:notice] [pid 20303] AH00169: caught SIGTERM, shutting down
