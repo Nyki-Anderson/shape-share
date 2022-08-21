@@ -1,16 +1,15 @@
 <?php
 
-namespace Helpers;
+namespace app\Helpers;
 
-class StringFormatHelper 
-{
-  /**
-   * Convert $string to StudlyCaps.
-   *
-   * @param string $string - string-to-convert
-   * @return string $string - StringToConvert
-   */
-  public static function convertToStudlyCaps(string $string)
+/**
+ * Convert $string to StudlyCaps.
+ *
+ * @param string $string - string-to-convert
+ * @return string $string - StringToConvert
+ */
+if (! function_exists('convertToStudlyCaps')) {
+  function convertToStudlyCaps(string $string)
   {
     // Replace hypens with spaces
     $string = str_replace('-', ' ', $string);
@@ -23,14 +22,16 @@ class StringFormatHelper
 
     return $string;
   }
+}
 
-   /**
-   * Convert $string to camelCase 
-   *
-   * @param string $string - string-to-convert
-   * @return string $string - stringToConvert
-   */
-  public static function convertToCamelCase(string $string)
+  /**
+ * Convert $string to camelCase 
+ *
+ * @param string $string - string-to-convert
+ * @return string $string - stringToConvert
+ */
+if (! function_exists('convertToCamelCase')) {
+  function convertToCamelCase(string $string)
   {
     // Replace hypens with spaces
     $string = str_replace('-', ' ', $string);
@@ -46,14 +47,16 @@ class StringFormatHelper
 
     return $string;
   }
+}
 
-  /**
-   * Compares a string to a regex patter that simulates any regex to determine if string is meant to be a regex pattern.
-   *
-   * @param string $string
-   * @return boolean - true if is regex, false if (most likely) string
-   */
-  public static function isRegex(string $string)
+/**
+ * Compares a string to a regex patter that simulates any regex to determine if string is meant to be a regex pattern.
+ *
+ * @param string $string
+ * @return boolean - true if is regex, false if (most likely) string
+ */
+if (! function_exists('isRegex')) {
+  function isRegex(string $string)
   {
     $regex = "/^\/[\s\S]+\/$/";
 
@@ -72,6 +75,4 @@ class StringFormatHelper
 
   return $value;
  }
-
- 
 }

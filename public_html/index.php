@@ -1,40 +1,52 @@
 <?php
 
+// Define path constants
 mb_internal_encoding('UTF-8'); // String Encoding
+define('DS', DIRECTORY_SEPARATOR); 
+define('ROOT', dirname(dirname(__FILE__)) . DS); 
 
-define('DS', DIRECTORY_SEPARATOR); // OS Compatible Directory Separator
-define('ROOT', dirname(dirname(__FILE__))); // Shape-Share Directory
-
-
-/**
- * -------------------------------------------------------------------
- *  || Include Bootstrap ||
- * -------------------------------------------------------------------
- */
-
-require_once(ROOT . DS . 'app' . DS . 'Bootstrap.php');
-
-unregisterGlobals();
+require ('../vendor/autoload.php');
 
 /**
  * -------------------------------------------------------------------
- *  || Define Routes ||
+ *  || Include Core Framework ||
  * -------------------------------------------------------------------
- * Besides the default route which is '', the url will always list the controller first (if only). If the next element is not the action, the action defaults to 'index'. Do not name action in the route if it is index! ParamRegexes can be set to the second element onward in the absence of the action.
- * 
- * Routes should be formatted as follows:
- * 
- *  $router->add(<request>, <url>, <name>, <namespace>);
  */
-$router = new Libraries\Router;
 
-// Default Router
-$router->add('GET', '', 'site_landing');
+require('..' . DS . 'framework' . DS . 'Core' . DS . 'Bootstrap.php');
+require('..' . DS . 'framework' . DS . 'Core' . DS . 'Controller.php');
+require('..' . DS . 'framework' . DS . 'Database' . DS . 'DatabasePDO.php');
+
+Bootstrap::run();
 
 /**
  * -------------------------------------------------------------------
- * || Run Application! ||
+ * Define all Routes
  * -------------------------------------------------------------------
  */
 
-$router->dispatch($_SERVER['QUERY_STRING']);
+  use Core\Route;
+
+  // Default Router
+  Route::add('/', function() {
+    $data = [
+      'title' => 'Welcome to Shape-Share!',
+      'description' => 'Shape-Share is a simple online image sharing platform where members can upload, react, save, and search for images of shapes.',
+    ];
+    include VIEW_PATH . 'static_pages' . DS . 'site_landing.html';
+  });
+
+  Route::add('/register', function () {Route::map('Index', 'register');});
+  Route::add('/login', function () {Route::map('Index', 'login');});
+
+ /**
+ * -------------------------------------------------------------------
+ * Initialize Routing
+ * -------------------------------------------------------------------
+ */
+
+// Trailing '/' doesn't matter, case doesn't matter, and no multimatching 
+Route::run('/', false, false, false);
+
+
+

@@ -1,9 +1,7 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
-# Direct access to the directory if the file exists without RewriteRule
+
 RewriteCond %{REQUEST_FILENAME} !-f
-# Direct access to the directory if it exists without RewriteRule
 RewriteCond %{REQUEST_FILENAME} !-d
-# Rewrite all other URLs to index.php/URL
-RewriteRule ^(.*)$ index.php?url=$1 [PT,L]
+RewriteRule (.*) /index.php/$1 [L]
 </IfModule>

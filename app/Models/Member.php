@@ -2,7 +2,7 @@
 
 namespace Models;
 
-use Libraries\Database;
+use framework\Database\DatabasePDO;
 
 class Member
 {
@@ -34,7 +34,7 @@ class Member
   
   public function __construct()
   {
-    $this->db = new Database;
+    $this->db = new DatabasePDO;
   }
 
   public function getMembers()
