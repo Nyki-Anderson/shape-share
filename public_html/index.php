@@ -1,7 +1,7 @@
 <?php
 
 // Define path constants
-mb_internal_encoding('UTF-8'); // String Encoding
+//mb_internal_encoding('UTF-8'); // String Encoding
 define('DS', DIRECTORY_SEPARATOR); 
 define('ROOT', dirname(dirname(__FILE__)) . DS); 
 
