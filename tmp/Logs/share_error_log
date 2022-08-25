@@ -18096,3 +18096,956 @@
 [Sun Aug 21 15:28:25.855949 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:49806] AH01626: authorization result of <RequireAny>: granted
 [Sun Aug 21 15:28:26.698203 2022] [ssl:debug] [pid 26161] ssl_engine_io.c(1147): [client ::1:49810] AH02001: Connection closed to child 2 with standard shutdown (server local.shape-share.com:443)
 [Sun Aug 21 15:28:30.859061 2022] [ssl:debug] [pid 46593] ssl_engine_io.c(1147): [client ::1:49806] AH02001: Connection closed to child 11 with standard shutdown (server local.shape-share.com:443)
+[Sun Aug 21 16:15:39.531165 2022] [ssl:info] [pid 26159] [client ::1:50124] AH01964: Connection to child 0 established (server local.shape-share.com:443)
+[Sun Aug 21 16:15:39.544288 2022] [ssl:debug] [pid 26159] ssl_engine_kernel.c(2395): [client ::1:50124] AH02043: SSL virtual host for servername local.shape-share.com found
+[Sun Aug 21 16:15:39.544392 2022] [core:debug] [pid 26159] protocol.c(2458): [client ::1:50124] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Sun Aug 21 16:15:39.549526 2022] [ssl:debug] [pid 26159] ssl_engine_kernel.c(2254): [client ::1:50124] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Sun Aug 21 16:15:39.549770 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0xe8 -> subcache 8)
+[Sun Aug 21 16:15:39.549802 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Sun Aug 21 16:15:39.549814 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Sun Aug 21 16:15:39.549822 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Sun Aug 21 16:15:39.549829 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Sun Aug 21 16:15:39.549837 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Sun Aug 21 16:15:39.549940 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x20 -> subcache 0)
+[Sun Aug 21 16:15:39.549957 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(745): AH00842: expiring 2 and reclaiming 0 removed socache entries
+[Sun Aug 21 16:15:39.549965 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Sun Aug 21 16:15:39.549972 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(862): AH00847: insert happened at idx=1, data=(226:258)
+[Sun Aug 21 16:15:39.549979 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=1/1, data_pos/data_used=226/225
+[Sun Aug 21 16:15:39.549987 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Sun Aug 21 16:15:39.556004 2022] [ssl:debug] [pid 26159] ssl_engine_kernel.c(415): [client ::1:50124] AH02034: Initial (No.1) HTTPS request received for child 0 (server local.shape-share.com:443)
+[Sun Aug 21 16:15:39.565175 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:50124] AH01626: authorization result of Require all granted: granted
+[Sun Aug 21 16:15:39.565205 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:50124] AH01626: authorization result of <RequireAny>: granted
+[Sun Aug 21 16:15:39.566052 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:50124] AH01626: authorization result of Require all granted: granted
+[Sun Aug 21 16:15:39.566093 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:50124] AH01626: authorization result of <RequireAny>: granted
+[Sun Aug 21 16:15:43.752219 2022] [ssl:debug] [pid 26159] ssl_engine_kernel.c(415): [client ::1:50124] AH02034: Subsequent (No.2) HTTPS request received for child 0 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Sun Aug 21 16:15:43.753521 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:50124] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:15:43.753586 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:50124] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:15:43.753771 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:50124] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:15:43.753803 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:50124] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:15:43.756083 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:50124] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:15:43.756124 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:50124] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:15:43.807374 2022] [ssl:debug] [pid 26159] ssl_engine_kernel.c(415): [client ::1:50124] AH02034: Subsequent (No.3) HTTPS request received for child 0 (server local.shape-share.com:443), referer: https://local.shape-share.com/[object%20HTMLButtonElement]
+[Sun Aug 21 16:15:43.807648 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:50124] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/[object%20HTMLButtonElement]
+[Sun Aug 21 16:15:43.807668 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:50124] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/[object%20HTMLButtonElement]
+[Sun Aug 21 16:15:43.816569 2022] [ssl:info] [pid 26159] (32)Broken pipe: [client ::1:50124] AH01993: SSL output filter write failed.
+[Sun Aug 21 16:15:43.816720 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(570): AH00837: socache_shmcb_remove (0x20 -> subcache 0)
+[Sun Aug 21 16:15:43.816754 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(954): AH00852: possible match at idx=1, data=226
+[Sun Aug 21 16:15:43.816773 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(959): AH00853: shmcb_subcache_remove removing matching entry
+[Sun Aug 21 16:15:43.816785 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(585): AH00839: leaving socache_shmcb_remove successfully
+[Sun Aug 21 16:20:32.197819 2022] [ssl:info] [pid 26160] [client ::1:50144] AH01964: Connection to child 1 established (server local.shape-share.com:443)
+[Sun Aug 21 16:20:32.219062 2022] [ssl:debug] [pid 26160] ssl_engine_kernel.c(2395): [client ::1:50144] AH02043: SSL virtual host for servername local.shape-share.com found
+[Sun Aug 21 16:20:32.219368 2022] [core:debug] [pid 26160] protocol.c(2458): [client ::1:50144] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Sun Aug 21 16:20:32.220549 2022] [ssl:debug] [pid 26160] ssl_engine_kernel.c(2254): [client ::1:50144] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Sun Aug 21 16:20:32.220713 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x56 -> subcache 22)
+[Sun Aug 21 16:20:32.221382 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Sun Aug 21 16:20:32.221410 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Sun Aug 21 16:20:32.221421 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Sun Aug 21 16:20:32.221428 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/225
+[Sun Aug 21 16:20:32.221436 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Sun Aug 21 16:20:32.221636 2022] [ssl:debug] [pid 26160] ssl_engine_kernel.c(415): [client ::1:50144] AH02034: Initial (No.1) HTTPS request received for child 1 (server local.shape-share.com:443)
+[Sun Aug 21 16:20:32.223255 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:50144] AH01626: authorization result of Require all granted: granted
+[Sun Aug 21 16:20:32.223317 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:50144] AH01626: authorization result of <RequireAny>: granted
+[Sun Aug 21 16:20:32.223474 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:50144] AH01626: authorization result of Require all granted: granted
+[Sun Aug 21 16:20:32.223542 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:50144] AH01626: authorization result of <RequireAny>: granted
+[Sun Aug 21 16:20:37.253886 2022] [ssl:debug] [pid 26160] ssl_engine_io.c(1147): [client ::1:50144] AH02001: Connection closed to child 1 with standard shutdown (server local.shape-share.com:443)
+[Sun Aug 21 16:20:44.367142 2022] [ssl:info] [pid 35877] [client ::1:50148] AH01964: Connection to child 6 established (server local.shape-share.com:443)
+[Sun Aug 21 16:20:44.372678 2022] [ssl:debug] [pid 35877] ssl_engine_kernel.c(2395): [client ::1:50148] AH02043: SSL virtual host for servername local.shape-share.com found
+[Sun Aug 21 16:20:44.374677 2022] [core:debug] [pid 35877] protocol.c(2458): [client ::1:50148] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Sun Aug 21 16:20:44.375952 2022] [ssl:debug] [pid 35877] ssl_engine_kernel.c(2254): [client ::1:50148] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Sun Aug 21 16:20:44.376201 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x9b -> subcache 27)
+[Sun Aug 21 16:20:44.377054 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Sun Aug 21 16:20:44.377108 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Sun Aug 21 16:20:44.377128 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Sun Aug 21 16:20:44.377139 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Sun Aug 21 16:20:44.377148 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Sun Aug 21 16:20:44.377411 2022] [ssl:debug] [pid 35877] ssl_engine_kernel.c(415): [client ::1:50148] AH02034: Initial (No.1) HTTPS request received for child 6 (server local.shape-share.com:443)
+[Sun Aug 21 16:20:44.384007 2022] [authz_core:debug] [pid 35877] mod_authz_core.c(815): [client ::1:50148] AH01626: authorization result of Require all granted: granted
+[Sun Aug 21 16:20:44.384048 2022] [authz_core:debug] [pid 35877] mod_authz_core.c(815): [client ::1:50148] AH01626: authorization result of <RequireAny>: granted
+[Sun Aug 21 16:20:44.384340 2022] [authz_core:debug] [pid 35877] mod_authz_core.c(815): [client ::1:50148] AH01626: authorization result of Require all granted: granted
+[Sun Aug 21 16:20:44.384360 2022] [authz_core:debug] [pid 35877] mod_authz_core.c(815): [client ::1:50148] AH01626: authorization result of <RequireAny>: granted
+[Sun Aug 21 16:20:44.475431 2022] [ssl:debug] [pid 35877] ssl_engine_kernel.c(415): [client ::1:50148] AH02034: Subsequent (No.2) HTTPS request received for child 6 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Sun Aug 21 16:20:44.476200 2022] [authz_core:debug] [pid 35877] mod_authz_core.c(815): [client ::1:50148] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:20:44.476227 2022] [authz_core:debug] [pid 35877] mod_authz_core.c(815): [client ::1:50148] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:20:44.492095 2022] [ssl:info] [pid 35877] (32)Broken pipe: [client ::1:50148] AH01993: SSL output filter write failed.
+[Sun Aug 21 16:20:44.492227 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(570): AH00837: socache_shmcb_remove (0x9b -> subcache 27)
+[Sun Aug 21 16:20:44.492246 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(954): AH00852: possible match at idx=0, data=0
+[Sun Aug 21 16:20:44.492259 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(959): AH00853: shmcb_subcache_remove removing matching entry
+[Sun Aug 21 16:20:44.492272 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(585): AH00839: leaving socache_shmcb_remove successfully
+[Sun Aug 21 16:20:46.031603 2022] [ssl:info] [pid 35878] [client ::1:50149] AH01964: Connection to child 7 established (server local.shape-share.com:443)
+[Sun Aug 21 16:20:46.039263 2022] [ssl:info] [pid 26171] [client ::1:50150] AH01964: Connection to child 5 established (server local.shape-share.com:443)
+[Sun Aug 21 16:20:46.043643 2022] [ssl:debug] [pid 35878] ssl_engine_kernel.c(2395): [client ::1:50149] AH02043: SSL virtual host for servername local.shape-share.com found
+[Sun Aug 21 16:20:46.043652 2022] [ssl:debug] [pid 26171] ssl_engine_kernel.c(2395): [client ::1:50150] AH02043: SSL virtual host for servername local.shape-share.com found
+[Sun Aug 21 16:20:46.043925 2022] [core:debug] [pid 35878] protocol.c(2458): [client ::1:50149] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Sun Aug 21 16:20:46.044002 2022] [core:debug] [pid 26171] protocol.c(2458): [client ::1:50150] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Sun Aug 21 16:20:46.045251 2022] [ssl:debug] [pid 35878] ssl_engine_kernel.c(2254): [client ::1:50149] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Sun Aug 21 16:20:46.045567 2022] [socache_shmcb:debug] [pid 35878] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0xec -> subcache 12)
+[Sun Aug 21 16:20:46.045601 2022] [socache_shmcb:debug] [pid 35878] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Sun Aug 21 16:20:46.045615 2022] [socache_shmcb:debug] [pid 35878] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Sun Aug 21 16:20:46.045626 2022] [socache_shmcb:debug] [pid 35878] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Sun Aug 21 16:20:46.045635 2022] [socache_shmcb:debug] [pid 35878] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/225
+[Sun Aug 21 16:20:46.045645 2022] [socache_shmcb:debug] [pid 35878] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Sun Aug 21 16:20:46.045827 2022] [ssl:debug] [pid 35878] ssl_engine_kernel.c(415): [client ::1:50149] AH02034: Initial (No.1) HTTPS request received for child 7 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Sun Aug 21 16:20:46.046183 2022] [ssl:debug] [pid 26171] ssl_engine_kernel.c(2254): [client ::1:50150] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Sun Aug 21 16:20:46.046586 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:50149] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:20:46.046612 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:50149] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:20:46.046591 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0xba -> subcache 26)
+[Sun Aug 21 16:20:46.046683 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Sun Aug 21 16:20:46.046699 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Sun Aug 21 16:20:46.046711 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Sun Aug 21 16:20:46.046720 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/225
+[Sun Aug 21 16:20:46.046728 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Sun Aug 21 16:20:46.046741 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:50149] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:20:46.046756 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:50149] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:20:46.046913 2022] [ssl:debug] [pid 26171] ssl_engine_kernel.c(415): [client ::1:50150] AH02034: Initial (No.1) HTTPS request received for child 5 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Sun Aug 21 16:20:46.047282 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:50149] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:20:46.047302 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:50149] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:20:46.047323 2022] [authz_core:debug] [pid 26171] mod_authz_core.c(815): [client ::1:50150] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:20:46.047341 2022] [authz_core:debug] [pid 26171] mod_authz_core.c(815): [client ::1:50150] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:20:46.048110 2022] [authz_core:debug] [pid 26171] mod_authz_core.c(815): [client ::1:50150] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:20:46.048131 2022] [authz_core:debug] [pid 26171] mod_authz_core.c(815): [client ::1:50150] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:20:46.049578 2022] [authz_core:debug] [pid 26171] mod_authz_core.c(815): [client ::1:50150] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:20:46.049614 2022] [authz_core:debug] [pid 26171] mod_authz_core.c(815): [client ::1:50150] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:20:46.152888 2022] [ssl:debug] [pid 35878] ssl_engine_kernel.c(415): [client ::1:50149] AH02034: Subsequent (No.2) HTTPS request received for child 7 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Sun Aug 21 16:20:46.153333 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:50149] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Sun Aug 21 16:20:46.153370 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:50149] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Sun Aug 21 16:20:46.159570 2022] [ssl:debug] [pid 35878] ssl_engine_io.c(1147): [client ::1:50149] AH02001: Connection closed to child 7 with standard shutdown (server local.shape-share.com:443)
+[Sun Aug 21 16:20:51.087139 2022] [ssl:debug] [pid 26171] ssl_engine_io.c(1147): [client ::1:50150] AH02001: Connection closed to child 5 with standard shutdown (server local.shape-share.com:443)
+[Sun Aug 21 16:21:05.240539 2022] [ssl:info] [pid 46591] [client ::1:50151] AH01964: Connection to child 9 established (server local.shape-share.com:443)
+[Sun Aug 21 16:21:05.254657 2022] [ssl:debug] [pid 46591] ssl_engine_kernel.c(2395): [client ::1:50151] AH02043: SSL virtual host for servername local.shape-share.com found
+[Sun Aug 21 16:21:05.254949 2022] [core:debug] [pid 46591] protocol.c(2458): [client ::1:50151] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Sun Aug 21 16:21:05.257025 2022] [ssl:debug] [pid 46591] ssl_engine_kernel.c(2254): [client ::1:50151] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Sun Aug 21 16:21:05.257274 2022] [socache_shmcb:debug] [pid 46591] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x6b -> subcache 11)
+[Sun Aug 21 16:21:05.257870 2022] [socache_shmcb:debug] [pid 46591] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Sun Aug 21 16:21:05.257895 2022] [socache_shmcb:debug] [pid 46591] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Sun Aug 21 16:21:05.257905 2022] [socache_shmcb:debug] [pid 46591] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Sun Aug 21 16:21:05.257913 2022] [socache_shmcb:debug] [pid 46591] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/225
+[Sun Aug 21 16:21:05.257921 2022] [socache_shmcb:debug] [pid 46591] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Sun Aug 21 16:21:05.258096 2022] [ssl:debug] [pid 46591] ssl_engine_kernel.c(415): [client ::1:50151] AH02034: Initial (No.1) HTTPS request received for child 9 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Sun Aug 21 16:21:05.259128 2022] [authz_core:debug] [pid 46591] mod_authz_core.c(815): [client ::1:50151] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:21:05.259148 2022] [authz_core:debug] [pid 46591] mod_authz_core.c(815): [client ::1:50151] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:21:05.259294 2022] [authz_core:debug] [pid 46591] mod_authz_core.c(815): [client ::1:50151] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:21:05.259307 2022] [authz_core:debug] [pid 46591] mod_authz_core.c(815): [client ::1:50151] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:21:05.259891 2022] [authz_core:debug] [pid 46591] mod_authz_core.c(815): [client ::1:50151] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:21:05.259908 2022] [authz_core:debug] [pid 46591] mod_authz_core.c(815): [client ::1:50151] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:21:10.281519 2022] [ssl:debug] [pid 46591] ssl_engine_io.c(1147): [client ::1:50151] AH02001: Connection closed to child 9 with standard shutdown (server local.shape-share.com:443)
+[Sun Aug 21 16:22:06.002901 2022] [ssl:info] [pid 26162] [client ::1:50154] AH01964: Connection to child 3 established (server local.shape-share.com:443)
+[Sun Aug 21 16:22:06.016040 2022] [ssl:debug] [pid 26162] ssl_engine_kernel.c(2395): [client ::1:50154] AH02043: SSL virtual host for servername local.shape-share.com found
+[Sun Aug 21 16:22:06.017623 2022] [core:debug] [pid 26162] protocol.c(2458): [client ::1:50154] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Sun Aug 21 16:22:06.019582 2022] [ssl:debug] [pid 26162] ssl_engine_kernel.c(2254): [client ::1:50154] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Sun Aug 21 16:22:06.019808 2022] [socache_shmcb:debug] [pid 26162] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x31 -> subcache 17)
+[Sun Aug 21 16:22:06.026017 2022] [socache_shmcb:debug] [pid 26162] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Sun Aug 21 16:22:06.026065 2022] [socache_shmcb:debug] [pid 26162] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Sun Aug 21 16:22:06.026075 2022] [socache_shmcb:debug] [pid 26162] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Sun Aug 21 16:22:06.026083 2022] [socache_shmcb:debug] [pid 26162] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Sun Aug 21 16:22:06.026091 2022] [socache_shmcb:debug] [pid 26162] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Sun Aug 21 16:22:06.026344 2022] [ssl:debug] [pid 26162] ssl_engine_kernel.c(415): [client ::1:50154] AH02034: Initial (No.1) HTTPS request received for child 3 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Sun Aug 21 16:22:06.028430 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:50154] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:22:06.028459 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:50154] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:22:06.028567 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:50154] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:22:06.028578 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:50154] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:22:06.029298 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:50154] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:22:06.029326 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:50154] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:22:06.090138 2022] [ssl:debug] [pid 26162] ssl_engine_kernel.c(415): [client ::1:50154] AH02034: Subsequent (No.2) HTTPS request received for child 3 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Sun Aug 21 16:22:06.091145 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:50154] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Sun Aug 21 16:22:06.091189 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:50154] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Sun Aug 21 16:22:06.206277 2022] [ssl:debug] [pid 26162] ssl_engine_kernel.c(415): [client ::1:50154] AH02034: Subsequent (No.3) HTTPS request received for child 3 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Sun Aug 21 16:22:06.206580 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:50154] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Sun Aug 21 16:22:06.206604 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:50154] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Sun Aug 21 16:22:06.224572 2022] [ssl:info] [pid 26162] (32)Broken pipe: [client ::1:50154] AH01993: SSL output filter write failed.
+[Sun Aug 21 16:22:06.224954 2022] [socache_shmcb:debug] [pid 26162] mod_socache_shmcb.c(570): AH00837: socache_shmcb_remove (0x31 -> subcache 17)
+[Sun Aug 21 16:22:06.224988 2022] [socache_shmcb:debug] [pid 26162] mod_socache_shmcb.c(954): AH00852: possible match at idx=0, data=0
+[Sun Aug 21 16:22:06.225003 2022] [socache_shmcb:debug] [pid 26162] mod_socache_shmcb.c(959): AH00853: shmcb_subcache_remove removing matching entry
+[Sun Aug 21 16:22:06.225015 2022] [socache_shmcb:debug] [pid 26162] mod_socache_shmcb.c(585): AH00839: leaving socache_shmcb_remove successfully
+[Sun Aug 21 16:22:41.270014 2022] [ssl:info] [pid 46592] [client ::1:50157] AH01964: Connection to child 10 established (server local.shape-share.com:443)
+[Sun Aug 21 16:22:41.282254 2022] [ssl:debug] [pid 46592] ssl_engine_kernel.c(2395): [client ::1:50157] AH02043: SSL virtual host for servername local.shape-share.com found
+[Sun Aug 21 16:22:41.283984 2022] [core:debug] [pid 46592] protocol.c(2458): [client ::1:50157] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Sun Aug 21 16:22:41.286381 2022] [ssl:debug] [pid 46592] ssl_engine_kernel.c(2254): [client ::1:50157] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Sun Aug 21 16:22:41.286698 2022] [socache_shmcb:debug] [pid 46592] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0xa1 -> subcache 1)
+[Sun Aug 21 16:22:41.286761 2022] [socache_shmcb:debug] [pid 46592] mod_socache_shmcb.c(745): AH00842: expiring 2 and reclaiming 0 removed socache entries
+[Sun Aug 21 16:22:41.286786 2022] [socache_shmcb:debug] [pid 46592] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Sun Aug 21 16:22:41.286808 2022] [socache_shmcb:debug] [pid 46592] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Sun Aug 21 16:22:41.286826 2022] [socache_shmcb:debug] [pid 46592] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Sun Aug 21 16:22:41.286844 2022] [socache_shmcb:debug] [pid 46592] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Sun Aug 21 16:22:41.289200 2022] [ssl:debug] [pid 46592] ssl_engine_kernel.c(415): [client ::1:50157] AH02034: Initial (No.1) HTTPS request received for child 10 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Sun Aug 21 16:22:41.290749 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:50157] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Sun Aug 21 16:22:41.290781 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:50157] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Sun Aug 21 16:22:41.290906 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:50157] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Sun Aug 21 16:22:41.290918 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:50157] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Sun Aug 21 16:22:41.291642 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:50157] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Sun Aug 21 16:22:41.291686 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:50157] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Sun Aug 21 16:22:43.509849 2022] [ssl:debug] [pid 46592] ssl_engine_kernel.c(415): [client ::1:50157] AH02034: Subsequent (No.2) HTTPS request received for child 10 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Sun Aug 21 16:22:43.511387 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:50157] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:22:43.511418 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:50157] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:22:43.511507 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:50157] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:22:43.511525 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:50157] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:22:43.511794 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:50157] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:22:43.511821 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:50157] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:22:48.515940 2022] [ssl:debug] [pid 46592] ssl_engine_io.c(1147): [client ::1:50157] AH02001: Connection closed to child 10 with standard shutdown (server local.shape-share.com:443)
+[Sun Aug 21 16:38:09.798119 2022] [ssl:info] [pid 26161] [client ::1:50210] AH01964: Connection to child 2 established (server local.shape-share.com:443)
+[Sun Aug 21 16:38:09.817010 2022] [ssl:debug] [pid 26161] ssl_engine_kernel.c(2395): [client ::1:50210] AH02043: SSL virtual host for servername local.shape-share.com found
+[Sun Aug 21 16:38:09.817972 2022] [core:debug] [pid 26161] protocol.c(2458): [client ::1:50210] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Sun Aug 21 16:38:09.829051 2022] [ssl:debug] [pid 26161] ssl_engine_kernel.c(2254): [client ::1:50210] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Sun Aug 21 16:38:09.829327 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x77 -> subcache 23)
+[Sun Aug 21 16:38:09.829362 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Sun Aug 21 16:38:09.829375 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Sun Aug 21 16:38:09.829385 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Sun Aug 21 16:38:09.829393 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/225
+[Sun Aug 21 16:38:09.829401 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Sun Aug 21 16:38:09.829482 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x9e -> subcache 30)
+[Sun Aug 21 16:38:09.829524 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(745): AH00842: expiring 3 and reclaiming 0 removed socache entries
+[Sun Aug 21 16:38:09.829538 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Sun Aug 21 16:38:09.829546 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Sun Aug 21 16:38:09.829553 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Sun Aug 21 16:38:09.829561 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Sun Aug 21 16:38:09.829785 2022] [ssl:debug] [pid 26161] ssl_engine_kernel.c(415): [client ::1:50210] AH02034: Initial (No.1) HTTPS request received for child 2 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Sun Aug 21 16:38:09.831201 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:50210] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:38:09.831235 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:50210] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:38:09.831433 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:50210] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:38:09.831502 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:50210] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:38:09.834197 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:50210] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:38:09.834237 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:50210] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:38:09.908681 2022] [ssl:debug] [pid 26161] ssl_engine_kernel.c(415): [client ::1:50210] AH02034: Subsequent (No.2) HTTPS request received for child 2 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Sun Aug 21 16:38:09.908988 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:50210] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Sun Aug 21 16:38:09.909066 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:50210] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Sun Aug 21 16:38:12.996165 2022] [ssl:debug] [pid 26161] ssl_engine_kernel.c(415): [client ::1:50210] AH02034: Subsequent (No.3) HTTPS request received for child 2 (server local.shape-share.com:443)
+[Sun Aug 21 16:38:12.996634 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:50210] AH01626: authorization result of Require all granted: granted
+[Sun Aug 21 16:38:12.996655 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:50210] AH01626: authorization result of <RequireAny>: granted
+[Sun Aug 21 16:38:12.996717 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:50210] AH01626: authorization result of Require all granted: granted
+[Sun Aug 21 16:38:12.996732 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:50210] AH01626: authorization result of <RequireAny>: granted
+[Sun Aug 21 16:38:14.951251 2022] [ssl:debug] [pid 26161] ssl_engine_kernel.c(415): [client ::1:50210] AH02034: Subsequent (No.4) HTTPS request received for child 2 (server local.shape-share.com:443)
+[Sun Aug 21 16:38:14.951668 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:50210] AH01626: authorization result of Require all granted: granted
+[Sun Aug 21 16:38:14.951684 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:50210] AH01626: authorization result of <RequireAny>: granted
+[Sun Aug 21 16:38:14.951724 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:50210] AH01626: authorization result of Require all granted: granted
+[Sun Aug 21 16:38:14.951735 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:50210] AH01626: authorization result of <RequireAny>: granted
+[Sun Aug 21 16:38:19.961427 2022] [ssl:debug] [pid 26161] ssl_engine_io.c(1147): [client ::1:50210] AH02001: Connection closed to child 2 with standard shutdown (server local.shape-share.com:443)
+[Sun Aug 21 16:38:28.290403 2022] [ssl:info] [pid 46593] [client ::1:50214] AH01964: Connection to child 11 established (server local.shape-share.com:443)
+[Sun Aug 21 16:38:28.300325 2022] [ssl:debug] [pid 46593] ssl_engine_kernel.c(2395): [client ::1:50214] AH02043: SSL virtual host for servername local.shape-share.com found
+[Sun Aug 21 16:38:28.301472 2022] [core:debug] [pid 46593] protocol.c(2458): [client ::1:50214] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Sun Aug 21 16:38:28.303362 2022] [ssl:debug] [pid 46593] ssl_engine_kernel.c(2254): [client ::1:50214] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Sun Aug 21 16:38:28.303544 2022] [socache_shmcb:debug] [pid 46593] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x40 -> subcache 0)
+[Sun Aug 21 16:38:28.303580 2022] [socache_shmcb:debug] [pid 46593] mod_socache_shmcb.c(745): AH00842: expiring 0 and reclaiming 1 removed socache entries
+[Sun Aug 21 16:38:28.303603 2022] [socache_shmcb:debug] [pid 46593] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Sun Aug 21 16:38:28.303612 2022] [socache_shmcb:debug] [pid 46593] mod_socache_shmcb.c(862): AH00847: insert happened at idx=1, data=(226:258)
+[Sun Aug 21 16:38:28.303621 2022] [socache_shmcb:debug] [pid 46593] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=1/1, data_pos/data_used=226/225
+[Sun Aug 21 16:38:28.303628 2022] [socache_shmcb:debug] [pid 46593] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Sun Aug 21 16:38:28.304612 2022] [ssl:debug] [pid 46593] ssl_engine_kernel.c(415): [client ::1:50214] AH02034: Initial (No.1) HTTPS request received for child 11 (server local.shape-share.com:443)
+[Sun Aug 21 16:38:28.307522 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:50214] AH01626: authorization result of Require all granted: granted
+[Sun Aug 21 16:38:28.307561 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:50214] AH01626: authorization result of <RequireAny>: granted
+[Sun Aug 21 16:38:28.307673 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:50214] AH01626: authorization result of Require all granted: granted
+[Sun Aug 21 16:38:28.307691 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:50214] AH01626: authorization result of <RequireAny>: granted
+[Sun Aug 21 16:38:30.069374 2022] [ssl:debug] [pid 46593] ssl_engine_kernel.c(415): [client ::1:50214] AH02034: Subsequent (No.2) HTTPS request received for child 11 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Sun Aug 21 16:38:30.070496 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:50214] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:38:30.070536 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:50214] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:38:30.070775 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:50214] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:38:30.070806 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:50214] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:38:30.071326 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:50214] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:38:30.071527 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:50214] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Sun Aug 21 16:38:35.075938 2022] [ssl:debug] [pid 46593] ssl_engine_io.c(1147): [client ::1:50214] AH02001: Connection closed to child 11 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 17:29:01.567290 2022] [ssl:info] [pid 26159] [client ::1:56034] AH01964: Connection to child 0 established (server local.shape-share.com:443)
+[Wed Aug 24 17:29:01.662239 2022] [ssl:debug] [pid 26159] ssl_engine_kernel.c(2395): [client ::1:56034] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 17:29:01.668674 2022] [core:debug] [pid 26159] protocol.c(2458): [client ::1:56034] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 17:29:01.731354 2022] [ssl:debug] [pid 26159] ssl_engine_kernel.c(2254): [client ::1:56034] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 17:29:01.732513 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x46 -> subcache 6)
+[Wed Aug 24 17:29:01.732599 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 17:29:01.732621 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 17:29:01.733657 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 17:29:01.733717 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/225
+[Wed Aug 24 17:29:01.733733 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 17:29:01.734124 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x6f -> subcache 15)
+[Wed Aug 24 17:29:01.735196 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 17:29:01.735278 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 17:29:01.735309 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 17:29:01.735323 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/225
+[Wed Aug 24 17:29:01.735334 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 17:29:01.756238 2022] [ssl:debug] [pid 26159] ssl_engine_kernel.c(415): [client ::1:56034] AH02034: Initial (No.1) HTTPS request received for child 0 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Wed Aug 24 17:29:01.816872 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56034] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 17:29:01.816939 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56034] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 17:29:01.833343 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56034] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 17:29:01.833420 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56034] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 17:29:01.844713 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56034] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 17:29:01.844755 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56034] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 17:29:02.599088 2022] [ssl:debug] [pid 26159] ssl_engine_kernel.c(415): [client ::1:56034] AH02034: Subsequent (No.2) HTTPS request received for child 0 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 17:29:02.629715 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56034] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 17:29:02.629759 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56034] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 17:29:02.642380 2022] [ssl:info] [pid 26159] (32)Broken pipe: [client ::1:56034] AH01993: SSL output filter write failed.
+[Wed Aug 24 17:29:02.642665 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(570): AH00837: socache_shmcb_remove (0x6f -> subcache 15)
+[Wed Aug 24 17:29:02.642690 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(954): AH00852: possible match at idx=0, data=0
+[Wed Aug 24 17:29:02.642703 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(959): AH00853: shmcb_subcache_remove removing matching entry
+[Wed Aug 24 17:29:02.642715 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(585): AH00839: leaving socache_shmcb_remove successfully
+[Wed Aug 24 17:31:23.929799 2022] [ssl:info] [pid 26160] [client ::1:56047] AH01964: Connection to child 1 established (server local.shape-share.com:443)
+[Wed Aug 24 17:31:23.955307 2022] [ssl:debug] [pid 26160] ssl_engine_kernel.c(2395): [client ::1:56047] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 17:31:23.956027 2022] [core:debug] [pid 26160] protocol.c(2458): [client ::1:56047] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 17:31:23.960768 2022] [ssl:debug] [pid 26160] ssl_engine_kernel.c(2254): [client ::1:56047] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 17:31:23.960966 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x05 -> subcache 5)
+[Wed Aug 24 17:31:23.961731 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 17:31:23.961763 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 17:31:23.961777 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 17:31:23.961799 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Wed Aug 24 17:31:23.961824 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 17:31:23.962712 2022] [ssl:debug] [pid 26160] ssl_engine_kernel.c(415): [client ::1:56047] AH02034: Initial (No.1) HTTPS request received for child 1 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Wed Aug 24 17:31:23.964128 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56047] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 17:31:23.964157 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56047] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 17:31:23.964320 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56047] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 17:31:23.964333 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56047] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 17:31:23.965004 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56047] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 17:31:23.965034 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56047] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 17:31:24.222053 2022] [ssl:debug] [pid 26160] ssl_engine_kernel.c(415): [client ::1:56047] AH02034: Subsequent (No.2) HTTPS request received for child 1 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 17:31:24.224725 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56047] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 17:31:24.224757 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56047] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 17:31:24.400283 2022] [ssl:debug] [pid 26160] ssl_engine_kernel.c(415): [client ::1:56047] AH02034: Subsequent (No.3) HTTPS request received for child 1 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 17:31:24.400537 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56047] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 17:31:24.400555 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56047] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 17:31:24.590486 2022] [ssl:debug] [pid 26160] ssl_engine_kernel.c(415): [client ::1:56047] AH02034: Subsequent (No.4) HTTPS request received for child 1 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 17:31:24.590827 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56047] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 17:31:24.590854 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56047] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 17:31:24.826985 2022] [ssl:debug] [pid 26160] ssl_engine_kernel.c(415): [client ::1:56047] AH02034: Subsequent (No.5) HTTPS request received for child 1 (server local.shape-share.com:443), referer: https://local.shape-share.com/assets/css/dark_theme.css?v24
+[Wed Aug 24 17:31:24.836859 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56047] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/assets/css/dark_theme.css?v24
+[Wed Aug 24 17:31:24.836940 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56047] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/assets/css/dark_theme.css?v24
+[Wed Aug 24 17:31:29.847604 2022] [ssl:debug] [pid 26160] ssl_engine_io.c(1147): [client ::1:56047] AH02001: Connection closed to child 1 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 18:14:34.279995 2022] [ssl:info] [pid 35877] [client ::1:56245] AH01964: Connection to child 6 established (server local.shape-share.com:443)
+[Wed Aug 24 18:14:34.301579 2022] [ssl:debug] [pid 35877] ssl_engine_kernel.c(2395): [client ::1:56245] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 18:14:34.301706 2022] [core:debug] [pid 35877] protocol.c(2458): [client ::1:56245] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 18:14:34.309586 2022] [ssl:debug] [pid 35877] ssl_engine_kernel.c(2254): [client ::1:56245] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 18:14:34.309811 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x34 -> subcache 20)
+[Wed Aug 24 18:14:34.310479 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 18:14:34.310502 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:14:34.310512 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:14:34.310519 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/225
+[Wed Aug 24 18:14:34.310527 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:14:34.310757 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0xd2 -> subcache 18)
+[Wed Aug 24 18:14:34.311377 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 18:14:34.311401 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:14:34.311410 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:14:34.311418 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/225
+[Wed Aug 24 18:14:34.311426 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:14:34.311695 2022] [ssl:debug] [pid 35877] ssl_engine_kernel.c(415): [client ::1:56245] AH02034: Initial (No.1) HTTPS request received for child 6 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:14:34.319799 2022] [authz_core:debug] [pid 35877] mod_authz_core.c(815): [client ::1:56245] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:14:34.319852 2022] [authz_core:debug] [pid 35877] mod_authz_core.c(815): [client ::1:56245] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:14:34.321407 2022] [authz_core:debug] [pid 35877] mod_authz_core.c(815): [client ::1:56245] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:14:34.321438 2022] [authz_core:debug] [pid 35877] mod_authz_core.c(815): [client ::1:56245] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:14:39.350780 2022] [ssl:debug] [pid 35877] ssl_engine_io.c(1147): [client ::1:56245] AH02001: Connection closed to child 6 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 18:14:45.242213 2022] [ssl:info] [pid 35878] [client ::1:56247] AH01964: Connection to child 7 established (server local.shape-share.com:443)
+[Wed Aug 24 18:14:45.266336 2022] [ssl:debug] [pid 35878] ssl_engine_kernel.c(2395): [client ::1:56247] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 18:14:45.268326 2022] [core:debug] [pid 35878] protocol.c(2458): [client ::1:56247] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 18:14:45.270464 2022] [ssl:debug] [pid 35878] ssl_engine_kernel.c(2254): [client ::1:56247] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 18:14:45.270650 2022] [socache_shmcb:debug] [pid 35878] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x31 -> subcache 17)
+[Wed Aug 24 18:14:45.271482 2022] [socache_shmcb:debug] [pid 35878] mod_socache_shmcb.c(745): AH00842: expiring 0 and reclaiming 1 removed socache entries
+[Wed Aug 24 18:14:45.271533 2022] [socache_shmcb:debug] [pid 35878] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:14:45.271545 2022] [socache_shmcb:debug] [pid 35878] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:14:45.271553 2022] [socache_shmcb:debug] [pid 35878] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/225
+[Wed Aug 24 18:14:45.271561 2022] [socache_shmcb:debug] [pid 35878] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:14:45.271895 2022] [ssl:debug] [pid 35878] ssl_engine_kernel.c(415): [client ::1:56247] AH02034: Initial (No.1) HTTPS request received for child 7 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Wed Aug 24 18:14:45.280135 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56247] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:14:45.280207 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56247] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:14:45.280611 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56247] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:14:45.280653 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56247] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:14:45.287116 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56247] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:14:45.287185 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56247] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:14:50.316198 2022] [ssl:debug] [pid 35878] ssl_engine_io.c(1147): [client ::1:56247] AH02001: Connection closed to child 7 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 18:22:26.192146 2022] [ssl:info] [pid 26171] [client ::1:56318] AH01964: Connection to child 5 established (server local.shape-share.com:443)
+[Wed Aug 24 18:22:26.205593 2022] [ssl:debug] [pid 26171] ssl_engine_kernel.c(2395): [client ::1:56318] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 18:22:26.206573 2022] [core:debug] [pid 26171] protocol.c(2458): [client ::1:56318] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 18:22:26.213527 2022] [ssl:debug] [pid 26171] ssl_engine_kernel.c(2254): [client ::1:56318] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 18:22:26.213751 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x71 -> subcache 17)
+[Wed Aug 24 18:22:26.213784 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 18:22:26.213796 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:22:26.213804 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:22:26.213812 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/225
+[Wed Aug 24 18:22:26.213822 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:22:26.217967 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0xc9 -> subcache 9)
+[Wed Aug 24 18:22:26.218773 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 18:22:26.218826 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:22:26.218841 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:22:26.218852 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Wed Aug 24 18:22:26.218864 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:22:26.219389 2022] [ssl:debug] [pid 26171] ssl_engine_kernel.c(415): [client ::1:56318] AH02034: Initial (No.1) HTTPS request received for child 5 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Wed Aug 24 18:22:26.228876 2022] [authz_core:debug] [pid 26171] mod_authz_core.c(815): [client ::1:56318] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:22:26.228925 2022] [authz_core:debug] [pid 26171] mod_authz_core.c(815): [client ::1:56318] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:22:26.229245 2022] [authz_core:debug] [pid 26171] mod_authz_core.c(815): [client ::1:56318] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:22:26.229275 2022] [authz_core:debug] [pid 26171] mod_authz_core.c(815): [client ::1:56318] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:22:26.230431 2022] [authz_core:debug] [pid 26171] mod_authz_core.c(815): [client ::1:56318] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:22:26.230473 2022] [authz_core:debug] [pid 26171] mod_authz_core.c(815): [client ::1:56318] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:22:31.318171 2022] [ssl:debug] [pid 26171] ssl_engine_io.c(1147): [client ::1:56318] AH02001: Connection closed to child 5 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 18:22:36.757685 2022] [ssl:info] [pid 46591] [client ::1:56326] AH01964: Connection to child 9 established (server local.shape-share.com:443)
+[Wed Aug 24 18:22:36.779493 2022] [ssl:debug] [pid 46591] ssl_engine_kernel.c(2395): [client ::1:56326] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 18:22:36.780579 2022] [core:debug] [pid 46591] protocol.c(2458): [client ::1:56326] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 18:22:36.784085 2022] [ssl:debug] [pid 46591] ssl_engine_kernel.c(2254): [client ::1:56326] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 18:22:36.784292 2022] [socache_shmcb:debug] [pid 46591] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x88 -> subcache 8)
+[Wed Aug 24 18:22:36.784325 2022] [socache_shmcb:debug] [pid 46591] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 18:22:36.784337 2022] [socache_shmcb:debug] [pid 46591] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:22:36.784345 2022] [socache_shmcb:debug] [pid 46591] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:22:36.784353 2022] [socache_shmcb:debug] [pid 46591] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/225
+[Wed Aug 24 18:22:36.784361 2022] [socache_shmcb:debug] [pid 46591] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:22:36.784633 2022] [ssl:debug] [pid 46591] ssl_engine_kernel.c(415): [client ::1:56326] AH02034: Initial (No.1) HTTPS request received for child 9 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:22:36.785977 2022] [authz_core:debug] [pid 46591] mod_authz_core.c(815): [client ::1:56326] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:22:36.786008 2022] [authz_core:debug] [pid 46591] mod_authz_core.c(815): [client ::1:56326] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:22:36.786748 2022] [authz_core:debug] [pid 46591] mod_authz_core.c(815): [client ::1:56326] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:22:36.786772 2022] [authz_core:debug] [pid 46591] mod_authz_core.c(815): [client ::1:56326] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:22:41.833609 2022] [ssl:debug] [pid 46591] ssl_engine_io.c(1147): [client ::1:56326] AH02001: Connection closed to child 9 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 18:23:13.336204 2022] [ssl:info] [pid 26162] [client ::1:56329] AH01964: Connection to child 3 established (server local.shape-share.com:443)
+[Wed Aug 24 18:23:13.372222 2022] [ssl:debug] [pid 26162] ssl_engine_kernel.c(2395): [client ::1:56329] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 18:23:13.373120 2022] [core:debug] [pid 26162] protocol.c(2458): [client ::1:56329] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 18:23:13.374928 2022] [ssl:debug] [pid 26162] ssl_engine_kernel.c(2254): [client ::1:56329] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 18:23:13.375696 2022] [socache_shmcb:debug] [pid 26162] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0xbd -> subcache 29)
+[Wed Aug 24 18:23:13.376459 2022] [socache_shmcb:debug] [pid 26162] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 18:23:13.376507 2022] [socache_shmcb:debug] [pid 26162] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:23:13.376518 2022] [socache_shmcb:debug] [pid 26162] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:23:13.376526 2022] [socache_shmcb:debug] [pid 26162] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Wed Aug 24 18:23:13.376534 2022] [socache_shmcb:debug] [pid 26162] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:23:13.376894 2022] [ssl:debug] [pid 26162] ssl_engine_kernel.c(415): [client ::1:56329] AH02034: Initial (No.1) HTTPS request received for child 3 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:23:13.378787 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:56329] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:23:13.378825 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:56329] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:23:13.379978 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:56329] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:23:13.380019 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:56329] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:23:16.075274 2022] [ssl:debug] [pid 26162] ssl_engine_kernel.c(415): [client ::1:56329] AH02034: Subsequent (No.2) HTTPS request received for child 3 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Wed Aug 24 18:23:16.075820 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:56329] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:23:16.075841 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:56329] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:23:16.075918 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:56329] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:23:16.075933 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:56329] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:23:16.076206 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:56329] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:23:16.076227 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:56329] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:23:21.103648 2022] [ssl:debug] [pid 26162] ssl_engine_io.c(1147): [client ::1:56329] AH02001: Connection closed to child 3 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 18:25:53.387629 2022] [ssl:info] [pid 46592] [client ::1:56336] AH01964: Connection to child 10 established (server local.shape-share.com:443)
+[Wed Aug 24 18:25:53.414850 2022] [ssl:debug] [pid 46592] ssl_engine_kernel.c(2395): [client ::1:56336] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 18:25:53.416004 2022] [core:debug] [pid 46592] protocol.c(2458): [client ::1:56336] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 18:25:53.418035 2022] [ssl:debug] [pid 46592] ssl_engine_kernel.c(2254): [client ::1:56336] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 18:25:53.418214 2022] [socache_shmcb:debug] [pid 46592] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0xb5 -> subcache 21)
+[Wed Aug 24 18:25:53.418238 2022] [socache_shmcb:debug] [pid 46592] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 18:25:53.418249 2022] [socache_shmcb:debug] [pid 46592] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:25:53.418257 2022] [socache_shmcb:debug] [pid 46592] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:25:53.418264 2022] [socache_shmcb:debug] [pid 46592] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Wed Aug 24 18:25:53.418271 2022] [socache_shmcb:debug] [pid 46592] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:25:53.419212 2022] [ssl:debug] [pid 46592] ssl_engine_kernel.c(415): [client ::1:56336] AH02034: Initial (No.1) HTTPS request received for child 10 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Wed Aug 24 18:25:53.425561 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:56336] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:25:53.425602 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:56336] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:25:53.425784 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:56336] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:25:53.425799 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:56336] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:25:53.426684 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:56336] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:25:53.426727 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:56336] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:25:58.457557 2022] [ssl:debug] [pid 46592] ssl_engine_io.c(1147): [client ::1:56336] AH02001: Connection closed to child 10 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 18:26:04.076221 2022] [ssl:info] [pid 26161] [client ::1:56340] AH01964: Connection to child 2 established (server local.shape-share.com:443)
+[Wed Aug 24 18:26:04.091144 2022] [ssl:debug] [pid 26161] ssl_engine_kernel.c(2395): [client ::1:56340] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 18:26:04.092159 2022] [core:debug] [pid 26161] protocol.c(2458): [client ::1:56340] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 18:26:04.093325 2022] [ssl:debug] [pid 26161] ssl_engine_kernel.c(2254): [client ::1:56340] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 18:26:04.093481 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0xaf -> subcache 15)
+[Wed Aug 24 18:26:04.094297 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(745): AH00842: expiring 0 and reclaiming 1 removed socache entries
+[Wed Aug 24 18:26:04.094345 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:26:04.094362 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:26:04.094371 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Wed Aug 24 18:26:04.094382 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:26:04.094699 2022] [ssl:debug] [pid 26161] ssl_engine_kernel.c(415): [client ::1:56340] AH02034: Initial (No.1) HTTPS request received for child 2 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:26:04.097422 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:56340] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:26:04.097502 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:56340] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:26:04.097802 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:56340] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:26:04.097824 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:56340] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:26:04.098222 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:56340] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:26:04.098243 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:56340] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:26:09.116482 2022] [ssl:debug] [pid 26161] ssl_engine_io.c(1147): [client ::1:56340] AH02001: Connection closed to child 2 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 18:26:13.265469 2022] [ssl:info] [pid 46593] [client ::1:56341] AH01964: Connection to child 11 established (server local.shape-share.com:443)
+[Wed Aug 24 18:26:13.273053 2022] [ssl:debug] [pid 46593] ssl_engine_kernel.c(2395): [client ::1:56341] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 18:26:13.274317 2022] [core:debug] [pid 46593] protocol.c(2458): [client ::1:56341] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 18:26:13.276651 2022] [ssl:debug] [pid 46593] ssl_engine_kernel.c(2254): [client ::1:56341] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 18:26:13.278590 2022] [socache_shmcb:debug] [pid 46593] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x19 -> subcache 25)
+[Wed Aug 24 18:26:13.278667 2022] [socache_shmcb:debug] [pid 46593] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 18:26:13.278682 2022] [socache_shmcb:debug] [pid 46593] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:26:13.278694 2022] [socache_shmcb:debug] [pid 46593] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:26:13.278703 2022] [socache_shmcb:debug] [pid 46593] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Wed Aug 24 18:26:13.278712 2022] [socache_shmcb:debug] [pid 46593] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:26:13.279245 2022] [ssl:debug] [pid 46593] ssl_engine_kernel.c(415): [client ::1:56341] AH02034: Initial (No.1) HTTPS request received for child 11 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Wed Aug 24 18:26:13.280173 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:56341] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:26:13.280259 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:56341] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:26:13.280477 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:56341] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:26:13.280586 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:56341] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:26:13.281054 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:56341] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:26:13.281074 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:56341] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:26:18.290769 2022] [ssl:debug] [pid 46593] ssl_engine_io.c(1147): [client ::1:56341] AH02001: Connection closed to child 11 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 18:27:49.424394 2022] [ssl:info] [pid 26159] [client ::1:56355] AH01964: Connection to child 0 established (server local.shape-share.com:443)
+[Wed Aug 24 18:27:49.430689 2022] [ssl:debug] [pid 26159] ssl_engine_kernel.c(2395): [client ::1:56355] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 18:27:49.430910 2022] [core:debug] [pid 26159] protocol.c(2458): [client ::1:56355] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 18:27:49.432309 2022] [ssl:debug] [pid 26159] ssl_engine_kernel.c(2254): [client ::1:56355] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 18:27:49.432526 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0xa5 -> subcache 5)
+[Wed Aug 24 18:27:49.432559 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 18:27:49.432572 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:27:49.432584 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:27:49.432593 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Wed Aug 24 18:27:49.432602 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:27:49.432923 2022] [ssl:debug] [pid 26159] ssl_engine_kernel.c(415): [client ::1:56355] AH02034: Initial (No.1) HTTPS request received for child 0 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Wed Aug 24 18:27:49.440975 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56355] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:27:49.441023 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56355] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:27:49.441244 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56355] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:27:49.441275 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56355] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:27:49.442979 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56355] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:27:49.443017 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56355] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:27:54.488252 2022] [ssl:debug] [pid 26159] ssl_engine_io.c(1147): [client ::1:56355] AH02001: Connection closed to child 0 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 18:28:02.805463 2022] [ssl:info] [pid 26160] [client ::1:56356] AH01964: Connection to child 1 established (server local.shape-share.com:443)
+[Wed Aug 24 18:28:02.815083 2022] [ssl:debug] [pid 26160] ssl_engine_kernel.c(2395): [client ::1:56356] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 18:28:02.816039 2022] [core:debug] [pid 26160] protocol.c(2458): [client ::1:56356] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 18:28:02.818296 2022] [ssl:debug] [pid 26160] ssl_engine_kernel.c(2254): [client ::1:56356] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 18:28:02.818549 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x62 -> subcache 2)
+[Wed Aug 24 18:28:02.818593 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(745): AH00842: expiring 2 and reclaiming 0 removed socache entries
+[Wed Aug 24 18:28:02.818615 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:28:02.818841 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:28:02.818875 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/225
+[Wed Aug 24 18:28:02.818892 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:28:02.819517 2022] [ssl:debug] [pid 26160] ssl_engine_kernel.c(415): [client ::1:56356] AH02034: Initial (No.1) HTTPS request received for child 1 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:28:02.820101 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56356] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:28:02.820127 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56356] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:28:02.820253 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56356] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:28:02.820269 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56356] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:28:02.820596 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56356] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:28:02.820613 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56356] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:28:07.827476 2022] [ssl:debug] [pid 26160] ssl_engine_io.c(1147): [client ::1:56356] AH02001: Connection closed to child 1 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 18:28:44.055554 2022] [ssl:info] [pid 35877] [client ::1:56357] AH01964: Connection to child 6 established (server local.shape-share.com:443)
+[Wed Aug 24 18:28:44.066943 2022] [ssl:debug] [pid 35877] ssl_engine_kernel.c(2395): [client ::1:56357] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 18:28:44.067964 2022] [core:debug] [pid 35877] protocol.c(2458): [client ::1:56357] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 18:28:44.069153 2022] [ssl:debug] [pid 35877] ssl_engine_kernel.c(2254): [client ::1:56357] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 18:28:44.069307 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x24 -> subcache 4)
+[Wed Aug 24 18:28:44.069334 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 18:28:44.069347 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:28:44.069358 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:28:44.069367 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Wed Aug 24 18:28:44.069376 2022] [socache_shmcb:debug] [pid 35877] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:28:44.069577 2022] [ssl:debug] [pid 35877] ssl_engine_kernel.c(415): [client ::1:56357] AH02034: Initial (No.1) HTTPS request received for child 6 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:28:44.076370 2022] [authz_core:debug] [pid 35877] mod_authz_core.c(815): [client ::1:56357] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:28:44.076483 2022] [authz_core:debug] [pid 35877] mod_authz_core.c(815): [client ::1:56357] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:28:44.077347 2022] [authz_core:debug] [pid 35877] mod_authz_core.c(815): [client ::1:56357] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:28:44.077388 2022] [authz_core:debug] [pid 35877] mod_authz_core.c(815): [client ::1:56357] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:28:44.078161 2022] [authz_core:debug] [pid 35877] mod_authz_core.c(815): [client ::1:56357] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:28:44.078190 2022] [authz_core:debug] [pid 35877] mod_authz_core.c(815): [client ::1:56357] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:28:44.243157 2022] [ssl:debug] [pid 35877] ssl_engine_kernel.c(415): [client ::1:56357] AH02034: Subsequent (No.2) HTTPS request received for child 6 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:28:44.243388 2022] [authz_core:debug] [pid 35877] mod_authz_core.c(815): [client ::1:56357] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:28:44.243407 2022] [authz_core:debug] [pid 35877] mod_authz_core.c(815): [client ::1:56357] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:28:49.252883 2022] [ssl:debug] [pid 35877] ssl_engine_io.c(1147): [client ::1:56357] AH02001: Connection closed to child 6 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 18:31:48.296093 2022] [ssl:info] [pid 35878] [client ::1:56363] AH01964: Connection to child 7 established (server local.shape-share.com:443)
+[Wed Aug 24 18:31:48.306808 2022] [ssl:debug] [pid 35878] ssl_engine_kernel.c(2395): [client ::1:56363] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 18:31:48.307159 2022] [core:debug] [pid 35878] protocol.c(2458): [client ::1:56363] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 18:31:48.308817 2022] [ssl:debug] [pid 35878] ssl_engine_kernel.c(2254): [client ::1:56363] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 18:31:48.309778 2022] [socache_shmcb:debug] [pid 35878] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x67 -> subcache 7)
+[Wed Aug 24 18:31:48.309832 2022] [socache_shmcb:debug] [pid 35878] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 18:31:48.309848 2022] [socache_shmcb:debug] [pid 35878] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:31:48.309861 2022] [socache_shmcb:debug] [pid 35878] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:31:48.309872 2022] [socache_shmcb:debug] [pid 35878] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Wed Aug 24 18:31:48.309884 2022] [socache_shmcb:debug] [pid 35878] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:31:48.310139 2022] [ssl:debug] [pid 35878] ssl_engine_kernel.c(415): [client ::1:56363] AH02034: Initial (No.1) HTTPS request received for child 7 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Wed Aug 24 18:31:48.311232 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:31:48.311262 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:31:48.311373 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:31:48.311386 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:31:48.311680 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:31:48.311695 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:31:48.386250 2022] [ssl:debug] [pid 35878] ssl_engine_kernel.c(415): [client ::1:56363] AH02034: Subsequent (No.2) HTTPS request received for child 7 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:48.387229 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:48.387370 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:48.393962 2022] [ssl:debug] [pid 35878] ssl_engine_kernel.c(415): [client ::1:56363] AH02034: Subsequent (No.3) HTTPS request received for child 7 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:48.394517 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:48.394685 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:48.394440 2022] [ssl:info] [pid 26171] [client ::1:56364] AH01964: Connection to child 5 established (server local.shape-share.com:443)
+[Wed Aug 24 18:31:48.395943 2022] [ssl:debug] [pid 26171] ssl_engine_kernel.c(2395): [client ::1:56364] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 18:31:48.396119 2022] [core:debug] [pid 26171] protocol.c(2458): [client ::1:56364] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 18:31:48.397800 2022] [ssl:debug] [pid 26171] ssl_engine_kernel.c(2254): [client ::1:56364] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 18:31:48.397933 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x06 -> subcache 6)
+[Wed Aug 24 18:31:48.397967 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 18:31:48.397985 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:31:48.398007 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:31:48.398020 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Wed Aug 24 18:31:48.398032 2022] [socache_shmcb:debug] [pid 26171] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:31:48.781027 2022] [ssl:debug] [pid 35878] ssl_engine_kernel.c(415): [client ::1:56363] AH02034: Subsequent (No.4) HTTPS request received for child 7 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:48.784319 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:48.784372 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:48.935338 2022] [ssl:debug] [pid 35878] ssl_engine_kernel.c(415): [client ::1:56363] AH02034: Subsequent (No.5) HTTPS request received for child 7 (server local.shape-share.com:443), referer: https://local.shape-share.com/assets/css/dark_theme.css?v24
+[Wed Aug 24 18:31:48.935873 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/assets/css/dark_theme.css?v24
+[Wed Aug 24 18:31:48.935910 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/assets/css/dark_theme.css?v24
+[Wed Aug 24 18:31:49.236666 2022] [ssl:debug] [pid 35878] ssl_engine_kernel.c(415): [client ::1:56363] AH02034: Subsequent (No.6) HTTPS request received for child 7 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:49.237389 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:49.237421 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:50.408291 2022] [ssl:debug] [pid 35878] ssl_engine_kernel.c(415): [client ::1:56363] AH02034: Subsequent (No.7) HTTPS request received for child 7 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Wed Aug 24 18:31:50.410229 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:31:50.410264 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:31:50.410365 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:31:50.410389 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:31:50.410745 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:31:50.410773 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Wed Aug 24 18:31:50.460811 2022] [ssl:debug] [pid 35878] ssl_engine_kernel.c(415): [client ::1:56363] AH02034: Subsequent (No.8) HTTPS request received for child 7 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:50.461144 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:50.461173 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:50.460987 2022] [ssl:debug] [pid 26171] ssl_engine_kernel.c(415): [client ::1:56364] AH02034: Initial (No.1) HTTPS request received for child 5 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:50.461897 2022] [authz_core:debug] [pid 26171] mod_authz_core.c(815): [client ::1:56364] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:50.461918 2022] [authz_core:debug] [pid 26171] mod_authz_core.c(815): [client ::1:56364] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:50.476044 2022] [ssl:debug] [pid 35878] ssl_engine_kernel.c(415): [client ::1:56363] AH02034: Subsequent (No.9) HTTPS request received for child 7 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:50.476367 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:50.476393 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:50.652619 2022] [ssl:debug] [pid 35878] ssl_engine_kernel.c(415): [client ::1:56363] AH02034: Subsequent (No.10) HTTPS request received for child 7 (server local.shape-share.com:443), referer: https://local.shape-share.com/assets/css/dark_theme.css?v24
+[Wed Aug 24 18:31:50.653134 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/assets/css/dark_theme.css?v24
+[Wed Aug 24 18:31:50.653163 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/assets/css/dark_theme.css?v24
+[Wed Aug 24 18:31:50.670339 2022] [ssl:debug] [pid 35878] ssl_engine_kernel.c(415): [client ::1:56363] AH02034: Subsequent (No.11) HTTPS request received for child 7 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:50.671232 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:50.671266 2022] [authz_core:debug] [pid 35878] mod_authz_core.c(815): [client ::1:56363] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:31:55.463844 2022] [ssl:debug] [pid 26171] ssl_engine_io.c(1147): [client ::1:56364] AH02001: Connection closed to child 5 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 18:31:55.674076 2022] [ssl:debug] [pid 35878] ssl_engine_io.c(1147): [client ::1:56363] AH02001: Connection closed to child 7 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 18:32:02.848745 2022] [ssl:info] [pid 46591] [client ::1:56371] AH01964: Connection to child 9 established (server local.shape-share.com:443)
+[Wed Aug 24 18:32:02.850933 2022] [ssl:debug] [pid 46591] ssl_engine_kernel.c(2395): [client ::1:56371] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 18:32:02.851124 2022] [core:debug] [pid 46591] protocol.c(2458): [client ::1:56371] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 18:32:02.853194 2022] [ssl:debug] [pid 46591] ssl_engine_kernel.c(2254): [client ::1:56371] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 18:32:02.853328 2022] [socache_shmcb:debug] [pid 46591] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x49 -> subcache 9)
+[Wed Aug 24 18:32:02.853354 2022] [socache_shmcb:debug] [pid 46591] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 18:32:02.853365 2022] [socache_shmcb:debug] [pid 46591] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:32:02.853374 2022] [socache_shmcb:debug] [pid 46591] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:32:02.853384 2022] [socache_shmcb:debug] [pid 46591] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/225
+[Wed Aug 24 18:32:02.853394 2022] [socache_shmcb:debug] [pid 46591] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:32:02.854006 2022] [ssl:debug] [pid 46591] ssl_engine_kernel.c(415): [client ::1:56371] AH02034: Initial (No.1) HTTPS request received for child 9 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:32:02.854965 2022] [authz_core:debug] [pid 46591] mod_authz_core.c(815): [client ::1:56371] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:32:02.855018 2022] [authz_core:debug] [pid 46591] mod_authz_core.c(815): [client ::1:56371] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:32:02.855121 2022] [authz_core:debug] [pid 46591] mod_authz_core.c(815): [client ::1:56371] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:32:02.855139 2022] [authz_core:debug] [pid 46591] mod_authz_core.c(815): [client ::1:56371] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:32:02.855451 2022] [authz_core:debug] [pid 46591] mod_authz_core.c(815): [client ::1:56371] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:32:02.855476 2022] [authz_core:debug] [pid 46591] mod_authz_core.c(815): [client ::1:56371] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:32:02.971627 2022] [ssl:debug] [pid 46591] ssl_engine_kernel.c(415): [client ::1:56371] AH02034: Subsequent (No.2) HTTPS request received for child 9 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:32:02.971974 2022] [authz_core:debug] [pid 46591] mod_authz_core.c(815): [client ::1:56371] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:32:02.972001 2022] [authz_core:debug] [pid 46591] mod_authz_core.c(815): [client ::1:56371] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:32:07.974007 2022] [ssl:debug] [pid 46591] ssl_engine_io.c(1147): [client ::1:56371] AH02001: Connection closed to child 9 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 18:33:14.546972 2022] [ssl:info] [pid 26162] [client ::1:56377] AH01964: Connection to child 3 established (server local.shape-share.com:443)
+[Wed Aug 24 18:33:14.554076 2022] [ssl:debug] [pid 26162] ssl_engine_kernel.c(2395): [client ::1:56377] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 18:33:14.554192 2022] [core:debug] [pid 26162] protocol.c(2458): [client ::1:56377] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 18:33:14.555274 2022] [ssl:debug] [pid 26162] ssl_engine_kernel.c(2254): [client ::1:56377] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 18:33:14.556157 2022] [socache_shmcb:debug] [pid 26162] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x06 -> subcache 6)
+[Wed Aug 24 18:33:14.556200 2022] [socache_shmcb:debug] [pid 26162] mod_socache_shmcb.c(862): AH00847: insert happened at idx=1, data=(226:258)
+[Wed Aug 24 18:33:14.556210 2022] [socache_shmcb:debug] [pid 26162] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/2, data_pos/data_used=0/451
+[Wed Aug 24 18:33:14.556219 2022] [socache_shmcb:debug] [pid 26162] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:33:14.556380 2022] [ssl:debug] [pid 26162] ssl_engine_kernel.c(415): [client ::1:56377] AH02034: Initial (No.1) HTTPS request received for child 3 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:33:14.557536 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:56377] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:33:14.557566 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:56377] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:33:14.557661 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:56377] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:33:14.557673 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:56377] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:33:14.558237 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:56377] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:33:14.558273 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:56377] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:33:14.610909 2022] [ssl:debug] [pid 26162] ssl_engine_kernel.c(415): [client ::1:56377] AH02034: Subsequent (No.2) HTTPS request received for child 3 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:33:14.611221 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:56377] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:33:14.611250 2022] [authz_core:debug] [pid 26162] mod_authz_core.c(815): [client ::1:56377] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:33:19.612844 2022] [ssl:debug] [pid 26162] ssl_engine_io.c(1147): [client ::1:56377] AH02001: Connection closed to child 3 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 18:35:17.555390 2022] [ssl:info] [pid 46592] [client ::1:56380] AH01964: Connection to child 10 established (server local.shape-share.com:443)
+[Wed Aug 24 18:35:17.556591 2022] [ssl:debug] [pid 46592] ssl_engine_kernel.c(2395): [client ::1:56380] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 18:35:17.556696 2022] [core:debug] [pid 46592] protocol.c(2458): [client ::1:56380] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 18:35:17.557648 2022] [ssl:debug] [pid 46592] ssl_engine_kernel.c(2254): [client ::1:56380] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 18:35:17.557790 2022] [socache_shmcb:debug] [pid 46592] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x15 -> subcache 21)
+[Wed Aug 24 18:35:17.557818 2022] [socache_shmcb:debug] [pid 46592] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 18:35:17.557830 2022] [socache_shmcb:debug] [pid 46592] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:35:17.557840 2022] [socache_shmcb:debug] [pid 46592] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:35:17.557850 2022] [socache_shmcb:debug] [pid 46592] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/225
+[Wed Aug 24 18:35:17.557859 2022] [socache_shmcb:debug] [pid 46592] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:35:17.557995 2022] [ssl:debug] [pid 46592] ssl_engine_kernel.c(415): [client ::1:56380] AH02034: Initial (No.1) HTTPS request received for child 10 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:35:17.559708 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:56380] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:35:17.559751 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:56380] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:35:17.559857 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:56380] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:35:17.559878 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:56380] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:35:17.560708 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:56380] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:35:17.560761 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:56380] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:35:17.635906 2022] [ssl:debug] [pid 46592] ssl_engine_kernel.c(415): [client ::1:56380] AH02034: Subsequent (No.2) HTTPS request received for child 10 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:35:17.636214 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:56380] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:35:17.636243 2022] [authz_core:debug] [pid 46592] mod_authz_core.c(815): [client ::1:56380] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:35:22.639634 2022] [ssl:debug] [pid 46592] ssl_engine_io.c(1147): [client ::1:56380] AH02001: Connection closed to child 10 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 18:35:36.167078 2022] [ssl:info] [pid 26161] [client ::1:56382] AH01964: Connection to child 2 established (server local.shape-share.com:443)
+[Wed Aug 24 18:35:36.172757 2022] [ssl:debug] [pid 26161] ssl_engine_kernel.c(2395): [client ::1:56382] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 18:35:36.172899 2022] [core:debug] [pid 26161] protocol.c(2458): [client ::1:56382] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 18:35:36.173930 2022] [ssl:debug] [pid 26161] ssl_engine_kernel.c(2254): [client ::1:56382] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 18:35:36.174116 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x9b -> subcache 27)
+[Wed Aug 24 18:35:36.174145 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(745): AH00842: expiring 0 and reclaiming 1 removed socache entries
+[Wed Aug 24 18:35:36.174159 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:35:36.174173 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:35:36.174183 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/225
+[Wed Aug 24 18:35:36.174192 2022] [socache_shmcb:debug] [pid 26161] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:35:36.174309 2022] [ssl:debug] [pid 26161] ssl_engine_kernel.c(415): [client ::1:56382] AH02034: Initial (No.1) HTTPS request received for child 2 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:35:36.174770 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:56382] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:35:36.174799 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:56382] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:35:36.174900 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:56382] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:35:36.174915 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:56382] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:35:36.175179 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:56382] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:35:36.175197 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:56382] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:35:36.230055 2022] [ssl:debug] [pid 26161] ssl_engine_kernel.c(415): [client ::1:56382] AH02034: Subsequent (No.2) HTTPS request received for child 2 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:35:36.230477 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:56382] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:35:36.230517 2022] [authz_core:debug] [pid 26161] mod_authz_core.c(815): [client ::1:56382] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:35:41.233604 2022] [ssl:debug] [pid 26161] ssl_engine_io.c(1147): [client ::1:56382] AH02001: Connection closed to child 2 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 18:36:43.025948 2022] [ssl:info] [pid 46593] [client ::1:56385] AH01964: Connection to child 11 established (server local.shape-share.com:443)
+[Wed Aug 24 18:36:43.028918 2022] [ssl:debug] [pid 46593] ssl_engine_kernel.c(2395): [client ::1:56385] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 18:36:43.029325 2022] [core:debug] [pid 46593] protocol.c(2458): [client ::1:56385] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 18:36:43.031997 2022] [ssl:debug] [pid 46593] ssl_engine_kernel.c(2254): [client ::1:56385] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 18:36:43.032136 2022] [socache_shmcb:debug] [pid 46593] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x46 -> subcache 6)
+[Wed Aug 24 18:36:43.032161 2022] [socache_shmcb:debug] [pid 46593] mod_socache_shmcb.c(862): AH00847: insert happened at idx=2, data=(451:483)
+[Wed Aug 24 18:36:43.032172 2022] [socache_shmcb:debug] [pid 46593] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/3, data_pos/data_used=0/677
+[Wed Aug 24 18:36:43.032181 2022] [socache_shmcb:debug] [pid 46593] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:36:43.032349 2022] [ssl:debug] [pid 46593] ssl_engine_kernel.c(415): [client ::1:56385] AH02034: Initial (No.1) HTTPS request received for child 11 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:36:43.032849 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:56385] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:36:43.032899 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:56385] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:36:43.033223 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:56385] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:36:43.033274 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:56385] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:36:43.033815 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:56385] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:36:43.033847 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:56385] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:36:43.097133 2022] [ssl:debug] [pid 46593] ssl_engine_kernel.c(415): [client ::1:56385] AH02034: Subsequent (No.2) HTTPS request received for child 11 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:36:43.097692 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:56385] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:36:43.097740 2022] [authz_core:debug] [pid 46593] mod_authz_core.c(815): [client ::1:56385] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:36:48.102015 2022] [ssl:debug] [pid 46593] ssl_engine_io.c(1147): [client ::1:56385] AH02001: Connection closed to child 11 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 18:42:55.530115 2022] [ssl:info] [pid 26159] [client ::1:56433] AH01964: Connection to child 0 established (server local.shape-share.com:443)
+[Wed Aug 24 18:42:55.536025 2022] [ssl:debug] [pid 26159] ssl_engine_kernel.c(2395): [client ::1:56433] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 18:42:55.536625 2022] [core:debug] [pid 26159] protocol.c(2458): [client ::1:56433] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 18:42:55.549213 2022] [ssl:debug] [pid 26159] ssl_engine_kernel.c(2254): [client ::1:56433] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 18:42:55.549467 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x55 -> subcache 21)
+[Wed Aug 24 18:42:55.549577 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 18:42:55.549604 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:42:55.549619 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:42:55.549677 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Wed Aug 24 18:42:55.549716 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:42:55.549977 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x62 -> subcache 2)
+[Wed Aug 24 18:42:55.550017 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 18:42:55.550035 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:42:55.550052 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:42:55.550065 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Wed Aug 24 18:42:55.550079 2022] [socache_shmcb:debug] [pid 26159] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:42:55.550524 2022] [ssl:debug] [pid 26159] ssl_engine_kernel.c(415): [client ::1:56433] AH02034: Initial (No.1) HTTPS request received for child 0 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:42:55.552309 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56433] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:42:55.552356 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56433] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:42:55.552652 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56433] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:42:55.552674 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56433] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:42:55.553452 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56433] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:42:55.553477 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56433] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:42:55.632932 2022] [ssl:debug] [pid 26159] ssl_engine_kernel.c(415): [client ::1:56433] AH02034: Subsequent (No.2) HTTPS request received for child 0 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:42:55.633272 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56433] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:42:55.633298 2022] [authz_core:debug] [pid 26159] mod_authz_core.c(815): [client ::1:56433] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:43:00.639603 2022] [ssl:debug] [pid 26159] ssl_engine_io.c(1147): [client ::1:56433] AH02001: Connection closed to child 0 with standard shutdown (server local.shape-share.com:443)
+[Wed Aug 24 18:51:08.343885 2022] [ssl:info] [pid 26160] [client ::1:56469] AH01964: Connection to child 1 established (server local.shape-share.com:443)
+[Wed Aug 24 18:51:08.354299 2022] [ssl:debug] [pid 26160] ssl_engine_kernel.c(2395): [client ::1:56469] AH02043: SSL virtual host for servername local.shape-share.com found
+[Wed Aug 24 18:51:08.354459 2022] [core:debug] [pid 26160] protocol.c(2458): [client ::1:56469] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Wed Aug 24 18:51:08.363322 2022] [ssl:debug] [pid 26160] ssl_engine_kernel.c(2254): [client ::1:56469] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Wed Aug 24 18:51:08.363627 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x19 -> subcache 25)
+[Wed Aug 24 18:51:08.363664 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 18:51:08.363676 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:51:08.363686 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Wed Aug 24 18:51:08.363693 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Wed Aug 24 18:51:08.363701 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:51:08.364664 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0xa0 -> subcache 0)
+[Wed Aug 24 18:51:08.364705 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(745): AH00842: expiring 1 and reclaiming 0 removed socache entries
+[Wed Aug 24 18:51:08.364715 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(765): AH00843: we now have 0 socache entries
+[Wed Aug 24 18:51:08.364723 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(862): AH00847: insert happened at idx=1, data=(226:258)
+[Wed Aug 24 18:51:08.364731 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=1/1, data_pos/data_used=226/226
+[Wed Aug 24 18:51:08.364739 2022] [socache_shmcb:debug] [pid 26160] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Wed Aug 24 18:51:08.365047 2022] [ssl:debug] [pid 26160] ssl_engine_kernel.c(415): [client ::1:56469] AH02034: Initial (No.1) HTTPS request received for child 1 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:51:08.366844 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56469] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:51:08.366928 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56469] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:51:08.367249 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56469] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:51:08.367276 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56469] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:51:08.368068 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56469] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:51:08.368089 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56469] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:51:08.474227 2022] [ssl:debug] [pid 26160] ssl_engine_kernel.c(415): [client ::1:56469] AH02034: Subsequent (No.2) HTTPS request received for child 1 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Wed Aug 24 18:51:08.474503 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56469] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:51:08.474523 2022] [authz_core:debug] [pid 26160] mod_authz_core.c(815): [client ::1:56469] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Wed Aug 24 18:51:13.483115 2022] [ssl:debug] [pid 26160] ssl_engine_io.c(1147): [client ::1:56469] AH02001: Connection closed to child 1 with standard shutdown (server local.shape-share.com:443)
+[Thu Aug 25 12:18:04.749671 2022] [ssl:info] [pid 94288] AH01914: Configuring server local.shape-share.com:443 for SSL protocol
+[Thu Aug 25 12:18:04.749794 2022] [ssl:debug] [pid 94288] ssl_engine_init.c(526): AH01893: Configuring TLS extension handling
+[Thu Aug 25 12:18:04.751209 2022] [ssl:debug] [pid 94288] ssl_util_ssl.c(451): AH02412: [local.shape-share.com:443] Cert matches for name 'local.shape-share.com' [subject: OU=nykianderson@AgBRAT (Nyki Anderson),O=mkcert development certificate / issuer: CN=mkcert nykianderson@Nykis-MacBook-Pro.local (Nyki Anderson),OU=nykianderson@Nykis-MacBook-Pro.local (Nyki Anderson),O=mkcert development CA / serial: 85367A785FF9957D67B02F9D1540BD65 / notbefore: Jul 28 15:51:59 2022 GMT / notafter: Oct 28 15:51:59 2024 GMT]
+[Thu Aug 25 12:18:04.751229 2022] [ssl:info] [pid 94288] AH02568: Certificate and private key local.shape-share.com:443:0 configured from /usr/local/etc/ssl/certs/local.shape-share.com.pem and /usr/local/etc/ssl/certs/local.shape-share.com-key.pem
+[Thu Aug 25 12:18:04.763445 2022] [ssl:info] [pid 94288] AH01914: Configuring server local.shape-share.com:443 for SSL protocol
+[Thu Aug 25 12:18:04.763554 2022] [ssl:debug] [pid 94288] ssl_engine_init.c(526): AH01893: Configuring TLS extension handling
+[Thu Aug 25 12:18:04.763718 2022] [ssl:debug] [pid 94288] ssl_util_ssl.c(451): AH02412: [local.shape-share.com:443] Cert matches for name 'local.shape-share.com' [subject: OU=nykianderson@AgBRAT (Nyki Anderson),O=mkcert development certificate / issuer: CN=mkcert nykianderson@Nykis-MacBook-Pro.local (Nyki Anderson),OU=nykianderson@Nykis-MacBook-Pro.local (Nyki Anderson),O=mkcert development CA / serial: 85367A785FF9957D67B02F9D1540BD65 / notbefore: Jul 28 15:51:59 2022 GMT / notafter: Oct 28 15:51:59 2024 GMT]
+[Thu Aug 25 12:18:04.763731 2022] [ssl:info] [pid 94288] AH02568: Certificate and private key local.shape-share.com:443:0 configured from /usr/local/etc/ssl/certs/local.shape-share.com.pem and /usr/local/etc/ssl/certs/local.shape-share.com-key.pem
+[Thu Aug 25 12:23:51.023707 2022] [ssl:info] [pid 94294] [client ::1:59540] AH01964: Connection to child 1 established (server local.shape-share.com:443)
+[Thu Aug 25 12:23:51.059409 2022] [ssl:debug] [pid 94294] ssl_engine_kernel.c(2395): [client ::1:59540] AH02043: SSL virtual host for servername local.shape-share.com found
+[Thu Aug 25 12:23:51.069070 2022] [core:debug] [pid 94294] protocol.c(2458): [client ::1:59540] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Thu Aug 25 12:23:51.093657 2022] [ssl:debug] [pid 94294] ssl_engine_kernel.c(2254): [client ::1:59540] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Thu Aug 25 12:23:51.094278 2022] [socache_shmcb:debug] [pid 94294] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0xd2 -> subcache 18)
+[Thu Aug 25 12:23:51.094311 2022] [socache_shmcb:debug] [pid 94294] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Thu Aug 25 12:23:51.094321 2022] [socache_shmcb:debug] [pid 94294] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/225
+[Thu Aug 25 12:23:51.094333 2022] [socache_shmcb:debug] [pid 94294] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Thu Aug 25 12:23:51.094511 2022] [socache_shmcb:debug] [pid 94294] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x7c -> subcache 28)
+[Thu Aug 25 12:23:51.094546 2022] [socache_shmcb:debug] [pid 94294] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Thu Aug 25 12:23:51.094561 2022] [socache_shmcb:debug] [pid 94294] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Thu Aug 25 12:23:51.094569 2022] [socache_shmcb:debug] [pid 94294] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Thu Aug 25 12:23:51.095582 2022] [ssl:debug] [pid 94294] ssl_engine_kernel.c(415): [client ::1:59540] AH02034: Initial (No.1) HTTPS request received for child 1 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Thu Aug 25 12:23:51.113586 2022] [authz_core:debug] [pid 94294] mod_authz_core.c(815): [client ::1:59540] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:23:51.113617 2022] [authz_core:debug] [pid 94294] mod_authz_core.c(815): [client ::1:59540] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:23:51.113776 2022] [authz_core:debug] [pid 94294] mod_authz_core.c(815): [client ::1:59540] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:23:51.113789 2022] [authz_core:debug] [pid 94294] mod_authz_core.c(815): [client ::1:59540] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:23:51.121482 2022] [authz_core:debug] [pid 94294] mod_authz_core.c(815): [client ::1:59540] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:23:51.121540 2022] [authz_core:debug] [pid 94294] mod_authz_core.c(815): [client ::1:59540] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:23:51.528117 2022] [ssl:debug] [pid 94294] ssl_engine_kernel.c(415): [client ::1:59540] AH02034: Subsequent (No.2) HTTPS request received for child 1 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Thu Aug 25 12:23:51.528506 2022] [authz_core:debug] [pid 94294] mod_authz_core.c(815): [client ::1:59540] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:23:51.528527 2022] [authz_core:debug] [pid 94294] mod_authz_core.c(815): [client ::1:59540] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:23:56.551957 2022] [ssl:debug] [pid 94294] ssl_engine_io.c(1147): [client ::1:59540] AH02001: Connection closed to child 1 with standard shutdown (server local.shape-share.com:443)
+[Thu Aug 25 12:24:44.015240 2022] [ssl:info] [pid 96553] AH01914: Configuring server local.shape-share.com:443 for SSL protocol
+[Thu Aug 25 12:24:44.015971 2022] [ssl:debug] [pid 96553] ssl_engine_init.c(526): AH01893: Configuring TLS extension handling
+[Thu Aug 25 12:24:44.018019 2022] [ssl:debug] [pid 96553] ssl_util_ssl.c(451): AH02412: [local.shape-share.com:443] Cert matches for name 'local.shape-share.com' [subject: OU=nykianderson@AgBRAT (Nyki Anderson),O=mkcert development certificate / issuer: CN=mkcert nykianderson@Nykis-MacBook-Pro.local (Nyki Anderson),OU=nykianderson@Nykis-MacBook-Pro.local (Nyki Anderson),O=mkcert development CA / serial: 85367A785FF9957D67B02F9D1540BD65 / notbefore: Jul 28 15:51:59 2022 GMT / notafter: Oct 28 15:51:59 2024 GMT]
+[Thu Aug 25 12:24:44.018071 2022] [ssl:info] [pid 96553] AH02568: Certificate and private key local.shape-share.com:443:0 configured from /usr/local/etc/ssl/certs/local.shape-share.com.pem and /usr/local/etc/ssl/certs/local.shape-share.com-key.pem
+[Thu Aug 25 12:24:44.030332 2022] [ssl:info] [pid 96553] AH01914: Configuring server local.shape-share.com:443 for SSL protocol
+[Thu Aug 25 12:24:44.030441 2022] [ssl:debug] [pid 96553] ssl_engine_init.c(526): AH01893: Configuring TLS extension handling
+[Thu Aug 25 12:24:44.030605 2022] [ssl:debug] [pid 96553] ssl_util_ssl.c(451): AH02412: [local.shape-share.com:443] Cert matches for name 'local.shape-share.com' [subject: OU=nykianderson@AgBRAT (Nyki Anderson),O=mkcert development certificate / issuer: CN=mkcert nykianderson@Nykis-MacBook-Pro.local (Nyki Anderson),OU=nykianderson@Nykis-MacBook-Pro.local (Nyki Anderson),O=mkcert development CA / serial: 85367A785FF9957D67B02F9D1540BD65 / notbefore: Jul 28 15:51:59 2022 GMT / notafter: Oct 28 15:51:59 2024 GMT]
+[Thu Aug 25 12:24:44.030619 2022] [ssl:info] [pid 96553] AH02568: Certificate and private key local.shape-share.com:443:0 configured from /usr/local/etc/ssl/certs/local.shape-share.com.pem and /usr/local/etc/ssl/certs/local.shape-share.com-key.pem
+[Thu Aug 25 12:27:59.678531 2022] [ssl:info] [pid 96565] [client ::1:59559] AH01964: Connection to child 1 established (server local.shape-share.com:443)
+[Thu Aug 25 12:27:59.682312 2022] [ssl:debug] [pid 96565] ssl_engine_kernel.c(2395): [client ::1:59559] AH02043: SSL virtual host for servername local.shape-share.com found
+[Thu Aug 25 12:27:59.682513 2022] [core:debug] [pid 96565] protocol.c(2458): [client ::1:59559] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Thu Aug 25 12:27:59.689012 2022] [ssl:debug] [pid 96565] ssl_engine_kernel.c(2254): [client ::1:59559] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Thu Aug 25 12:27:59.689436 2022] [socache_shmcb:debug] [pid 96565] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x1b -> subcache 27)
+[Thu Aug 25 12:27:59.689483 2022] [socache_shmcb:debug] [pid 96565] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Thu Aug 25 12:27:59.689495 2022] [socache_shmcb:debug] [pid 96565] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Thu Aug 25 12:27:59.689506 2022] [socache_shmcb:debug] [pid 96565] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Thu Aug 25 12:27:59.689617 2022] [socache_shmcb:debug] [pid 96565] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0xee -> subcache 14)
+[Thu Aug 25 12:27:59.689640 2022] [socache_shmcb:debug] [pid 96565] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Thu Aug 25 12:27:59.689650 2022] [socache_shmcb:debug] [pid 96565] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Thu Aug 25 12:27:59.689659 2022] [socache_shmcb:debug] [pid 96565] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Thu Aug 25 12:27:59.689994 2022] [ssl:debug] [pid 96565] ssl_engine_kernel.c(415): [client ::1:59559] AH02034: Initial (No.1) HTTPS request received for child 1 (server local.shape-share.com:443)
+[Thu Aug 25 12:27:59.691445 2022] [authz_core:debug] [pid 96565] mod_authz_core.c(815): [client ::1:59559] AH01626: authorization result of Require all granted: granted
+[Thu Aug 25 12:27:59.691483 2022] [authz_core:debug] [pid 96565] mod_authz_core.c(815): [client ::1:59559] AH01626: authorization result of <RequireAny>: granted
+[Thu Aug 25 12:27:59.787983 2022] [ssl:debug] [pid 96565] ssl_engine_kernel.c(415): [client ::1:59559] AH02034: Subsequent (No.2) HTTPS request received for child 1 (server local.shape-share.com:443), referer: https://local.shape-share.com/test.php
+[Thu Aug 25 12:27:59.788247 2022] [authz_core:debug] [pid 96565] mod_authz_core.c(815): [client ::1:59559] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/test.php
+[Thu Aug 25 12:27:59.788265 2022] [authz_core:debug] [pid 96565] mod_authz_core.c(815): [client ::1:59559] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/test.php
+[Thu Aug 25 12:28:04.790277 2022] [ssl:debug] [pid 96565] ssl_engine_io.c(1147): [client ::1:59559] AH02001: Connection closed to child 1 with standard shutdown (server local.shape-share.com:443)
+[Thu Aug 25 12:36:24.541815 2022] [ssl:info] [pid 96564] [client ::1:59613] AH01964: Connection to child 0 established (server local.shape-share.com:443)
+[Thu Aug 25 12:36:24.559269 2022] [ssl:debug] [pid 96564] ssl_engine_kernel.c(2395): [client ::1:59613] AH02043: SSL virtual host for servername local.shape-share.com found
+[Thu Aug 25 12:36:24.559433 2022] [core:debug] [pid 96564] protocol.c(2458): [client ::1:59613] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Thu Aug 25 12:36:24.569386 2022] [ssl:debug] [pid 96564] ssl_engine_kernel.c(2254): [client ::1:59613] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Thu Aug 25 12:36:24.569611 2022] [socache_shmcb:debug] [pid 96564] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0xef -> subcache 15)
+[Thu Aug 25 12:36:24.569671 2022] [socache_shmcb:debug] [pid 96564] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Thu Aug 25 12:36:24.569688 2022] [socache_shmcb:debug] [pid 96564] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Thu Aug 25 12:36:24.569704 2022] [socache_shmcb:debug] [pid 96564] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Thu Aug 25 12:36:24.569897 2022] [socache_shmcb:debug] [pid 96564] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x68 -> subcache 8)
+[Thu Aug 25 12:36:24.569958 2022] [socache_shmcb:debug] [pid 96564] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Thu Aug 25 12:36:24.569976 2022] [socache_shmcb:debug] [pid 96564] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Thu Aug 25 12:36:24.569991 2022] [socache_shmcb:debug] [pid 96564] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Thu Aug 25 12:36:24.570274 2022] [ssl:debug] [pid 96564] ssl_engine_kernel.c(415): [client ::1:59613] AH02034: Initial (No.1) HTTPS request received for child 0 (server local.shape-share.com:443)
+[Thu Aug 25 12:36:24.571690 2022] [authz_core:debug] [pid 96564] mod_authz_core.c(815): [client ::1:59613] AH01626: authorization result of Require all granted: granted
+[Thu Aug 25 12:36:24.571719 2022] [authz_core:debug] [pid 96564] mod_authz_core.c(815): [client ::1:59613] AH01626: authorization result of <RequireAny>: granted
+[Thu Aug 25 12:36:24.642119 2022] [ssl:debug] [pid 96564] ssl_engine_kernel.c(415): [client ::1:59613] AH02034: Subsequent (No.2) HTTPS request received for child 0 (server local.shape-share.com:443), referer: https://local.shape-share.com/test.php
+[Thu Aug 25 12:36:24.642920 2022] [authz_core:debug] [pid 96564] mod_authz_core.c(815): [client ::1:59613] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/test.php
+[Thu Aug 25 12:36:24.642956 2022] [authz_core:debug] [pid 96564] mod_authz_core.c(815): [client ::1:59613] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/test.php
+[Thu Aug 25 12:36:29.651239 2022] [ssl:debug] [pid 96564] ssl_engine_io.c(1147): [client ::1:59613] AH02001: Connection closed to child 0 with standard shutdown (server local.shape-share.com:443)
+[Thu Aug 25 12:36:32.861453 2022] [ssl:info] [pid 96566] [client ::1:59617] AH01964: Connection to child 2 established (server local.shape-share.com:443)
+[Thu Aug 25 12:36:32.863814 2022] [ssl:debug] [pid 96566] ssl_engine_kernel.c(2395): [client ::1:59617] AH02043: SSL virtual host for servername local.shape-share.com found
+[Thu Aug 25 12:36:32.864337 2022] [core:debug] [pid 96566] protocol.c(2458): [client ::1:59617] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Thu Aug 25 12:36:32.865763 2022] [ssl:debug] [pid 96566] ssl_engine_kernel.c(2254): [client ::1:59617] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Thu Aug 25 12:36:32.865976 2022] [socache_shmcb:debug] [pid 96566] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0xb5 -> subcache 21)
+[Thu Aug 25 12:36:32.866019 2022] [socache_shmcb:debug] [pid 96566] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Thu Aug 25 12:36:32.866031 2022] [socache_shmcb:debug] [pid 96566] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/225
+[Thu Aug 25 12:36:32.866042 2022] [socache_shmcb:debug] [pid 96566] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Thu Aug 25 12:36:32.866489 2022] [ssl:debug] [pid 96566] ssl_engine_kernel.c(415): [client ::1:59617] AH02034: Initial (No.1) HTTPS request received for child 2 (server local.shape-share.com:443)
+[Thu Aug 25 12:36:32.867137 2022] [authz_core:debug] [pid 96566] mod_authz_core.c(815): [client ::1:59617] AH01626: authorization result of Require all granted: granted
+[Thu Aug 25 12:36:32.867168 2022] [authz_core:debug] [pid 96566] mod_authz_core.c(815): [client ::1:59617] AH01626: authorization result of <RequireAny>: granted
+[Thu Aug 25 12:36:32.867302 2022] [authz_core:debug] [pid 96566] mod_authz_core.c(815): [client ::1:59617] AH01626: authorization result of Require all granted: granted
+[Thu Aug 25 12:36:32.867318 2022] [authz_core:debug] [pid 96566] mod_authz_core.c(815): [client ::1:59617] AH01626: authorization result of <RequireAny>: granted
+[Thu Aug 25 12:36:33.124240 2022] [ssl:debug] [pid 96566] ssl_engine_kernel.c(415): [client ::1:59617] AH02034: Subsequent (No.2) HTTPS request received for child 2 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Thu Aug 25 12:36:33.129563 2022] [authz_core:debug] [pid 96566] mod_authz_core.c(815): [client ::1:59617] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Thu Aug 25 12:36:33.129588 2022] [authz_core:debug] [pid 96566] mod_authz_core.c(815): [client ::1:59617] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Thu Aug 25 12:36:33.350702 2022] [ssl:debug] [pid 96566] ssl_engine_kernel.c(415): [client ::1:59617] AH02034: Subsequent (No.3) HTTPS request received for child 2 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Thu Aug 25 12:36:33.351060 2022] [authz_core:debug] [pid 96566] mod_authz_core.c(815): [client ::1:59617] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Thu Aug 25 12:36:33.351086 2022] [authz_core:debug] [pid 96566] mod_authz_core.c(815): [client ::1:59617] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Thu Aug 25 12:36:33.350870 2022] [ssl:info] [pid 96567] [client ::1:59620] AH01964: Connection to child 3 established (server local.shape-share.com:443)
+[Thu Aug 25 12:36:33.352364 2022] [ssl:debug] [pid 96567] ssl_engine_kernel.c(2395): [client ::1:59620] AH02043: SSL virtual host for servername local.shape-share.com found
+[Thu Aug 25 12:36:33.352700 2022] [core:debug] [pid 96567] protocol.c(2458): [client ::1:59620] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Thu Aug 25 12:36:33.354503 2022] [ssl:debug] [pid 96567] ssl_engine_kernel.c(2254): [client ::1:59620] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Thu Aug 25 12:36:33.354698 2022] [socache_shmcb:debug] [pid 96567] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0xa9 -> subcache 9)
+[Thu Aug 25 12:36:33.354774 2022] [socache_shmcb:debug] [pid 96567] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Thu Aug 25 12:36:33.354835 2022] [socache_shmcb:debug] [pid 96567] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/225
+[Thu Aug 25 12:36:33.354859 2022] [socache_shmcb:debug] [pid 96567] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Thu Aug 25 12:36:33.355345 2022] [ssl:debug] [pid 96567] ssl_engine_kernel.c(415): [client ::1:59620] AH02034: Initial (No.1) HTTPS request received for child 3 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Thu Aug 25 12:36:33.355831 2022] [authz_core:debug] [pid 96567] mod_authz_core.c(815): [client ::1:59620] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Thu Aug 25 12:36:33.355851 2022] [authz_core:debug] [pid 96567] mod_authz_core.c(815): [client ::1:59620] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Thu Aug 25 12:36:33.645492 2022] [ssl:debug] [pid 96567] ssl_engine_kernel.c(415): [client ::1:59620] AH02034: Subsequent (No.2) HTTPS request received for child 3 (server local.shape-share.com:443), referer: https://local.shape-share.com/assets/css/dark_theme.css?v24
+[Thu Aug 25 12:36:33.646107 2022] [authz_core:debug] [pid 96567] mod_authz_core.c(815): [client ::1:59620] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/assets/css/dark_theme.css?v24
+[Thu Aug 25 12:36:33.646144 2022] [authz_core:debug] [pid 96567] mod_authz_core.c(815): [client ::1:59620] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/assets/css/dark_theme.css?v24
+[Thu Aug 25 12:36:33.733633 2022] [ssl:debug] [pid 96567] ssl_engine_kernel.c(415): [client ::1:59620] AH02034: Subsequent (No.3) HTTPS request received for child 3 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Thu Aug 25 12:36:33.733952 2022] [authz_core:debug] [pid 96567] mod_authz_core.c(815): [client ::1:59620] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Thu Aug 25 12:36:33.733982 2022] [authz_core:debug] [pid 96567] mod_authz_core.c(815): [client ::1:59620] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Thu Aug 25 12:36:37.745185 2022] [ssl:debug] [pid 96567] ssl_engine_kernel.c(415): [client ::1:59620] AH02034: Subsequent (No.4) HTTPS request received for child 3 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Thu Aug 25 12:36:37.746310 2022] [authz_core:debug] [pid 96567] mod_authz_core.c(815): [client ::1:59620] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Thu Aug 25 12:36:37.746372 2022] [authz_core:debug] [pid 96567] mod_authz_core.c(815): [client ::1:59620] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Thu Aug 25 12:36:37.746536 2022] [authz_core:debug] [pid 96567] mod_authz_core.c(815): [client ::1:59620] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Thu Aug 25 12:36:37.746564 2022] [authz_core:debug] [pid 96567] mod_authz_core.c(815): [client ::1:59620] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Thu Aug 25 12:36:37.747500 2022] [authz_core:debug] [pid 96567] mod_authz_core.c(815): [client ::1:59620] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Thu Aug 25 12:36:37.747583 2022] [authz_core:debug] [pid 96567] mod_authz_core.c(815): [client ::1:59620] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Thu Aug 25 12:36:37.834207 2022] [ssl:debug] [pid 96567] ssl_engine_kernel.c(415): [client ::1:59620] AH02034: Subsequent (No.5) HTTPS request received for child 3 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Thu Aug 25 12:36:37.834326 2022] [ssl:debug] [pid 96566] ssl_engine_kernel.c(415): [client ::1:59617] AH02034: Subsequent (No.4) HTTPS request received for child 2 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Thu Aug 25 12:36:37.834616 2022] [authz_core:debug] [pid 96567] mod_authz_core.c(815): [client ::1:59620] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:36:37.837611 2022] [authz_core:debug] [pid 96567] mod_authz_core.c(815): [client ::1:59620] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:36:37.837808 2022] [authz_core:debug] [pid 96566] mod_authz_core.c(815): [client ::1:59617] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:36:37.837831 2022] [authz_core:debug] [pid 96566] mod_authz_core.c(815): [client ::1:59617] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:36:37.850295 2022] [ssl:debug] [pid 96567] ssl_engine_kernel.c(415): [client ::1:59620] AH02034: Subsequent (No.6) HTTPS request received for child 3 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Thu Aug 25 12:36:37.851094 2022] [authz_core:debug] [pid 96567] mod_authz_core.c(815): [client ::1:59620] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:36:37.851138 2022] [authz_core:debug] [pid 96567] mod_authz_core.c(815): [client ::1:59620] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:36:38.116404 2022] [ssl:debug] [pid 96567] ssl_engine_kernel.c(415): [client ::1:59620] AH02034: Subsequent (No.7) HTTPS request received for child 3 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Thu Aug 25 12:36:38.117511 2022] [authz_core:debug] [pid 96567] mod_authz_core.c(815): [client ::1:59620] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:36:38.117569 2022] [authz_core:debug] [pid 96567] mod_authz_core.c(815): [client ::1:59620] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:36:38.124064 2022] [ssl:debug] [pid 96567] ssl_engine_kernel.c(415): [client ::1:59620] AH02034: Subsequent (No.8) HTTPS request received for child 3 (server local.shape-share.com:443), referer: https://local.shape-share.com/assets/css/dark_theme.css?v24
+[Thu Aug 25 12:36:38.124399 2022] [authz_core:debug] [pid 96567] mod_authz_core.c(815): [client ::1:59620] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/assets/css/dark_theme.css?v24
+[Thu Aug 25 12:36:38.124417 2022] [authz_core:debug] [pid 96567] mod_authz_core.c(815): [client ::1:59620] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/assets/css/dark_theme.css?v24
+[Thu Aug 25 12:36:42.839630 2022] [ssl:debug] [pid 96566] ssl_engine_io.c(1147): [client ::1:59617] AH02001: Connection closed to child 2 with standard shutdown (server local.shape-share.com:443)
+[Thu Aug 25 12:36:43.126182 2022] [ssl:debug] [pid 96567] ssl_engine_io.c(1147): [client ::1:59620] AH02001: Connection closed to child 3 with standard shutdown (server local.shape-share.com:443)
+[Thu Aug 25 12:36:52.050521 2022] [ssl:info] [pid 96568] [client ::1:59624] AH01964: Connection to child 4 established (server local.shape-share.com:443)
+[Thu Aug 25 12:36:52.054321 2022] [ssl:debug] [pid 96568] ssl_engine_kernel.c(2395): [client ::1:59624] AH02043: SSL virtual host for servername local.shape-share.com found
+[Thu Aug 25 12:36:52.054592 2022] [core:debug] [pid 96568] protocol.c(2458): [client ::1:59624] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Thu Aug 25 12:36:52.055554 2022] [ssl:debug] [pid 96568] ssl_engine_kernel.c(2254): [client ::1:59624] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Thu Aug 25 12:36:52.055726 2022] [socache_shmcb:debug] [pid 96568] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x2a -> subcache 10)
+[Thu Aug 25 12:36:52.055757 2022] [socache_shmcb:debug] [pid 96568] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Thu Aug 25 12:36:52.055767 2022] [socache_shmcb:debug] [pid 96568] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Thu Aug 25 12:36:52.055775 2022] [socache_shmcb:debug] [pid 96568] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Thu Aug 25 12:36:52.055969 2022] [ssl:debug] [pid 96568] ssl_engine_kernel.c(415): [client ::1:59624] AH02034: Initial (No.1) HTTPS request received for child 4 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Thu Aug 25 12:36:52.056411 2022] [authz_core:debug] [pid 96568] mod_authz_core.c(815): [client ::1:59624] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:36:52.056428 2022] [authz_core:debug] [pid 96568] mod_authz_core.c(815): [client ::1:59624] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:36:52.056561 2022] [authz_core:debug] [pid 96568] mod_authz_core.c(815): [client ::1:59624] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:36:52.056573 2022] [authz_core:debug] [pid 96568] mod_authz_core.c(815): [client ::1:59624] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:36:52.056879 2022] [authz_core:debug] [pid 96568] mod_authz_core.c(815): [client ::1:59624] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:36:52.056893 2022] [authz_core:debug] [pid 96568] mod_authz_core.c(815): [client ::1:59624] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:36:57.063919 2022] [ssl:debug] [pid 96568] ssl_engine_io.c(1147): [client ::1:59624] AH02001: Connection closed to child 4 with standard shutdown (server local.shape-share.com:443)
+[Thu Aug 25 12:37:17.460258 2022] [ssl:info] [pid 96682] [client ::1:59626] AH01964: Connection to child 5 established (server local.shape-share.com:443)
+[Thu Aug 25 12:37:17.464650 2022] [ssl:debug] [pid 96682] ssl_engine_kernel.c(2395): [client ::1:59626] AH02043: SSL virtual host for servername local.shape-share.com found
+[Thu Aug 25 12:37:17.464796 2022] [core:debug] [pid 96682] protocol.c(2458): [client ::1:59626] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Thu Aug 25 12:37:17.473785 2022] [ssl:debug] [pid 96682] ssl_engine_kernel.c(2254): [client ::1:59626] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Thu Aug 25 12:37:17.473956 2022] [socache_shmcb:debug] [pid 96682] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x90 -> subcache 16)
+[Thu Aug 25 12:37:17.474000 2022] [socache_shmcb:debug] [pid 96682] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Thu Aug 25 12:37:17.474012 2022] [socache_shmcb:debug] [pid 96682] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Thu Aug 25 12:37:17.474022 2022] [socache_shmcb:debug] [pid 96682] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Thu Aug 25 12:37:17.475214 2022] [socache_shmcb:debug] [pid 96682] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0xe5 -> subcache 5)
+[Thu Aug 25 12:37:17.475270 2022] [socache_shmcb:debug] [pid 96682] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Thu Aug 25 12:37:17.475290 2022] [socache_shmcb:debug] [pid 96682] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Thu Aug 25 12:37:17.475309 2022] [socache_shmcb:debug] [pid 96682] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Thu Aug 25 12:37:17.476355 2022] [ssl:debug] [pid 96682] ssl_engine_kernel.c(415): [client ::1:59626] AH02034: Initial (No.1) HTTPS request received for child 5 (server local.shape-share.com:443)
+[Thu Aug 25 12:37:17.486474 2022] [authz_core:debug] [pid 96682] mod_authz_core.c(815): [client ::1:59626] AH01626: authorization result of Require all granted: granted
+[Thu Aug 25 12:37:17.486506 2022] [authz_core:debug] [pid 96682] mod_authz_core.c(815): [client ::1:59626] AH01626: authorization result of <RequireAny>: granted
+[Thu Aug 25 12:37:17.486630 2022] [authz_core:debug] [pid 96682] mod_authz_core.c(815): [client ::1:59626] AH01626: authorization result of Require all granted: granted
+[Thu Aug 25 12:37:17.486645 2022] [authz_core:debug] [pid 96682] mod_authz_core.c(815): [client ::1:59626] AH01626: authorization result of <RequireAny>: granted
+[Thu Aug 25 12:37:17.705154 2022] [ssl:debug] [pid 96682] ssl_engine_kernel.c(415): [client ::1:59626] AH02034: Subsequent (No.2) HTTPS request received for child 5 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Thu Aug 25 12:37:17.705483 2022] [authz_core:debug] [pid 96682] mod_authz_core.c(815): [client ::1:59626] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Thu Aug 25 12:37:17.705507 2022] [authz_core:debug] [pid 96682] mod_authz_core.c(815): [client ::1:59626] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Thu Aug 25 12:37:17.709487 2022] [ssl:info] [pid 96565] [client ::1:59627] AH01964: Connection to child 1 established (server local.shape-share.com:443)
+[Thu Aug 25 12:37:17.711431 2022] [ssl:debug] [pid 96565] ssl_engine_kernel.c(2395): [client ::1:59627] AH02043: SSL virtual host for servername local.shape-share.com found
+[Thu Aug 25 12:37:17.711599 2022] [core:debug] [pid 96565] protocol.c(2458): [client ::1:59627] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Thu Aug 25 12:37:17.713451 2022] [ssl:debug] [pid 96565] ssl_engine_kernel.c(2254): [client ::1:59627] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Thu Aug 25 12:37:17.713607 2022] [socache_shmcb:debug] [pid 96565] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0xf8 -> subcache 24)
+[Thu Aug 25 12:37:17.713645 2022] [socache_shmcb:debug] [pid 96565] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Thu Aug 25 12:37:17.713659 2022] [socache_shmcb:debug] [pid 96565] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/225
+[Thu Aug 25 12:37:17.713671 2022] [socache_shmcb:debug] [pid 96565] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Thu Aug 25 12:37:18.003199 2022] [ssl:debug] [pid 96682] ssl_engine_kernel.c(415): [client ::1:59626] AH02034: Subsequent (No.3) HTTPS request received for child 5 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Thu Aug 25 12:37:18.004517 2022] [ssl:debug] [pid 96565] ssl_engine_kernel.c(415): [client ::1:59627] AH02034: Initial (No.1) HTTPS request received for child 1 (server local.shape-share.com:443), referer: https://local.shape-share.com/
+[Thu Aug 25 12:37:18.006099 2022] [authz_core:debug] [pid 96682] mod_authz_core.c(815): [client ::1:59626] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Thu Aug 25 12:37:18.006138 2022] [authz_core:debug] [pid 96682] mod_authz_core.c(815): [client ::1:59626] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Thu Aug 25 12:37:18.006316 2022] [authz_core:debug] [pid 96565] mod_authz_core.c(815): [client ::1:59627] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/
+[Thu Aug 25 12:37:18.006359 2022] [authz_core:debug] [pid 96565] mod_authz_core.c(815): [client ::1:59627] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/
+[Thu Aug 25 12:37:18.151188 2022] [ssl:debug] [pid 96565] ssl_engine_kernel.c(415): [client ::1:59627] AH02034: Subsequent (No.2) HTTPS request received for child 1 (server local.shape-share.com:443), referer: https://local.shape-share.com/assets/css/dark_theme.css?v24
+[Thu Aug 25 12:37:18.166758 2022] [authz_core:debug] [pid 96565] mod_authz_core.c(815): [client ::1:59627] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/assets/css/dark_theme.css?v24
+[Thu Aug 25 12:37:18.166800 2022] [authz_core:debug] [pid 96565] mod_authz_core.c(815): [client ::1:59627] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/assets/css/dark_theme.css?v24
+[Thu Aug 25 12:37:23.008072 2022] [ssl:debug] [pid 96682] ssl_engine_io.c(1147): [client ::1:59626] AH02001: Connection closed to child 5 with standard shutdown (server local.shape-share.com:443)
+[Thu Aug 25 12:37:23.177041 2022] [ssl:debug] [pid 96565] ssl_engine_io.c(1147): [client ::1:59627] AH02001: Connection closed to child 1 with standard shutdown (server local.shape-share.com:443)
+[Thu Aug 25 12:41:57.991810 2022] [ssl:info] [pid 96564] [client ::1:59642] AH01964: Connection to child 0 established (server local.shape-share.com:443)
+[Thu Aug 25 12:41:58.000501 2022] [ssl:debug] [pid 96564] ssl_engine_kernel.c(2395): [client ::1:59642] AH02043: SSL virtual host for servername local.shape-share.com found
+[Thu Aug 25 12:41:58.000881 2022] [core:debug] [pid 96564] protocol.c(2458): [client ::1:59642] AH03155: select protocol from , choices=h2,http/1.1 for server local.shape-share.com
+[Thu Aug 25 12:41:58.007150 2022] [ssl:debug] [pid 96564] ssl_engine_kernel.c(2254): [client ::1:59642] AH02041: Protocol: TLSv1.3, Cipher: TLS_AES_256_GCM_SHA384 (256/256 bits)
+[Thu Aug 25 12:41:58.007296 2022] [socache_shmcb:debug] [pid 96564] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0xf3 -> subcache 19)
+[Thu Aug 25 12:41:58.007320 2022] [socache_shmcb:debug] [pid 96564] mod_socache_shmcb.c(862): AH00847: insert happened at idx=0, data=(0:32)
+[Thu Aug 25 12:41:58.007331 2022] [socache_shmcb:debug] [pid 96564] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/1, data_pos/data_used=0/226
+[Thu Aug 25 12:41:58.007341 2022] [socache_shmcb:debug] [pid 96564] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Thu Aug 25 12:41:58.007449 2022] [socache_shmcb:debug] [pid 96564] mod_socache_shmcb.c(508): AH00831: socache_shmcb_store (0x73 -> subcache 19)
+[Thu Aug 25 12:41:58.007465 2022] [socache_shmcb:debug] [pid 96564] mod_socache_shmcb.c(862): AH00847: insert happened at idx=1, data=(226:258)
+[Thu Aug 25 12:41:58.007474 2022] [socache_shmcb:debug] [pid 96564] mod_socache_shmcb.c(865): AH00848: finished insert, subcache: idx_pos/idx_used=0/2, data_pos/data_used=0/452
+[Thu Aug 25 12:41:58.007483 2022] [socache_shmcb:debug] [pid 96564] mod_socache_shmcb.c(530): AH00834: leaving socache_shmcb_store successfully
+[Thu Aug 25 12:41:58.007572 2022] [ssl:debug] [pid 96564] ssl_engine_kernel.c(415): [client ::1:59642] AH02034: Initial (No.1) HTTPS request received for child 0 (server local.shape-share.com:443), referer: https://local.shape-share.com/register
+[Thu Aug 25 12:41:58.009046 2022] [authz_core:debug] [pid 96564] mod_authz_core.c(815): [client ::1:59642] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:41:58.009094 2022] [authz_core:debug] [pid 96564] mod_authz_core.c(815): [client ::1:59642] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:41:58.009251 2022] [authz_core:debug] [pid 96564] mod_authz_core.c(815): [client ::1:59642] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:41:58.009309 2022] [authz_core:debug] [pid 96564] mod_authz_core.c(815): [client ::1:59642] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:41:58.010767 2022] [authz_core:debug] [pid 96564] mod_authz_core.c(815): [client ::1:59642] AH01626: authorization result of Require all granted: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:41:58.010811 2022] [authz_core:debug] [pid 96564] mod_authz_core.c(815): [client ::1:59642] AH01626: authorization result of <RequireAny>: granted, referer: https://local.shape-share.com/register
+[Thu Aug 25 12:42:03.033734 2022] [ssl:debug] [pid 96564] ssl_engine_io.c(1147): [client ::1:59642] AH02001: Connection closed to child 0 with standard shutdown (server local.shape-share.com:443)

@@ -1,7 +1,13 @@
 <?php
 
-namespace app\Helpers;
+namespace Helpers;
 
+/**
+ * Sanitize user input by trimming trailing spaces, stripping any other slashes, and escape special characters
+ * 
+ * @param array $inputArray - post array 
+ * @return array $escapedInput
+ */
 if (! function_exists('escapeUserInput')) {
   function escapeUserInput(array $inputArray)
   {
@@ -18,51 +24,11 @@ if (! function_exists('escapeUserInput')) {
   }
 }
 
-if (! function_exists('verifyPasswordsMatch')) {
-
-  function verifyPasswordsMatch(string $password1, string $password2)
+if (! function_exists('esc')) {
+  function esc(string $phpOutput)
   {
-    if (strcmp($password1, $password2) === 0) 
-    {
-      return true;
+    $escapedOutput = htmlspecialchars($phpOutput);
     
-    } else {
-
-      return false;
-    }
-  }
-}
-
-if (! function_exists('validateUsername')) {
-
-  function validateUsername(string $username)
-  {
-    $regex = '/(^[a-z][A-Z])(\w+-){5,25}$/';
-
-    if (preg_match($regex, $username))
-    {
-      return true;
-    
-    } else {
-
-      return false;
-    }
-  }
-}
-
-if (! function_exists('validatePassword')) {
-
-  function validatePassword(string $password)
-  {
-    $regex = '/(^[a-z][A-Z])(\w+-!@#%&\*\$){8,25}$/';
-
-    if (preg_match($regex, $password))
-    {
-      return true;
-    
-    } else {
-
-      return false;
-    }
+    return $escapedOutput;
   }
 }

@@ -35,7 +35,7 @@
     <div class="content-container">
 
       <div class="form-container">
-        <form action=<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?> autocomplete=false>
+        <form action="/register" method='POST' autocomplete=false>
 
           <input type="hidden" name="role" value="0">
 
@@ -89,7 +89,7 @@
             <div class='input-container'>
                 <i class="fa-solid fa-calendar-day" title='Birthday'></i>
 
-                <select class='input-field' name='bday_month' title='Birthday Month'>
+                <select class='input-field' name='month' title='Birthday Month'>
                     <option value=''>Month</option>
                     <option value='01'<?php if (isset($_POST['bday_month']) && $_POST['bday_month'] == '01') echo ('selected'); ?>>Jan</option>
                     <option value='02'<?php if (isset($_POST['bday_month']) && $_POST['bday_month'] == '02') echo ('selected'); ?>>Feb</option>
@@ -105,7 +105,7 @@
                     <option value='12'<?php if (isset($_POST['bday_month']) && $_POST['bday_month'] == '12') echo ('selected'); ?>>Dec</option>
                   </select>
 
-                  <select class='input-field'     name='bday_day' title='Birthday Day'>
+                  <select class='input-field'     name='day' title='Birthday Day'>
                     <option value=''>Day</option>
                     <option value='01'<?php if (isset($_POST['bday_day']) && $_POST['bday_day'] == '01') echo ('selected'); ?>>01</option>
                     <option value='02'<?php if (isset($_POST['bday_day']) && $_POST['bday_day'] == '02') echo ('selected'); ?>>02</option>
@@ -140,7 +140,7 @@
                     <option value='31'<?php if (isset($_POST['bday_day']) && $_POST['bday_day'] == '31') echo ('selected'); ?>>31</option>
                   </select>
 
-                <select class='input-field' name='bday_year' title='Birthday Year'>
+                <select class='input-field' name='year' title='Birthday Year'>
                     <option value=''>Year</option>
                     <option value='2022'<?php if (isset($_POST['bday_year']) && $_POST['bday_year'] == '2022') echo ('selected'); ?>>2022</option>
                     <option value='2021'<?php if (isset($_POST['bday_year']) && $_POST['bday_year'] == '2021') echo ('selected'); ?>>2021</option>
@@ -571,5 +571,8 @@
 
     <!-- Closing <div class="content-container"> -->
     </div>
+
+    <script type="text/javascript" src="/assets/js/register.js"></script>
+
   </body>
 </html>

@@ -92,7 +92,7 @@ class Bootstrap
 
    private static function configureApp()
    {
-    require(CONFIG_PATH . 'Configuration.class.php');
+    require(CONFIG_PATH . 'Configuration.php');
 
     $config = app\Config\Configuration::getInstance('DEV');
 

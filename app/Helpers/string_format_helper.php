@@ -75,4 +75,6 @@ if (! function_exists('isRegex')) {
 
   return $value;
  }
+
+ 
 }

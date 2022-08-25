@@ -2,6 +2,8 @@
 
 namespace Core;
 
+use Helpers\validation_helper;
+
 class Controller 
 {
 
@@ -18,7 +20,7 @@ class Controller
     
     } else {
 
-      include VIEW_PATH . "$message.html";
+      include VIEW_PATH . "{$message}.html";
     }
 
     exit;

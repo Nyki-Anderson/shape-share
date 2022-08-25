@@ -3,9 +3,8 @@
 namespace Controllers;
 
 use Core\Controller;
-
-use function app\Helpers\escapeUserInput;
-use function app\Helpers\verifyPasswordsMatch;
+use Libraries\Validation;
+use app\Helpers\validation_helper;
 
 class IndexController extends Controller
 {
@@ -14,26 +13,72 @@ class IndexController extends Controller
     if (! empty($_POST) && $_SERVER["REQUEST_METHOD"] == "POST")
     {
       $formInput = [
-        'username' => $_POST('username'),
-        'password' => $_POST('password'),
-        'passConfirm' => $_POST('passConfirm'),
-        'aboutMe' => $_POST('about_me'),
-        'bdayMonth' => $_POST('bday_month'),
-        'bdayDay' => $_POST('bday_day'),
-        'bdayYear' => $_POST('bday_year'),
-        'gender' => $_POST('gender'),
-        'occupation' => $_POST('occupation'),
-        'hometown' => $_POST('hometown'),
-        'country' => $_POST('country'),
-        'favShape' => $_POST('fav_shape'),
-        'favColor' => $_POST('fav_color'),
+        'username' => $_POST['username'],
+        'password' => $_POST['password'],
+        'passConfirm' => $_POST['passConfirm'],
+        'aboutMe' => $_POST['aboutMe'],
+        'month' => $_POST['month'],
+        'day' => $_POST['day'],
+        'year' => $_POST['year'],
+        'gender' => $_POST['gender'],
+        'occupation' => $_POST['occupation'],
+        'hometown' => $_POST['hometown'],
+        'country' => $_POST['country'],
+        'favShape' => $_POST['fav_shape'],
+        'favColor' => $_POST['fav_color'],
       ];
 
-      $escapedInput = escapeUserInput($formInput);
+      $escInput = escapeUserInput($formInput);
 
-      if (verifyPasswordsMatch($escapedInput['password'], $escapedInput['passConfirm']))
+      $rules = [
+        'username' => [
+          'required'  => true,
+          'pattern'   => 'username',
+          'min'       => 5,
+          'max'       => 25,
+          'noCurse'   => true,
+        ],
+        'password'  => [
+          'required'  => true,
+          'pattern'   => 'password',
+          'match'     => $escInput['passConfirm'],
+          'min'       => 8,
+          'max'       => 25,
+        ],
+        'aboutMe' => [
+          'pattern'   => 'alphanumchar',
+          'max'       => 200,
+          'noCurse'   => true,
+        ],
+        'year' => [
+          'date'      => true,
+        ],
+        'occupation' => [
+          'pattern'   => 'alphanumspace',
+          'noCurse'   => true,
+        ],
+        'hometown' => [
+          'pattern'   => 'alphanumspace',
+          'noCurse'   => true,
+        ],
+      ];
+
+      $val = new Validation($escInput, $rules);
+      $val->validate();
+
+      if ($val->isValid())
       {
 
+
+      } else {
+
+        $data = [
+          'title' => 'Error in Form',
+          'description' => 'Form has at least one input error.',
+          'errorMsgs' => $val->errors(),
+        ];
+
+        include(VIEW_PATH . 'forms' . DS . 'registration.html');
       }
 
 
