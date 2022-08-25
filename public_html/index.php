@@ -37,6 +37,7 @@ Bootstrap::run();
   });
 
   Route::add('/register', function () {Route::map('Index', 'register');});
+  Route::add('/register', function () {Route::map('Index', 'register');}, 'post');
   Route::add('/login', function () {Route::map('Index', 'login');});
 
  /**

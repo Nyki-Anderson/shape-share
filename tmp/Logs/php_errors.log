@@ -1999,3 +1999,129 @@ Stack trace:
 #5 /Users/nykianderson/Sites/shape-share/public_html/index.php(49): Core\Route::run('', false, false, false)
 #6 {main}
   thrown in /Users/nykianderson/Sites/shape-share/app/Views/forms/login.html on line 69
+[21-Aug-2022 16:22:41 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "RECAPTCHAV2_SITEKEY" in /Users/nykianderson/Sites/shape-share/app/Views/forms/login.html:69
+Stack trace:
+#0 /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php(59): include()
+#1 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(154): Controllers\IndexController->login('')
+#2 /Users/nykianderson/Sites/shape-share/public_html/index.php(40): Core\Route::map(Object(Controllers\IndexController), 'login')
+#3 [internal function]: {closure}('')
+#4 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(109): call_user_func_array(Object(Closure), Array)
+#5 /Users/nykianderson/Sites/shape-share/public_html/index.php(49): Core\Route::run('', false, false, false)
+#6 {main}
+  thrown in /Users/nykianderson/Sites/shape-share/app/Views/forms/login.html on line 69
+[24-Aug-2022 17:29:01 America/New_York] PHP Warning:  require(/Users/nykianderson/Sites/shape-share/app/Config/Configuration.class.php): Failed to open stream: No such file or directory in /Users/nykianderson/Sites/shape-share/framework/Core/Bootstrap.php on line 95
+[24-Aug-2022 17:29:01 America/New_York] PHP Fatal error:  Uncaught Error: Failed opening required '/Users/nykianderson/Sites/shape-share/app/Config/Configuration.class.php' (include_path='.:/usr/local/pear/share/pear') in /Users/nykianderson/Sites/shape-share/framework/Core/Bootstrap.php:95
+Stack trace:
+#0 /Users/nykianderson/Sites/shape-share/framework/Core/Bootstrap.php(9): Bootstrap::configureApp()
+#1 /Users/nykianderson/Sites/shape-share/public_html/index.php(20): Bootstrap::run()
+#2 {main}
+  thrown in /Users/nykianderson/Sites/shape-share/framework/Core/Bootstrap.php on line 95
+[24-Aug-2022 18:23:16 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function esc() in /Users/nykianderson/Sites/shape-share/app/Views/forms/registration.html:38
+Stack trace:
+#0 /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php(93): include()
+#1 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(154): Controllers\IndexController->register('')
+#2 /Users/nykianderson/Sites/shape-share/public_html/index.php(39): Core\Route::map(Object(Controllers\IndexController), 'register')
+#3 [internal function]: {closure}('')
+#4 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(109): call_user_func_array(Object(Closure), Array)
+#5 /Users/nykianderson/Sites/shape-share/public_html/index.php(49): Core\Route::run('', false, false, false)
+#6 {main}
+  thrown in /Users/nykianderson/Sites/shape-share/app/Views/forms/registration.html on line 38
+[24-Aug-2022 18:32:02 America/New_York] PHP Fatal error:  Uncaught Error: Array callback must have exactly two elements in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php:17
+Stack trace:
+#0 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(154): Controllers\IndexController->register('')
+#1 /Users/nykianderson/Sites/shape-share/public_html/index.php(40): Core\Route::map(Object(Controllers\IndexController), 'register')
+#2 [internal function]: {closure}('')
+#3 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(109): call_user_func_array(Object(Closure), Array)
+#4 /Users/nykianderson/Sites/shape-share/public_html/index.php(50): Core\Route::run('', false, false, false)
+#5 {main}
+  thrown in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php on line 17
+[24-Aug-2022 18:33:14 America/New_York] PHP Fatal error:  Uncaught Error: Array callback must have exactly two elements in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php:19
+Stack trace:
+#0 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(154): Controllers\IndexController->register('')
+#1 /Users/nykianderson/Sites/shape-share/public_html/index.php(40): Core\Route::map(Object(Controllers\IndexController), 'register')
+#2 [internal function]: {closure}('')
+#3 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(109): call_user_func_array(Object(Closure), Array)
+#4 /Users/nykianderson/Sites/shape-share/public_html/index.php(50): Core\Route::run('', false, false, false)
+#5 {main}
+  thrown in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php on line 19
+[24-Aug-2022 18:35:17 America/New_York] PHP Warning:  Undefined array key "about_me" in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php on line 20
+[24-Aug-2022 18:35:17 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function app\Helpers\escapeUserInput() in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php:32
+Stack trace:
+#0 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(154): Controllers\IndexController->register('')
+#1 /Users/nykianderson/Sites/shape-share/public_html/index.php(40): Core\Route::map(Object(Controllers\IndexController), 'register')
+#2 [internal function]: {closure}('')
+#3 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(109): call_user_func_array(Object(Closure), Array)
+#4 /Users/nykianderson/Sites/shape-share/public_html/index.php(50): Core\Route::run('', false, false, false)
+#5 {main}
+  thrown in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php on line 32
+[24-Aug-2022 18:35:36 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function app\Helpers\escapeUserInput() in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php:32
+Stack trace:
+#0 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(154): Controllers\IndexController->register('')
+#1 /Users/nykianderson/Sites/shape-share/public_html/index.php(40): Core\Route::map(Object(Controllers\IndexController), 'register')
+#2 [internal function]: {closure}('')
+#3 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(109): call_user_func_array(Object(Closure), Array)
+#4 /Users/nykianderson/Sites/shape-share/public_html/index.php(50): Core\Route::run('', false, false, false)
+#5 {main}
+  thrown in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php on line 32
+[24-Aug-2022 18:36:43 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function Controllers\escapeUserInput() in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php:32
+Stack trace:
+#0 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(154): Controllers\IndexController->register('')
+#1 /Users/nykianderson/Sites/shape-share/public_html/index.php(40): Core\Route::map(Object(Controllers\IndexController), 'register')
+#2 [internal function]: {closure}('')
+#3 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(109): call_user_func_array(Object(Closure), Array)
+#4 /Users/nykianderson/Sites/shape-share/public_html/index.php(50): Core\Route::run('', false, false, false)
+#5 {main}
+  thrown in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php on line 32
+[24-Aug-2022 18:42:55 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function Controllers\escapeUserInput() in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php:32
+Stack trace:
+#0 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(154): Controllers\IndexController->register('')
+#1 /Users/nykianderson/Sites/shape-share/public_html/index.php(40): Core\Route::map(Object(Controllers\IndexController), 'register')
+#2 [internal function]: {closure}('')
+#3 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(109): call_user_func_array(Object(Closure), Array)
+#4 /Users/nykianderson/Sites/shape-share/public_html/index.php(50): Core\Route::run('', false, false, false)
+#5 {main}
+  thrown in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php on line 32
+[24-Aug-2022 18:51:08 America/New_York] PHP Fatal error:  Uncaught Error: Class "Helpers\validation_helper" not found in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php:31
+Stack trace:
+#0 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(154): Controllers\IndexController->register('')
+#1 /Users/nykianderson/Sites/shape-share/public_html/index.php(40): Core\Route::map(Object(Controllers\IndexController), 'register')
+#2 [internal function]: {closure}('')
+#3 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(109): call_user_func_array(Object(Closure), Array)
+#4 /Users/nykianderson/Sites/shape-share/public_html/index.php(50): Core\Route::run('', false, false, false)
+#5 {main}
+  thrown in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php on line 31
+[25-Aug-2022 12:23:51 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function app\Helpers\validation_helper\escapeUserInput() in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php:31
+Stack trace:
+#0 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(154): Controllers\IndexController->register('')
+#1 /Users/nykianderson/Sites/shape-share/public_html/index.php(40): Core\Route::map(Object(Controllers\IndexController), 'register')
+#2 [internal function]: {closure}('')
+#3 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(109): call_user_func_array(Object(Closure), Array)
+#4 /Users/nykianderson/Sites/shape-share/public_html/index.php(50): Core\Route::run('', false, false, false)
+#5 {main}
+  thrown in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php on line 31
+[25-Aug-2022 12:27:59 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function phpinfo() in /Users/nykianderson/Sites/shape-share/public_html/test.php:3
+Stack trace:
+#0 {main}
+  thrown in /Users/nykianderson/Sites/shape-share/public_html/test.php on line 3
+[25-Aug-2022 12:36:24 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function phpinfo() in /Users/nykianderson/Sites/shape-share/public_html/test.php:3
+Stack trace:
+#0 {main}
+  thrown in /Users/nykianderson/Sites/shape-share/public_html/test.php on line 3
+[25-Aug-2022 12:36:52 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function app\Helpers\validation_helper\escapeUserInput() in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php:31
+Stack trace:
+#0 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(154): Controllers\IndexController->register('')
+#1 /Users/nykianderson/Sites/shape-share/public_html/index.php(40): Core\Route::map(Object(Controllers\IndexController), 'register')
+#2 [internal function]: {closure}('')
+#3 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(109): call_user_func_array(Object(Closure), Array)
+#4 /Users/nykianderson/Sites/shape-share/public_html/index.php(50): Core\Route::run('', false, false, false)
+#5 {main}
+  thrown in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php on line 31
+[25-Aug-2022 12:41:58 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function Controllers\escapeUserInput() in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php:31
+Stack trace:
+#0 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(154): Controllers\IndexController->register('')
+#1 /Users/nykianderson/Sites/shape-share/public_html/index.php(40): Core\Route::map(Object(Controllers\IndexController), 'register')
+#2 [internal function]: {closure}('')
+#3 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(109): call_user_func_array(Object(Closure), Array)
+#4 /Users/nykianderson/Sites/shape-share/public_html/index.php(50): Core\Route::run('', false, false, false)
+#5 {main}
+  thrown in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php on line 31
