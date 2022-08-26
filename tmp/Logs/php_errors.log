@@ -2125,3 +2125,12 @@ Stack trace:
 #4 /Users/nykianderson/Sites/shape-share/public_html/index.php(50): Core\Route::run('', false, false, false)
 #5 {main}
   thrown in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php on line 31
+[26-Aug-2022 13:08:36 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function Controllers\escapeUserInput() in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php:31
+Stack trace:
+#0 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(154): Controllers\IndexController->register('')
+#1 /Users/nykianderson/Sites/shape-share/public_html/index.php(40): Core\Route::map(Object(Controllers\IndexController), 'register')
+#2 [internal function]: {closure}('')
+#3 /Users/nykianderson/Sites/shape-share/framework/Core/Route.php(109): call_user_func_array(Object(Closure), Array)
+#4 /Users/nykianderson/Sites/shape-share/public_html/index.php(50): Core\Route::run('', false, false, false)
+#5 {main}
+  thrown in /Users/nykianderson/Sites/shape-share/app/Controllers/IndexController.php on line 31
