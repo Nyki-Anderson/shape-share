@@ -1,0 +1,77 @@
+{
+  "version": "3.9",
+  "services": {
+    "apache": {
+      "image": "lets-encrypt-apache:latest",
+      "container_name": "Apache${APACHE_VERSION}",
+      "restart": "always",
+      "volumes": [
+        "${APACHE_LOG_VOLUME}:/var/log/apache2",
+        "${SSL_VOLUME}:/var/imported/ssl"
+      ],
+      "ports": [
+        "${APACHE_HTTP_PORTS}",
+        "${APACHE_HTTPS_PORTS}",
+        "${HOST_HTTPS_PORT}:443"
+      ],
+      "environment": {
+        "LOG_DIRECTORY": "/var/log/httpd",
+        "LOG_PREFIX": "httpd-shape-share",
+        "LOG_LEVEL": "debug"
+      },
+      "depends_on": [
+        "php",
+        "mariadb"
+      ]
+    },
+    "php": {
+      "image": "php:latest",
+      "container_name": "php-fpm${PHP_VERSION}",
+      "restart": "always",
+      "environment": {
+        "COMPOSER_VERSION": "1",
+        "WEB_ALIAS_DOMAIN": "local.shape-share.com",
+        "PHP_DATE_TIMEZONE": "EST",
+        "PHP_DISPLAY_ERRORS": "1",
+        "PHP_MEMORY_LIMIT": "2048M",
+        "PHP_MAX_EXECUTION_TIME": "300",
+        "PHP_POST_MAX": "500M",
+        "PHP_UPLOAD_MAX_FILESIZE": "1024M"
+      },
+      "links": [
+        "mariadb"
+      ]
+    },
+    "mariadb": {
+      "image": "mariadb:latest",
+      "container_name": "MariaDB${MARIADB_VERSION}",
+      "restart": "always",
+      "environment": {
+        "MARIADB_ROOT_PASSWORD": "${MYSQL_ROOT_PASSWORD}", 
+        "MYSQL_DATABASE": "${MYSQL_DATABASE}",
+        "MYSQL_USER": "${MYSQL_USER}",
+        "MYSQL_PASSWORD": "${MYSQL_PASSWORD}"
+      },
+      "ports": [
+        "${MARIADB_PORTS}"
+      ],
+      "volumes": [
+        "./mariadb:/var/lib/mysql"
+      ]
+    }
+  },
+  "secrets": {
+    "db_password": {
+      "file": "/mariadb/secrets/db_password.txt"
+    },
+    "db_root_password": {
+      "file": "/mariadb/secrets/db_root_password.txt"
+    },
+    "ssl_key": {
+      "file": "/apache/secrets/ssl-key.pem"
+    },
+    "ssl_cert": {
+      "file": "/apache/secrets/ssl-cert.pem"
+    }
+  }
+}

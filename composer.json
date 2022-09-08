@@ -21,17 +21,13 @@
       "psr-4": {
         "Config\\": "app/Config",
         "Controllers\\": "app/Controllers",
-        "Core\\": "framework/Core",
-        "Database\\": "framework/Database",
+        "Framework\\": "framework",
         "Entities\\": "app/Entities",
         "Libraries\\": "app/Libraries",
         "Models\\": "app/Models",
         "Views\\": "app/Views",
         "Vendor\\": "vendor",
         "Tests\\": "tests"
-      },
-      "files": [
-        "app/Helpers/validation_helper.php"
-      ]
+      }
     }
 }

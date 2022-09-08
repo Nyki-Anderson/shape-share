@@ -13,11 +13,13 @@ require ('../vendor/autoload.php');
  * -------------------------------------------------------------------
  */
 
-require('..' . DS . 'framework' . DS . 'Core' . DS . 'Bootstrap.php');
-require('..' . DS . 'framework' . DS . 'Core' . DS . 'Controller.php');
-require('..' . DS . 'framework' . DS . 'Database' . DS . 'DatabasePDO.php');
+require('..' . DS . 'framework' . DS . 'Bootstrap.php');
 
 Bootstrap::run();
+
+//require_once(FRAMEWORK_PATH . 'Core/Globals.php');
+
+require_once(FRAMEWORK_PATH . 'Core/Core.php');
 
 /**
  * -------------------------------------------------------------------
@@ -25,20 +27,13 @@ Bootstrap::run();
  * -------------------------------------------------------------------
  */
 
-  use Core\Route;
+  use framework\Core\Route;
 
-  // Default Router
-  Route::add('/', function() {
-    $data = [
-      'title' => 'Welcome to Shape-Share!',
-      'description' => 'Shape-Share is a simple online image sharing platform where members can upload, react, save, and search for images of shapes.',
-    ];
-    include VIEW_PATH . 'static_pages' . DS . 'site_landing.html';
-  });
+  // Default Route
+  Route::add('/', function() {});
 
-  Route::add('/register', function () {Route::map('Index', 'register');});
-  Route::add('/register', function () {Route::map('Index', 'register');}, 'post');
-  Route::add('/login', function () {Route::map('Index', 'login');});
+  Route::add('/landing/register', function (){}, ['get', 'post']);
+  Route::add('/landing/login', function (){}, ['get', 'post']);
 
  /**
  * -------------------------------------------------------------------
@@ -46,7 +41,7 @@ Bootstrap::run();
  * -------------------------------------------------------------------
  */
 
-// Trailing '/' doesn't matter, case doesn't matter, and no multimatching 
+// Trailing '/' doesn't matter, case doesn't matter, and no multi-matching 
 Route::run('/', false, false, false);
 
 

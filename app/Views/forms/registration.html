@@ -32,10 +32,50 @@
 
   </head>
   </body>
+
+<!-- Error, Success, Warning, Info Messages -->
+    <div class='notifcation-bar'>
+        <?php if (isset($data['errors'])) : ?>
+
+            <div class='notify-error'>
+              <ul>
+                <?php foreach ($data['errors'] as $error): ?>
+                    <li><?= $error; ?></li>
+                <?php endforeach ?>
+              </ul>
+            </div>
+
+        <?php endif; 
+        
+        if (isset($data['success'])) : ?>
+
+            <div class = 'notify-success'> 
+                <?= $data['success'] ?>
+            </div>
+        
+        <?php endif;
+
+        if (isset($data['warning'])) : ?>
+
+            <div class = 'notify-warning'> 
+                <?= $data['warning'] ?>
+            </div>
+        
+        <?php endif;
+
+        if (isset($data['info'])) : ?>
+
+            <div class = 'notify-info'> 
+                <?= $data['info'] ?>
+            </div>
+        
+        <?php endif; ?>
+    </div>
+
     <div class="content-container">
 
       <div class="form-container">
-        <form action="/register" method='POST' autocomplete=false>
+        <form action="/landing/register" method='post' autocomplete=false>
 
           <input type="hidden" name="role" value="0">
 
@@ -562,7 +602,7 @@
               <input type="submit" name="registerSubmit" value="Register" class="submit-btn">
     
               <div>Already a member? Login 
-                <a href="/login">Here</a>
+                <a href="/landing/login">Here</a>
               </div>
         
           </div>

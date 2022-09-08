@@ -1,8 +1,12 @@
 <?php
+declare(strict_types=1);
 
-namespace Core;
+namespace framework\Core;
 
-use Controllers\IndexController;
+include(HELPER_PATH . 'string_format_helper.php');
+
+use function Helpers\convertToCamelCase;
+use function Helpers\convertToStudlyCaps;
 
 class Route
 {
@@ -20,10 +24,10 @@ class Route
   * @param string|array $method - either a string of allowed methods or an array with string values
   * @return void
   */
-  public static function add(string $expression, callable $function, string $method = 'get')
+  public static function add(string $requestURI, callable $function, array $method = ['get'])
   {
     array_push(self::$routes, Array(
-      'expression'  => $expression,
+      'requestURI'  => $requestURI,
       'function'    => $function,
       'method'      => $method,
     ));
@@ -48,13 +52,15 @@ class Route
   {
     $basepath = rtrim($basepath, '/');
 
-    $parsed_url = parse_url($_SERVER['REQUEST_URI']);
+    $parsed_url = parse_url(
+      (isset($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . 
+      $_SERVER['HTTP_HOST'] . 
+      $_SERVER['REQUEST_URI']);
 
     $path = '/';
 
     if (isset($parsed_url['path'])) 
     {
-
       if ($trailing_slash_matters)
       {
         $path = $parsed_url['path'];
@@ -63,7 +69,7 @@ class Route
 
         if ($basepath . '/' != $parsed_url['path'])
         {
-          $path = rtrim($parsed_url['path']);
+          $path = rtrim($parsed_url['path'], '/');
         
         } else {
 
@@ -72,47 +78,43 @@ class Route
       }
     }
 
-    $path = urldecode($path);
-
-    $method = $_SERVER['REQUEST_METHOD'];
-
     $path_match_found = false;
 
     $route_match_found = false;
 
     foreach (self::$routes as $route)
     {
-      $route['expression'] = '(' . $basepath . ')' . $route['expression'];
-    
+      if (((strcasecmp($path, $route['requestURI']) === 0) && $case_matters) || (strcmp($path, $route['requestURI']) === 0) && ! $case_matters){
 
-      // Add 'find string start' automatically
-      $route['expression'] = '^' . $route['expression'];
-
-      // Add 'find string end' automatically
-      $route['expression'] = $route['expression'] . '$';
-
-      if (preg_match('#' . $route['expression'] . '#' . ($case_matters ? '' : 'i') . 'u', $path, $matches))
-      {
         $path_match_found = true;
 
-        foreach ((array) $route['method'] as $allowedMethod)
+        foreach ($route['method'] as $allowedMethod)
         {
-          if (strtolower($method) == strtolower($allowedMethod))
+          if (strtolower($_SERVER['REQUEST_METHOD']) == ($allowedMethod))
           {
-            array_shift($matches);
-
-            if ($basepath != '' && $basepath != '/')
-            { 
-              array_shift($matches); // Remove basepath
-            }
-
-            if ($return_value = call_user_func_array($route['function'], $matches))
-            {
-              echo $return_value;
-            }
-
             $route_match_found = true;
 
+            $temp = explode('/', substr($path, 1));
+
+            // Default Controller
+            $controller = convertToStudlyCaps(empty($temp[0]) ? 'landing' : $temp[0]);
+
+            // Default Action
+            $action = convertToCamelCase(! isset($temp[1]) || empty($temp[1]) ? 'index' : $temp[1]);
+
+            if (! file_exists(CONTROLLER_PATH . "{$controller}Controller.php")) {
+
+              $controller = "Error";
+              $action = "index";
+            }
+        
+            if (! method_exists("Controllers\\{$controller}Controller", "{$action}")) {
+        
+              $controller = 'Error';
+              $action = 'index';
+            }
+
+            self::map($controller, $action);
             break;
           }
         }
@@ -130,7 +132,7 @@ class Route
       {
         if (self::$methodNotAllowed)
         {
-          call_user_func_array(self::$methodNotAllowed, Array($path, $method));
+          call_user_func_array(self::$methodNotAllowed, Array($path,  $_SERVER['REQUEST_METHOD']));
         }
       
       } else {
@@ -143,11 +145,19 @@ class Route
     }
   }
 
-  public static function map(string $controller, string $action = 'index', array $params = [])
+  public static function map(string $controller, string $action = 'index')
   {
     $controllerName = 'Controllers\\' . $controller . 'Controller';
     $actionName = $action;
-    $paramString = implode(', ', $params);
+   
+    $paramString = '';
+
+    foreach ($_GET as $key => $value){
+
+      $paramString .= $value . ', ';
+    }
+
+    $paramString = rtrim($paramString, ',');
 
     $controller = new $controllerName;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Helpers;
+namespace Helpers;
 
 /**
  * Convert $string to StudlyCaps.
@@ -62,6 +62,7 @@ if (! function_exists('isRegex')) {
 
     return preg_match($regex, $string);
   }
+}
 
   /**
    * Detect Magic Quotes and Remove Then (remove backslashes)
@@ -69,12 +70,12 @@ if (! function_exists('isRegex')) {
    * @param array||string $value
    * @return void
    */
-  function stripSlashDeep($value) 
- {
-  $value = is_array($value) ? array_map('stripSlashDeep', $value) : stripslashes($value);
+if (! function_exists('stripSlashDeep')) {
+  function stripSlashDeep(mixed $value) 
+  {
+    $value = is_array($value) ? array_map('stripSlashDeep', $value) : stripslashes($value);
 
-  return $value;
- }
-
- 
+    return $value;
+  }
 }
+ 

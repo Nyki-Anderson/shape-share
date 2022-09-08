@@ -1,13 +1,16 @@
-FROM php:8.2-fpm
+ARG PHP_VERSION="8.2"
 
-ARG WEB_USER
-ARG WEB_GROUP
-ARG PHP_ROOT_DIR
+FROM php:latest
 
-COPY www.conf ${PHP_ROOT_DIR}/php.fpm.d/www.conf
+WORKDIR /Users/nykianderson/Sites/shape-share/
 
-RUN docker-php-ext-install pdo
+CMD [ "php", "shape-share/public_html/index.php" ]
 
-RUN usermod -u 1000 ${WEB_USER} \
-  && groupmod -g 1000 ${WEB_GROUP} \
-  && chgrp -R staff ${PHP_ROOT_DIR}php-fpm.d/www.conf
+RUN docker-php-ext-install pdo pdo_mysql
+
+RUN apt-get update && apt-get install -y \
+		libfreetype6-dev \
+		libjpeg62-turbo-dev \
+		libpng-dev \
+	&& docker-php-ext-configure gd --with-freetype --with-jpeg \
+	&& docker-php-ext-install -j$(nproc) gd

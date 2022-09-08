@@ -1,106 +1,152 @@
 <?php
+declare(strict_types=1);
 
-namespace Controllers;
+namespace app\Controllers;
 
-use Core\Controller;
-use Libraries\Validation;
-use app\Helpers\validation_helper;
+use app\Models\MemberModel;
+use framework\Core\Controller;
+use framework\Core\Core;
+use framework\Exception\AccessDeniedException;
+use framework\Exception\RuntimeException;
+use framework\Repsonse\Response;
+use framework\Response\Response as ResponseResponse;
+use framework\Service\Logger\LoggerInterface;
 
 class IndexController extends Controller
 {
-  public function register()
+  /** @var UserModel */
+  protected $memberModel;
+
+  /** @var LoggerInterface */
+  protected $logger;
+
+  /**
+   * IndexController constructor
+   *
+   * @param MemberModel $memberModel
+   * @param LoggerInterface $logger
+   */
+  public function __construct(MemberModel $memberModel, LoggerInterface $logger)
   {
-    if (! empty($_POST) && $_SERVER["REQUEST_METHOD"] == "POST")
-    {
-      $formInput = [
-        'username' => $_POST['username'],
-        'password' => $_POST['password'],
-        'passConfirm' => $_POST['passConfirm'],
-        'aboutMe' => $_POST['aboutMe'],
-        'month' => $_POST['month'],
-        'day' => $_POST['day'],
-        'year' => $_POST['year'],
-        'gender' => $_POST['gender'],
-        'occupation' => $_POST['occupation'],
-        'hometown' => $_POST['hometown'],
-        'country' => $_POST['country'],
-        'favShape' => $_POST['fav_shape'],
-        'favColor' => $_POST['fav_color'],
-      ];
-
-      $escInput = escapeUserInput($formInput);
-
-      $rules = [
-        'username' => [
-          'required'  => true,
-          'pattern'   => 'username',
-          'min'       => 5,
-          'max'       => 25,
-          'noCurse'   => true,
-        ],
-        'password'  => [
-          'required'  => true,
-          'pattern'   => 'password',
-          'match'     => $escInput['passConfirm'],
-          'min'       => 8,
-          'max'       => 25,
-        ],
-        'aboutMe' => [
-          'pattern'   => 'alphanumchar',
-          'max'       => 200,
-          'noCurse'   => true,
-        ],
-        'year' => [
-          'date'      => true,
-        ],
-        'occupation' => [
-          'pattern'   => 'alphanumspace',
-          'noCurse'   => true,
-        ],
-        'hometown' => [
-          'pattern'   => 'alphanumspace',
-          'noCurse'   => true,
-        ],
-      ];
-
-      $val = new Validation($escInput, $rules);
-      $val->validate();
-
-      if ($val->isValid())
-      {
-
-
-      } else {
-
-        $data = [
-          'title' => 'Error in Form',
-          'description' => 'Form has at least one input error.',
-          'errorMsgs' => $val->errors(),
-        ];
-
-        include(VIEW_PATH . 'forms' . DS . 'registration.html');
-      }
-
-
-    
-    } else {
-
-      $data = [
-        'title' => 'Registration Form',
-        'description' => 'A form to register for a free Shape-Share membership.',
-      ];
-  
-      include(VIEW_PATH . 'forms' . DS . 'registration.html');
-    }
+    $this->memberModel= $memberModel;
+    $this->logger = $logger;
   }
 
-  public function login()
+  /**
+   * @return Response
+   * @throws RuntimeException
+   */
+  public function indexAction()
   {
-    $data = [
-      'title' => 'Login Form',
-      'description' => 'A form to login to the membership dashboard',
+    $members = $this->getCache()->getCache('members');
+
+    if (! $members) {
+      $members = $this->memberModel->getAll();
+      $this->getCache()->setCache('members', $members, 10);
+    }
+
+    $params = [
+      'members' => $members,
+      'auth'    => $this->isAuth()
     ];
 
-    include(VIEW_PATH . 'forms' . DS . 'login.html');
+    return $this->renderView("index", $params);
+  }
+
+  public function jsonAction()
+  {
+    $members = $this->getCache()->getCache('members');
+
+    if (! $members) {
+
+      $members = $this->memberModel->getAll();
+      $this->getCache()->setCache('members', $members, 10);
+    }
+
+    // Presenter
+    $membersJson = [];
+
+    foreach ($members as $member) {
+
+      $membersJson[] = [
+        'id'    => $member->id,
+        'role'  => $member->role,
+      ];
+    }
+
+    return $this->renderView("json", ['json' => json_encode($membersJson)], 'application/json', true);
+  }
+
+  /**
+   * @param $id
+   * @return Response
+   * @throws RuntimeException
+   */
+  public function memberAction($id)
+  {
+    $member = $this->memberModel->getById($id);
+
+    if (! $this->isAuth()) {
+
+      Core::redirect("/index/login");
+    }
+
+    return $this->renderView("member", ['member' => $member]);
+  }
+
+  /** 
+   * @return Response
+   * @throws RuntimeException
+   */
+  public function loginAction()
+  {
+    if ($this->isAuth()) {
+      Core::redirect("/index/index");
+    }
+
+    if (! empty($_POST['username']) && ! empty($_POST['password'])) {
+
+      $member = $this->memberModel->getMemberbyLoginPassword($_POST['username'], $_POST['password']);
+
+      if ($member) {
+
+        $this->setAuth($member->role);
+        set_flash_message(t('Success Login'));
+
+        Core::redirect("index/index");
+      }
+
+      set_flash_message(t('Invalid login data'));
+      $this->logger->error("Invalid login data", ['username' => $_POST['username']]);
+    }
+    return $this->renderView('login');
+  }
+
+  /**
+   * @return Response
+   * @throws RuntimeException
+   */
+  public function logoutAction()
+  {
+    $this->destroyAuth();
+    return $this->renderView("logout");
+  }
+
+  public function insertAction()
+  {
+    if (! $this->isAuth()) {
+      throw new AccessDeniedException();
+    }
+
+    if (isset($_POST['username']) && isset($_POST['password'])) {
+
+      $id = $this->memberModel->addMember($_POST['username'], $_POST['password']);
+
+      $this->getCache()->dropByKey('members');
+
+      Core::redirect("/index/index");
+    }
+
+    return $this->renderView("insert");
   }
 }

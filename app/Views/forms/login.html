@@ -37,7 +37,7 @@
     <div class="content-container">
 
       <div class="form-container">
-        <form action="/login" autocomplete="false">
+        <form action="/landing/login" autocomplete="false">
 
           <div class="form-header">
             <h2>Login</h2>
@@ -65,15 +65,11 @@
               </div>
             </div>
 
-            <div class="form-row">
-              <div class="g-recaptcha" data-sitekey="<?= RECAPTCHAV2_SITEKEY; ?>"></div>
-            </div>
-
             <div class="form-footer">
 
               <input type="submit" name="loginSubmit" value="Login" class="submit-btn">
 
-              <h4>Not a member yet? <a href="/register">Register</a></h4>
+              <h4>Not a member yet? <a href="/landing/register">Register</a></h4>
 
             </div>
           </div>

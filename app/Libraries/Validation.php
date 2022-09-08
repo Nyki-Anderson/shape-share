@@ -34,7 +34,7 @@ class Validation
     'alphanumspace' => '/^[a-zA-Z\d ]*$/',
     'alphanumchar'  => '/^[\w\d !@#$%&$.,?:;-_]*$/',
     'username'      => '/^[a-zA-Z][a-zA-Z0-9-_]*$/',
-    'password'      => '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]$/',
+    'password'      => '/^(?=.*[a-z])(?=.*[A-Z])(?=.*0-9)(?=.*[#$@!%&*?])[A-Za-z0-9#$@!%&*?]$/',
   ];
   
   /**
@@ -99,92 +99,100 @@ class Validation
       
       foreach ($rules as $rule => $param)
       {
-        switch ($rule)
-        {
-          case 'required':
-            if (empty($value) && $param === true)
-            {
-              $this->addError("<b>{$field}</b> is required.");
-            }
-            break;
-          
-          case 'email':
-            if (! filter_var($value, FILTER_VALIDATE_EMAIL))
-            {
-              $this->addError("<b>{$field}</b> is not a valid email.");
-            }
-            break;
-
-          case 'match':
-            if (is_string($this->_post['field']))
-            {
-              if (! strcasecmp($this->_post['field'], $this->_post[$param]))
+        if (! empty($value) && $rule != 'required') {
+          switch ($rule)
+          {
+            case 'required':
+              if (empty($value) && $param === true)
               {
-                $this->addError("<b>{$field}</b> must match <b>{$param}</b>.");
-              }
-        
-            } else {
+                $this->addError("<b>{$field}</b> is required.");
+              
+              } elseif ($param === false) {
 
-              if ($this->_post['field'] != $this->_post['param'])
+                break;
+              }
+              break;
+            
+            case 'email':
+              if (! filter_var($value, FILTER_VALIDATE_EMAIL))
               {
-                $this->addError("<b>{$field}</b> must match <b>{$param}</b>.");
+                $this->addError("<b>{$field}</b> is not a valid email.");
               }
-            }
-            break;
-          
-          case 'pattern':
-            if (! preg_match($this->regex[$param], $value))
-            {
-              $this->addError("<b>{$field}</b> contains invalid characters. ", $param);
-            }
-            break;
-          
-          case 'min':
-            if (strlen($value) > $param)
-            {
-              $this->addError("<b>{$field}</b> must be at least {$param} characters in length.");
-            }
-            break;
-          
-          case 'max':
-            if (strlen($value) < $param)
-            {
-              $this->addError("<b>{$field}</b> must be less than {$param} characters in length.");
-            }
-            break;
+              break;
 
-          case 'exact':
-            if (strlen($value) != $param)
-            {
-              $this->addError("<b>{$field}</b> must be exactly {$param} characters in length.");
-            }
-            break;
+            case 'match':
+              if (is_string($value))
+              {
+                if (strcasecmp($value, $this->_post[$param]) != 0)
+                {
+                  $this->addError("<b>{$field}</b> must match.");
+                }
+          
+              } else {
 
-          case 'noCurse':
-            if (! $this->curseWordsFilter($value))
-            {
-              $this->addError("<b>{$field}</b> contains language which may be inappropriate for some members.");
-            }
-            break;
-          
-          case 'date':
-            if (! $this->validDate())
-            {
-              $this->addError("This is not a valid date.");
-            }
-          
-          case 'file':
-            if (! $this->validFile($field))
-            {
-              $this->addError("{$field} is not valid.");
-            }
+                if ($value !== $this->_post[$param])
+                {
+                  $this->addError("<b>{$field}</b> must match <b>{$param}</b>.");
+                }
+              }
+              break;
+            
+            case 'pattern':
+              if (preg_match($this->regex[$param], $value) === false)
+              {
+                $this->addError("<b>{$field}</b> contains invalid characters. ", $param);
+              }
+              break;
+            
+            case 'min':
+              if (strlen($value) < $param)
+              {
+                $this->addError("<b>{$field}</b> must be at least {$param} characters in length.");
+              }
+              break;
+            
+            case 'max':
+              if (strlen($value) > $param)
+              {
+                $this->addError("<b>{$field}</b> must be less than {$param} characters in length.");
+              }
+              break;
+
+            case 'exact':
+              if (strlen($value) != $param)
+              {
+                $this->addError("<b>{$field}</b> must be exactly {$param} characters in length.");
+              }
+              break;
+
+            case 'noCurse':
+              if (! $this->curseWordsFilter($value))
+              {
+                $this->addError("<b>{$field}</b> contains language which may be inappropriate for some members.");
+              }
+              break;
+            
+            case 'date':
+                if (! $this->validDate())
+                {
+                  $this->addError("This is not a valid date.");
+                }
+              break;
+            
+            case 'file':
+              if (! $this->validFile($field))
+              {
+                $this->addError("{$field} is not valid.");
+              }
+              break;
+          }
         }
       }
     }
 
     if (empty($this->_validationErrors))
     {
-      $this->isValid = true;
+      $this->_isValid = true;
     }
 
     return $this;
@@ -278,7 +286,7 @@ class Validation
 
     if (! isset($this->_file[$field]['error']) || is_array($this->_file[$field]['error']))
     {
-      $this->addError = "<b>{$field}</b> is not a valid file.";
+      $this->addError("<b>{$field}</b> is not a valid file.");
       $valid = false;
     }
 
@@ -288,28 +296,28 @@ class Validation
         break;
       
       case UPLOAD_ERR_NO_FILE:
-        $this->addError = "<b>{$field}</b> is not sent.";
+        $this->addError("<b>{$field}</b> is not sent.");
         $valid = false;
         break;
 
       case UPLOAD_ERR_INI_SIZE:
-        $this->addError = "<b>{$field}</b> exceeds the max filesize.";
+        $this->addError("<b>{$field}</b> exceeds the max filesize.");
         $valid = false;
         break;
 
       case UPLOAD_ERR_FORM_SIZE:
-        $this->addError = "<b>{$field}</b> exceeds the max filesize.";
+        $this->addError("<b>{$field}</b> exceeds the max filesize.");
         $valid = false;
         break;
 
       default:
-        $this->addError = "<b>{$field}</b> has an unknown error.";
+        $this->addError("<b>{$field}</b> has an unknown error.");
         $valid = false;
     }
 
     if ($this->_file[$field]['size'] > 1000000)
     {
-      $this->addError = "<b>{$field}</b> exceeds the max filesize.";
+      $this->addError("<b>{$field}</b> exceeds the max filesize.");
       $valid = false;
     }
 
@@ -319,7 +327,7 @@ class Validation
       'gif'   => 'image/gif',
     ];
 
-    if (array_search($this->_file[$field]['mime'], $allowedMime))
+    if (array_search($this->_file[$field]['type'], $allowedMime))
     {
       $this->addError("<b>{$field} has an invalid file format.");
       $valid = false;
@@ -391,7 +399,7 @@ class Validation
    */
   public function isValid()
   {
-    return $this->isValid;
+    return $this->_isValid;
   }
 
 }

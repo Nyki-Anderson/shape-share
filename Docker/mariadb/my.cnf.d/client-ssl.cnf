@@ -1,0 +1,9 @@
+[mysql]
+## MySQL Client Configuration ##
+ssl-ca=/usr/local/etc/my.cnf.d/certificates/ca-cert.pem
+ssl-cert=/usr/local/etc/my.cnf.d/certificates/client-cert.pem
+ssl-key=/usr/local/etc/my.cnf.d/certificates/client-key.pem
+##  Force TLS version for client too
+tls_version=TLSv1.2,TLSv1.3
+# Verify SSL Server
+#ssl-verify-server-cert

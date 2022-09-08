@@ -1,16 +1,45 @@
-FROM httpd:2.4
+ARG APACHE_VERSION=2.4
 
-ARG WEB_USER
-ARG WEB_GROUP
-ARG APACHE_ROOT_DIR
+FROM httpd:latest
 
-COPY httpd-vhosts.conf ${APACHE_ROOT_DIR}/conf/extr/httpd-vhosts.conf
-COPY httpd.conf ${APACHE_ROOT_DIR}/conf/httpd.conf
+WORKDIR /Users/nykianderson/Sites/shape-share
 
-RUN chgrp -R ${WEB_GROUP} ${APACHE_ROOT_DIR}/conf/httpd.conf \
-  && chgrp -R {WEB_GROUP} ${APACHE_ROOT_DIR}/conf/extra/httpd-vhosts.conf
+EXPOSE 80
+EXPOSE 443
 
-RUN usermod -u 1000 ${WEB_USER} \
-  && groupmod -g 1000 ${WEB_GROUP} \
-  && chgrp -R ${WEB_GROUP} ${APACHE_ROOT_DIR}
+RUN apt-get update -yqq && apt-get install -yqq 
+
+COPY /sites-available/my-httpd.conf /usr/local/apache2/conf/httpd.conf
+
+RUN sed -i "s/#LoadModule\ rewrite_module/LoadModule\ rewrite_module/" /usr/local/apache2/conf/httpd.conf;
+
+# Copy apache vhost file to proxy php requests to php-fpm container
+COPY /sites-available/demo.apache.conf /usr/local/apache2/conf/demo.apache.conf
+
+COPY /sites-available/my-httpd.conf /usr/local/apache2/conf/httpd.conf
+
+RUN echo "Include /usr/local/apache2/conf/my-httpd.conf" \
+    >> /usr/local/apache2/conf/my-httpd.conf
+
+COPY /sites-available/default.conf /usr/local/apache2/conf/default.conf
+
+RUN echo "Include /usr/local/apache2/conf/default.conf" \
+    >> /usr/local/apache2/conf/default.conf
+
+RUN echo "Include /usr/local/apache2/conf/demo.apache.conf" \
+    >> /usr/local/apache2/conf/demo.apache.conf
+
+COPY sites-available/shape-share.conf /usr/local/apache2/conf/shape-share.conf
+
+RUN echo "Include /usr/local/apache2/conf/shape-share.conf" \
+    >> /usr/local/apache2/conf/shape-share.conf
+
+ENV ServerName=local.shape-share.com
+
+RUN rm -rf /var/www/local.shape-share.com/public
+CMD exec /usr/sbin/httpd -D FOREGROUND -f /etc/apache
+
+
+
+
 
