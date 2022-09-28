@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace framework\Core;
+namespace Core;
 
 include(HELPER_PATH . 'string_format_helper.php');
 

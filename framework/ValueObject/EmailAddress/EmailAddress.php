@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace framework\ValueObject\EmailAddress;
+namespace ValueObject\EmailAddress;
 
-use framework\Exception\InvalidArgumentException;
-use framework\ValueObject\IValueObject;
+use Exception\InvalidArgumentException;
+use ValueObject\IValueObject;
 
 class EmailAddress implements IValueObject
 {

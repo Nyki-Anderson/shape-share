@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace framework\Core;
+namespace Core;
 
-use framework\Core\DependencyInjection\ContainerInterface;
-use framework\Exception\NotFoundException;
-use framework\Exception\RuntimeException;
-use framework\Response\Response;
-use framework\Service\Auth\Auth;
-use framework\Service\Cache\Cache;
+use DependencyInjection\ContainerInterface;
+use Exception\NotFoundException;
+use Exception\RuntimeException;
+use Response\Response;
+use Service\Auth\Auth;
+use Service\Cache\Cache;
 
 /**
  * Class Controller
@@ -26,6 +26,12 @@ class Controller implements IController
     $this->includeHelpers(['string_format']);
   }
 
+  /**
+   * Loads helper functions for use in all controllers
+   *
+   * @param array $helpers
+   * @return void
+   */
   public function includeHelpers(array $helpers)
   {
     foreach ($helpers as $helper) {

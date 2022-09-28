@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace framework\Core\DependencyInjection;
+namespace DependencyInjection;
 
-use framework\Exception\RuntimeException;
-use framework\Security\PasswordManager;
-use framework\Security\PasswordManagerInterface;
-use framework\Service\Logger\BasicLogger;
-use framework\Service\Logger\LoggerInterface;
+use Exception\RuntimeException;
+use Security\PasswordManager;
+use Security\PasswordManagerInterface;
+use Service\Logger\BasicLogger;
+use Service\Logger\LoggerInterface;
 
 class Container implements ContainerInterface
 {

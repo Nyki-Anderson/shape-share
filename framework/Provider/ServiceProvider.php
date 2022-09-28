@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace framework\Provider;
+namespace Provider;
 
 class ServiceProvider
 {

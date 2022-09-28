@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace framework\Service\Profiler;
+namespace Service\Profiler;
 
-use framework\Config\Configuration;
+use Config\Configuration;
 
 class Profiler implements ProfilerInterface
 {

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace framework\Core\DependencyInjection;
+namespace DependencyInjection;
 
 use framework\Exception\RuntimeException;
 

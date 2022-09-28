@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace framework\Service\Logger;
+namespace Service\Logger;
 
 class BasicLogger implements LoggerInterface
 {

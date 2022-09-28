@@ -2,7 +2,7 @@
 
 namespace Controllers;
 
-use framework\Core\Controller;
+use Core\Controller;
 use Libraries\Validation; 
 use Models\Member;
 
@@ -13,7 +13,7 @@ class LandingController extends Controller
   public function __construct()
   {
     parent::__construct();
-    $this->memberModel = new Member();
+    #$this->memberModel = new Member();
   }
 
   public function index()
@@ -22,7 +22,7 @@ class LandingController extends Controller
       'title' => 'Welcome to Shape-Share!',
       'description' => 'Shape-Share is a simple online image sharing platform where members can upload, react, save, and search for images of shapes.',
     ];
-    include VIEW_PATH . 'static_pages' . DS . 'site_landing.html';
+    return $this->renderView('static_pages' . DS . 'site_landing', $data);
   }
 
   public function register()

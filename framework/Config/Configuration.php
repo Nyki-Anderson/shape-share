@@ -1,6 +1,6 @@
 <?php
 
-namespace framework\Config;
+namespace Config;
 
 /**
  * Shape-Share Configuration Wrapper Class
@@ -29,15 +29,15 @@ class Configuration
       switch ($environment) {
 
         case 'dev':
-          self::$config = json_decode(file_get_contents('..' . DS .'framework' . DS . 'Config' . DS . 'environment' . DS . 'Development.json'), true);
+          self::$config = json_decode(file_get_contents(FRAMEWORK_PATH . 'Config' . DS . 'environment' . DS . 'Development.json'), true);
           break;
 
         case 'prod':
-          self::$config = json_decode(file_get_contents('..' . DS .'framework' . DS . 'Config' . DS . 'environment' . DS . 'Production.json'), true);
+          self::$config = json_decode(file_get_contents(FRAMEWORK_PATH . 'Config' . DS . 'environment' . DS . 'Production.json'), true);
           break;
 
         case 'test':
-          self::$config = json_decode(file_get_contents('..' . DS .'framework' . DS . 'Config' . DS . 'environment' . DS . 'Testing.json'), true);
+          self::$config = json_decode(file_get_contents(FRAMEWORK_PATH . 'Config' . DS . 'environment' . DS . 'Testing.json'), true);
           break;
       }
     }
@@ -81,12 +81,10 @@ class Configuration
 
     if (! file_exists($iniFilepath)) {
 
-      throw new \Exception('Create user.ini file - copy form config.ini.sample!');
+      throw new \Exception('Create user.ini file - copy from config.ini.sample!');
     }
 
     try {
-
-      $data = parse_ini_file($iniFilepath, true);
 
       foreach ($phpConfig as $section => $values) {
 
@@ -97,6 +95,15 @@ class Configuration
           $content .= $key . "=" . $value . "\n";
         }
       }
+
+      //write it into file
+      if (!$handle = fopen($iniFilepath, 'w')) { 
+        
+        return false; 
+      }
+    
+      fwrite($handle, $content);
+      fclose($handle); 
    
     } catch (\Exception $e) {
 

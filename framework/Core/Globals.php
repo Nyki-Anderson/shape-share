@@ -5,7 +5,7 @@ spl_autoload_register('MVCAutoLoader');
 
 function MVCAutoLoader($class_name)
 {
-  $className = \framework\Core\Core::dirNameFilter($class_name);
+  $className = \Core\Core::dirNameFilter($class_name);
 
   $class = str_replace('\\', DS, $className) . '.php';
 

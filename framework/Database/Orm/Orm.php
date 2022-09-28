@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace framework\Database\Orm;
+namespace Database\Orm;
 
-use framework\Core\Config\Configuration;
-use framework\Database\Database;
+use Config\Configuration;
+use Database\Database;
 
 abstract class Orm implements IOrm
 {

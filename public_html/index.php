@@ -5,7 +5,7 @@
 define('DS', DIRECTORY_SEPARATOR); 
 define('ROOT', dirname(dirname(__FILE__)) . DS); 
 
-require ('../vendor/autoload.php');
+require('../vendor/autoload.php');
 
 /**
  * -------------------------------------------------------------------
@@ -15,11 +15,7 @@ require ('../vendor/autoload.php');
 
 require('..' . DS . 'framework' . DS . 'Bootstrap.php');
 
-Bootstrap::run();
-
-//require_once(FRAMEWORK_PATH . 'Core/Globals.php');
-
-require_once(FRAMEWORK_PATH . 'Core/Core.php');
+Bootstrap::run('dev');
 
 /**
  * -------------------------------------------------------------------
@@ -27,13 +23,13 @@ require_once(FRAMEWORK_PATH . 'Core/Core.php');
  * -------------------------------------------------------------------
  */
 
-  use framework\Core\Route;
+use Core\Route;
 
   // Default Route
   Route::add('/', function() {});
 
-  Route::add('/landing/register', function (){}, ['get', 'post']);
-  Route::add('/landing/login', function (){}, ['get', 'post']);
+  Route::add('/register/', function (){}, ['get', 'post']);
+  Route::add('/login/', function (){}, ['get', 'post']);
 
  /**
  * -------------------------------------------------------------------

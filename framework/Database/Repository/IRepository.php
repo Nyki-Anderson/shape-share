@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace framework\Database\Repository;
+namespace Database\Repository;
 
-use framework\Database\Entity\Entity;
+use Database\Entity\Entity;
 
 interface IRepository
 {

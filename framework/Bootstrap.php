@@ -1,16 +1,23 @@
 <?php
 
+use Config\Configuration;
+use Core\Core;
+use DependencyInjection\Container;
+
 class Bootstrap 
 {
-  public static function run()
+  public static function run(string $environment)
   {
     if (! session_id()) {
       @session_start();
     }
 
-    self::init();
+    self::init($environment);
     self::configureApp();
     self::unregisterGlobals();
+
+    $container = new Container();
+    $core = new Core($container);
   }
 
   /**
@@ -18,7 +25,7 @@ class Bootstrap
    * Initialization
    * --------------------------------------------------------
    */
-  private static function init()
+  private static function init(string $environment)
   {
     // Define path constants
     mb_internal_encoding('UTF-8'); // String Encoding
@@ -42,6 +49,7 @@ class Bootstrap
     define('JS_PATH', URL_ROOT . 'assets' . DS . 'js' . DS);
     define('IMG_PATH', URL_ROOT . 'assets' . DS . 'img' . DS);
     define('INI_FILEPATH', ROOT);
+    define('ENVIRONMENT', $environment);
   }
 
   /**
@@ -57,11 +65,8 @@ class Bootstrap
 
    private static function configureApp()
    {
-    require(CONFIG_PATH . 'Configuration.php');
+    $config = Configuration::getInstance(ENVIRONMENT);
 
-    $config = framework\Config\Configuration::getInstance('dev');
-
-    define('ENVIRONMENT_VAR', $config->get('app', 'environment'));
     define('LANG_VAR', $config->get('app', 'language'));
     define('CHARSET_VAR', $config->get('app', 'site_charset'));
 

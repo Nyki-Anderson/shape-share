@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace framework\Database;
+namespace Database;
 
-use framework\Config\Configuration;
+use Config\Configuration;
 
 class Database implements IDatabase
 {

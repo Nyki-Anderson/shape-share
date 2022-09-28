@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace framework\Database\Orm;
+namespace Database\Orm;
 
 interface IOrm
 {

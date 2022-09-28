@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace framework\Security;
+namespace Security;
 
-use framework\Exception\RuntimeException;
+use Exception\RuntimeException;
 
 class PasswordManager implements PasswordManagerInterface
 {
