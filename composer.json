@@ -1,0 +1,42 @@
+{
+    "name": "nykianderson/shape-share",
+    "description": "Shape-Share is a simple online image sharing platform where members can upload, react, save, and search for images of shapes.",
+    "type": "website",
+    "readme": "README.md",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nyki-Anderson",
+            "email": "nyki.l.anderson@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "config": {
+      "optimize-autoloader": false
+    },
+    "require": {
+        "twig/twig": "^3.0"
+    },
+    "autoload": {
+      "psr-4": {
+        "Config\\": "framework/Config",
+        "Controllers\\": "app/Controllers",
+        "Core\\": "framework/Core",
+        "Database\\": "framework/Database",
+        "DependencyInjection\\": "framework/Core/DependencyInjection",
+        "Entities\\": "app/Entities",
+        "Exception\\": "framework/Core/Exception",
+        "Libraries\\": "app/Libraries",
+        "Models\\": "app/Models",
+        "Provider\\": "framework/Provider",
+        "Response\\": "framework/Response",
+        "Request\\": "framework/Request",
+        "Security\\": "framework/Security",
+        "Service\\": "framework/Service",
+        "ValueObject\\": "framework/ValueObject",
+        "Views\\": "app/Views",
+        "Vendor\\": "vendor",
+        "Tests\\": "tests"
+      }
+    }
+}
