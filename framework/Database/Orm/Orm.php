@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Database\Orm;
 
-use Config\Configuration;
 use Database\Database;
 
 abstract class Orm implements IOrm
@@ -21,7 +20,7 @@ abstract class Orm implements IOrm
   {
     $this->tableName = $tableName;
     $this->databaseInstance = Database::getInstance();
-    $this->environment = ENVIRONMENT_VAR;
+    $this->environment = ENVIRONMENT;
 
     if (empty($this->environment)) {
 
