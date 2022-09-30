@@ -124,10 +124,4 @@ class Configuration
     define('TWIG_STRICT_VARIABLES', $this->get('twig', 'strict_variables'));
     define('TWIG_AUTOESCAPE', $this->get('twig', "autoescape"));
   }
-
-  public function reCaptchaKeys()
-  {
-    define('RECAPTCHAV2_sitekey', '6Ldy92QgAAAAAESJBMUaktUGRiUTFJZwcO8eJE6U');
-    define('RECAPTCHAV2_secretkey', '6Ldy92QgAAAAAA2-4KX9eNrg8bD7IcKiOZw0CQqX');
-  }
 }
