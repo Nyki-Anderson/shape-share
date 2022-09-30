@@ -6,5 +6,10 @@ node_modules/*
 tests/*
 src/*
 public_html/assets/img/*
-.htaccess
 
+
+framework/Config/environment/Development.json
+framework/Config/environment/Production.json
+framework/Config/environment/Testing.json
+framework/Config/.htpasswd
+.user.ini
