@@ -1,0 +1,10 @@
+.gitsecret/keys/random_seed
+!*.secret
+tmp/*
+vendor/*
+node_modules/*
+tests/*
+src/*
+public_html/assets/img/*
+.htaccess
+
