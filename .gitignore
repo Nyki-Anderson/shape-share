@@ -6,6 +6,7 @@ node_modules/*
 tests/*
 src/*
 public_html/assets/img/*
+public_html/robots.txt
 
 
 framework/Config/environment/Development.json
