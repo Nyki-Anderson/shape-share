@@ -1,0 +1,7 @@
+# Exclude Everything
+*
+
+# Un-Exclude Now
+!src
+!package.json
+!LICENSE

@@ -1,0 +1,70 @@
+version: '3.9'
+
+services:  
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "${NGINX_PORTS}"
+    volumes:
+      - ./public_html
+
+  db:
+    container_name: mysql
+    build:
+      context: ./.docker/db/
+      dockerfile: Dockerfile
+    environment:
+      - MYSQL_ROOT_PASSWORD="${DOCKER_SECRETS_DIR} mysql_root_password"
+      - MYSQL_PASSWORD="${DOCKER_SECRETS_DIR}mysql_password"
+      - MYSQL_USER="${MYSQL_USER}"
+      - MYSQL_DATABASE="${MYSQL_DATABASE}"
+    volumes:
+      - "${MYSQL_DATA_DIR}:${CONTAINER_DB_DATA_DIR}:rw"
+      - type: bind
+        source: "${LOCAL_SSL_DIR}/"
+        target: "${CONTAINER_SSL_DIR}/"
+      - ${MYSQL_DUMP_DIR}:"${CONTAINER_INIT_DB_DIR}":ro
+    ports: 
+      - "${MYSQL_PORTS}"
+    networks:
+      - mysql_net
+    restart: on-failure
+    secrets:
+      - mysql_root_password
+      - mysql_password
+    command: [ "mysqld",
+      "--character-set-server=utf8mb4",
+      "--collation-server=utf8mb4_unicode_ci",
+      "--bind-address=0.0.0.0",
+      "--log-error-verbosity",
+      "--require_secure_transport=ON",
+      "--ssl-ca=${SHAPE_SHARE_CA}",
+      "--ssl-cert=${MYSQL_SERVER_CERT}",
+      "--ssl-key=MYSQL_SERVER_KEY",
+      "--default_authentication_plugin=mysql_native_password" ]
+
+  adminer:
+    image: adminer:4.8.1
+    container_name: adminer
+    depends_on:
+      - db
+    ports:
+      - "${ADMINER_PORTS}"
+    networks:
+      - mysql_net
+    restart: always
+
+networks:
+  mysql_net:
+    name: mysql_net
+
+secrets:
+  mysql_password:
+    file: "${LOCAL_PASSWORD_FILE}db_password.txt"
+  mysql_root_password:
+    file: "${LOCAL_ROOT_PASSWORD_FILE}db_root_password.txt"
+
+
+
+
+

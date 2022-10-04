@@ -905,5 +905,13 @@
         "foreground": "#B267E6"
       }
     }
-  ]
+  ],
+  "files.exclude": {
+    ".vscode": true,
+    "**/.hg": false,
+    "**/.svn": false,
+    "**/CVS": false,
+    "**/Thumbs.db": false,
+    "LICENSE": true
+  }
 }
