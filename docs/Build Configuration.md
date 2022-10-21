@@ -8,7 +8,7 @@ tags:
 share: true  
 ---  
   
-  
+modification date: <%+ tp.file.last_modified_date() %>  
 # Build Configuration  
 ---  
 ##  Insert Section Title  

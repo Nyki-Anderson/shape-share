@@ -8,6 +8,7 @@ tags:
 share: true  
 ---  
   
+modification date: <%+ tp.file.last_modified_date() %>  
 # Docker Containerization  
 ---  
 ## Why Docker?  
@@ -16,9 +17,8 @@ share: true
   
 [Containerization](https://www.citrix.com/solutions/app-delivery-and-security/what-is-containerization.html) is a form of virtualization where applications run in isolated user spaces, called containers. The benefit of this is that you essentially have a pre-packaged instance of your project that runs the same on any host computer. Containerization can carry a project from development to production and is capable of being much lighter than running a virutal machine. This is because instead of building an entire OS, containers are slim images that only contain the packages your application needs. This makes containers faster and more streamlined than any other build method.   
   
-Docker is used extensively among software development teams as a way to test an application on multiple environments and maintain consistency. It is the industry standard and when used correctly, it can speed up the development and testing process. I spent months learning and configuring my Docker images, so there is a steep learning curve but once you get everything running, you have a perfectly curated development environment.   
+Docker is used extensively among software development teams as a way to test an application on multiple environments and maintain consistency. It is the industry standard and when used correctly, it can speed up the development and testing process. I spent months learning and configuring my Docker images, so there is a steep learning curve but once you get everything running, you have a perfectly curated development environment. Docker is heavily documented and has a great wiki, visit their site to learn the lingo as I won't go into much detail throughout the tutorial.  
   
 ## Installing Docker Desktop  
   
-Installing Docker is fairly simple and is available on all OS's. I am currently developing on a Mac but the beauty of Docker is, once it's installed,  no matter where the containers are run they operate in Linux (or Windows).   
-```
+Installing Docker is fairly simple and is available on all OS's. I am currently developing on a Mac but the beauty of Docker is, once it's installed,  no matter where the containers are run they operate in Linux (or Windows). Docker Desktop is my preferred way to run Docker because you can see exactly what images and 
