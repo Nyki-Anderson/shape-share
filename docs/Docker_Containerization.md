@@ -27,10 +27,13 @@ Install for Mac OS (Intel) by one of two ways:
 - Go to [Docker.com](https://www.docker.com/) and install via .dmg file (preferred method)  
 - Install via [Homebrew](https://formulae.brew.sh/cask/docker) with the command:  `$ brew install --cask docker`  
   
-> [!Note]  
+> [Note]  
 > I had issues when I installed via Homebrew that resulted in my docker daemon not running despite Docker Desktop being active. To fix this, I had to completely [uninstall Docker Desktop](https://nektony.com/how-to/uninstall-docker-on-mac) and then reinstall/update the application which was a major pain.   
   
 To install on Linux or Windows go [here](https://dockerwebdev.com/tutorials/install-docker/)for instructions.  
   
+We will also be making use of a terrific companion to Docker Desktop called Docker Compose. When we get into the [ Crafting your Docker-Compose.yml](Docker%20Containerization#Crafting%20your%20Docker-Compose.yml.md)  
+section the benefits   
   
+## Crafting your Docker-Compose.yml  
   
