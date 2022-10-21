@@ -1,12 +1,24 @@
 version: '3.9'
 
 services:  
-  nginx:
-    image: nginx:alpine
+  server:
+    container_name: server
+    build: 
+      context: ./.docker/server/
+      dockerfile: Dockerfile
     ports:
-      - "${NGINX_PORTS}"
+      - "${APACHE_PORTS}"
+      - "${APACHE_SECURE_PORTS}"
     volumes:
-      - ./public_html
+      - ./src:/var/www
+      - type: bind
+        source: "${APACHE_CONFIG}"
+        target: "${CONTAINER_APACHE_CONFIG}"
+      - type: bind
+        source: "${PHP_CONFIG}"
+        target: "${CONTAINER_PHP_CONFIG}"
+    networks:
+      - php_net
 
   db:
     container_name: mysql
@@ -19,11 +31,13 @@ services:
       - MYSQL_USER="${MYSQL_USER}"
       - MYSQL_DATABASE="${MYSQL_DATABASE}"
     volumes:
-      - "${MYSQL_DATA_DIR}:${CONTAINER_DB_DATA_DIR}:rw"
       - type: bind
-        source: "${LOCAL_SSL_DIR}/"
-        target: "${CONTAINER_SSL_DIR}/"
-      - ${MYSQL_DUMP_DIR}:"${CONTAINER_INIT_DB_DIR}":ro
+        source: "${MYSQL_DATA_DIR}"
+        target: "${CONTAINER_DB_DATA_DIR}"
+      - "${MYSQL_CONFIG}:${CONTAINER_MYSQL_CONFIG}:ro"
+      - type: bind
+        source: "${SSL_DIR}/certs/mysql"
+        target: "${CONTAINER_SSL_DIR}/certs/mysql"
     ports: 
       - "${MYSQL_PORTS}"
     networks:
@@ -40,7 +54,7 @@ services:
       "--require_secure_transport=ON",
       "--ssl-ca=${SHAPE_SHARE_CA}",
       "--ssl-cert=${MYSQL_SERVER_CERT}",
-      "--ssl-key=MYSQL_SERVER_KEY",
+      "--ssl-key=${MYSQL_SERVER_KEY}",
       "--default_authentication_plugin=mysql_native_password" ]
 
   adminer:
@@ -57,12 +71,16 @@ services:
 networks:
   mysql_net:
     name: mysql_net
+  php_net:
+    name: php_net
 
 secrets:
   mysql_password:
-    file: "${LOCAL_PASSWORD_FILE}db_password.txt"
+    file: "${PASSWORD_FILE}db_password.txt"
   mysql_root_password:
-    file: "${LOCAL_ROOT_PASSWORD_FILE}db_root_password.txt"
+    file: "${PASSWORD_FILE}db_root_password.txt"
+
+
 
 
 

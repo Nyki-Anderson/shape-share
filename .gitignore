@@ -28,3 +28,8 @@ src/public_html/.htaccess
 src/.htaccess
 .htpasswd
 .security/gpg/private_keys/gpg_private_key.gpg
+.docker/nginx/conf.d/default.conf
+.docker/server/apache/sites-enabled/httpd.conf
+.docker/server/apache/sites-enabled/vhost.conf
+.docker/server/php/conf.d/php.ini
+.docker/server/php/conf.d/xdebug.ini
