@@ -1,7 +1,6 @@
 ---  
 title: Docker_Containerization  
 creation date: 2022-10-20 22:59  
-modification date: <%+ tp.file.last_modified_date() %>  
 topic: How to containerize Apache, PHP, MySQL, and Adminer.  
 tags:  
   - docker  
