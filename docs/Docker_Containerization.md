@@ -9,7 +9,6 @@ tags:
 share: true  
 ---  
   
-  
 # Docker Containerization  
 ---  
 ## Why Docker?  
