@@ -1,11 +1,11 @@
 ---  
 title: Docker_Containerization  
-creation date: 2022-10-20 19:26  
-modification date: 2022-10-20 19:26  
-topic: How to containerize apache, php, mysql, and adminer.  
+creation date: 2022-10-20 22:59  
+modification date: <%+ tp.file.last_modified_date() %>  
+topic: How to containerize Apache, PHP, MySQL, and Adminer.  
 tags:  
-  - readme  
   - docker  
+  - readme  
 share: true  
 ---  
   
@@ -21,3 +21,5 @@ Docker is used extensively among software development teams as a way to test an 
   
 ## Installing Docker Desktop  
   
+Installing Docker is fairly simple and is available on all OS's. I am currently developing on a Mac but the beauty of Docker is, once it's installed,  no matter where the containers are run they operate in Linux (or Windows).   
+```
