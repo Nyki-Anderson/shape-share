@@ -63,7 +63,12 @@ Docker Compose is not required to run containers. Everything that the Docker Com
 --- /.docker  
 	--- /db  
 		--- /init_scripts  
+			--- dev_db_instance.sql  
 		--- /my.cnf.d  
+			--- client_ssl.cnf  
+			--- encrypt.cnf  
+			--- my.cnf  
+			--- server_ssl.cnf  
 		--- /mysql_data  
 		--- Dockerfile  
 	--- /server  
@@ -89,4 +94,27 @@ Docker Compose is not required to run containers. Everything that the Docker Com
 > **NOTE**  
 > In reality, I used dozens of tutorials and references over the course of a couple of months getting my head around Docker. I have listed only the most comprehensive resources I used for brevity.  
   
-The first thing we need to do to get our Docker containers running is write the special Dockerfile's for each service we wish to deploy. In this case, we are running an Apache server, a PHP engine, and a MySQL database server. Each of these will need their own Dockerfile so that we may customize the images. We will be using Docker Hub official images but you can use whatever base image you like, though configurations may differ. 
+The first thing we need to do to get our Docker containers running is write the special Dockerfile's for each service we wish to deploy. In this case, we are running an **Apache** server, a **PHP** engine, and a **MySQL** database server. Each of these will need their own Dockerfile so that we may customize the images. We will be using Docker Hub official images but you can use whatever base image you like, though configurations may differ.   
+  
+```docker  
+FROM php:8.1-apache  
+  
+# Update OS and install common dev tools  
+RUN apt-get update  
+RUN apt-get install -y zip unzip libzip-dev libpng-dev libicu-dev ca-certificates  
+  
+# Install PHP extensions needed  
+RUN docker-php-ext-install mysqli pdo_mysql openssl curl  
+RUN pecl install xdebug  
+RUN docker-php-ext-enable  
+  
+# Enable common Apache modules  
+RUN a2enmod headers expires rewrite php8.0    
+  
+# Install Composer  
+COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer  
+RUN composer global require friendsofphp/php-cs-fixer  
+  
+# Set working directory to web files  
+WORKDIR /var/www/local.shape-share.com  
+```  
