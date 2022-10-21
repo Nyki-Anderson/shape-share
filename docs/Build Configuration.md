@@ -1,6 +1,7 @@
 ---  
 title: Build Configuration  
-creation date: 2022-10-20 22:56  
+created: 2022-10-20 22:56  
+modified: <%+ tp.file.last_modified_date() %>  
 topic: Configuring development environment and building container at runtime.  
 tags:  
   - config  
@@ -8,7 +9,6 @@ tags:
 share: true  
 ---  
   
-modification date: <%+ tp.file.last_modified_date() %>  
 # Build Configuration  
 ---  
 ##  Insert Section Title  
