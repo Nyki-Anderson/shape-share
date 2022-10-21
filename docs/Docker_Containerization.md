@@ -21,4 +21,12 @@ Docker is used extensively among software development teams as a way to test an 
   
 ## Installing Docker Desktop  
   
-Installing Docker is fairly simple and is available on all OS's. I am currently developing on a Mac but the beauty of Docker is, once it's installed,  no matter where the containers are run they operate in Linux (or Windows). Docker Desktop is my preferred way to run Docker because you can see exactly what images and 
+Installing Docker is fairly simple and is available on all OS's. I am currently developing on a Mac so your installation method may differ from mine, but the beauty of Docker is, once it's installed,  no matter where the containers are run they operate in Linux (or Windows). The Docker Desktop GUI is my preferred way to run Docker because you can see exactly what images, containers, and volumes are running as well as have access to active logging to help troubleshoot.   
+  
+There are few ways you can download Docker Desktop for Mac:   
+- Go to [Docker.com](https://www.docker.com/) and install via .dmg file (preferred method)  
+- Install via [Homebrew](https://formulae.brew.sh/cask/docker) with the following command   
+```sh  
+brew install --cask docker  
+```  
+- 
