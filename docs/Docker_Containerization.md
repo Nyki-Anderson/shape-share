@@ -19,7 +19,17 @@ share: true
   
 Docker is used extensively among software development teams as a way to test an application on multiple environments and maintain consistency. It is the industry standard and when used correctly, it can speed up the development and testing process. I spent months learning and configuring my Docker images, so there is a steep learning curve but once you get everything running, you have a perfectly curated development environment. Docker is heavily documented and has a great wiki, visit their site to learn the lingo as I won't go into much detail throughout the tutorial.  
   
-## Installing Docker Desktop  
+## Docker-Specific [Terminology](https://docs.docker.com/glossary/)  
+  
+Term | Definition  
+--- | ---  
+Container | A container is a runtime instance of a docker image. A docker container consists of a docker image, an execution environment, and a standard set of instructions.  
+Image | Docker images are the basis of containers. An image is an ordered collection of root filesystem changes and the corresponding execution parameters for use within a container runtime.  
+Dockerfile | A dockerfile is a text document that contains all the commands you would normally execute manually in order to build a Docker image.  
+Volume | A volume is a specifically-designated directory within one or more containers that bypasses the Union File System. Volumes are designed to persist data, independent of the container's life-cycle.  
+  
+  
+## Installing Docker Desktop and Docker Compose  
   
 Installing Docker is fairly simple and is available on all OS's. I am currently developing on a Mac so your installation method may differ from mine, but the beauty of Docker is, once it's installed,  no matter where the containers are run they operate in Linux (or Windows). The Docker Desktop GUI is my preferred way to run Docker because you can see exactly what images, containers, and volumes are running as well as have access to active logging to help troubleshoot.   
   
@@ -30,10 +40,9 @@ Install for Mac OS (Intel) by one of two ways:
 > [Note]  
 > I had issues when I installed via Homebrew that resulted in my docker daemon not running despite Docker Desktop being active. To fix this, I had to completely [uninstall Docker Desktop](https://nektony.com/how-to/uninstall-docker-on-mac) and then reinstall/update the application which was a major pain.   
   
-To install on Linux or Windows go [here](https://dockerwebdev.com/tutorials/install-docker/)for instructions.  
+To install on Linux or Windows go [here](https://dockerwebdev.com/tutorials/install-docker/) for instructions.  
   
-We will also be making use of a terrific companion to Docker Desktop called Docker Compose. When we get into the [ Crafting your Docker-Compose.yml](Docker%20Containerization#Crafting%20your%20Docker-Compose.yml.md)  
-section the benefits   
+We will also be making use of a terrific companion to Docker Desktop called Docker Compose. Docker Compose is supposed to come with the Docker Desktop installation but mine didn't so I had to install via [Homebrew](https://formulae.brew.sh/formula/docker-compose) `$ brew install docker-compose`. For installation instructions on other OS's, go [here](https://docs.docker.com/compose/install/).  
   
-## Crafting your Docker-Compose.yml  
+Once we start building our containers we will use Dockerfiles to build our custom images and Docker Compose to run the builds.  
   
