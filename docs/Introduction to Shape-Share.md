@@ -8,7 +8,7 @@ tags:
 share: true  
 ---  
   
-Last Modified: <%+ tp.file.last_modified_date("MMMM DD YYYY") %>  
+Last Modified: “<% tp.file.last_modified_date("MMMM DD YYYY") %>  
   
 # Introduction to Shape-Share  
   
