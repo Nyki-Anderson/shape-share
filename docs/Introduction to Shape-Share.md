@@ -29,13 +29,14 @@ Let’s get started!
   
 ## Formatting Conventions in this Tutorial  
   
-Before we get going, here are some typographical conventions I will be using throughout the tutorial. Notice that *italics* denote the project file system that you will be implementing on your host computer and **bold** text is a reference to a file within this repository specifically. Most of this project will be containerized and not require you to store or install anything on your host computer itself but some secrets and security keys will need to be handled outside of the project directory for obvious reasons.  
+Before we get going, here are some typographical conventions I will be using throughout the tutorial. Notice that *italics* denote the project file system that you will be implementing on your host computer and [linked] text is a reference to a file within this repository specifically. Most of this project will be containerized and not require you to store or install anything on your host computer itself but some secrets and security keys will need to be handled outside of the project directory for obvious reasons.  
   
-| Type of Text  | Corresponding Information                       |  
-| ------------- | ----------------------------------------------- |  
-| **bold**      | Filename or Path to File Within this Repository                    |  
-| *italic*      | Project Filename or Path to File on Host System |  
-| `inline code` | Application, Language, or Tool Name             |  
+| Type of Text | Corresponding Information            |  
+| ------------ | ------------------------------------ |  
+| [linked]     | Reference to File in this Repository |  
+| **bold**      | Application, Language, or Tool Name               |  
+| *italic*      | Project Filename or Path to File on Host Computer |  
+| `inline code` | Code Snippet                                      |  
   
 ```  
 A code block will either display instructions to run or a file to be copied.  
@@ -50,10 +51,14 @@ A code block will either display instructions to run or a file to be copied.
 ## Some Considerations  
 I am coding on a Macbook Pro and thus some of this tutorial will be Mac-specific. I will try to include resources for other operating systems where necessary but once you get your `Docker` container up and running, we will essentially be building in a `Linux` environment anyways.   
   
-The remainder of this document will detail my coding setup for anyone interested and will of course be entirely subjective. I am pretty proud of my go to tools but they are by no means the only way to implement this project. Skip ahead to the **doc/1.0_Docker_Containerization** document if you are ready, otherwise let’s talk about tools and apps that make coding more enjoyable and productive.  
+The remainder of this document will detail my coding setup for anyone interested and will of course be entirely subjective. I am pretty proud of my go to tools but they are by no means the only way to implement this project. Skip ahead to the [Docker Containerization](/doc/1.0_Docker_Containerization) document if you are ready, otherwise let’s talk about tools and apps that make coding more enjoyable and productive.  
   
 > :note: Note:  
 > I am not compensated in anyway by the products or companies I am about to shower with praise. I just get really passionate about my tools.  
   
 ## Note-Taking and Organization  
-When it comes to organizing my research and task management, I have jumped around between `Evernote`, `OneNote`, and even `Apple Reminders` (I know…). But until recently, nothing was really satisfying my need to keep a centralized brain-dump that easily kept track of all the things my ADHD brain tries to forget. In walks, `Obsidian`. If you’ve never heard of it here’s a link to their [website](https://obsidian.md). I have only been using it for a few months and I’m just now delving into the really awesome stuff that makes it a truly one-of-a-kind app.
+  
+When it comes to organizing my research and task management, I have jumped around between Evernote, OneNote, and even Apple Reminders (I know…). But until recently, nothing was really satisfying my need to keep a centralized brain-dump that easily kept track of all the things my ADHD brain tries to forget. In walks, `Obsidian`. If you’ve never heard of it here’s a link to their [website](https://obsidian.md). I have only been using it for a few months and I’m just now delving into the really awesome stuff that makes it a truly one-of-a-kind app.  
+  
+First off, it’s a note-taking app written entirely in their own flavor of Markdown language. Similar to Github Markdown, `Obsidian` allows you to format your notes using common Markdown notation and configurable Hotkeys. When I say it’s customizable, I mean there is an open API that supports custom CSS as well Javascript commands. If you’re like me and don’t know what the heck to do with all that, the `Obsidian` community has you covered. They churn out gorgeous typesetting themes and plugins that make this app a must have for project (or school) management.   
+  
