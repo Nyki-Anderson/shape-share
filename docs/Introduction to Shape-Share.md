@@ -8,13 +8,8 @@ tags:
 share: true  
 ---  
   
-Last Modified: “<% tp.file.last_modified_date("MMMM DD YYYY") %>  
   
 # Introduction to Shape-Share  
-  
-```toc  
-title: Table of Contents  
-```  
 ---  
 ##  About this Tutorial  
   
