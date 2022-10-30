@@ -10,7 +10,7 @@ share: true
   
   
 # Introduction to Shape-Share  
----  
+  
 ##  About this Tutorial  
   
 This tutorial   
@@ -26,12 +26,13 @@ Before we get started, here are some typographical conventions I will be using t
 | **bold**      | Files Within this Repository                    |  
 | *italic*      | Project Filename or Path to File on Host System |  
 | `inline code` | Application, Language, or Tool Name             |  
-| > code block  | Code                                            |  
-| :warning:     | Warnings or Things to Watch out For             |  
-| :note:        | Important Tidbits                                                |  
   
+```bash  
+This is code to run.  
+```  
   
-| :warning: Warning! |  
-| ------------------ |  
-|       Just checking if admonitions work in github.             |  
+> **note**  
+> This is a note  
   
+> **warning**  
+> This is a warning  
