@@ -51,7 +51,7 @@ A code block will either display instructions to run or a file to be copied.
 ## Some Considerations  
 I am coding on a Macbook Pro and thus some of this tutorial will be Mac-specific. I will try to include resources for other operating systems where necessary but once you get your **Docker** container up and running, we will essentially be building in a **Linux** environment anyways.   
   
-The remainder of this document will detail my coding setup for anyone interested and will of course be entirely subjective. I am pretty proud of my go to tools but they are by no means the only way to implement this project. Skip ahead to the [Getting Started](/docs/0.0_Getting_Started) document if you are ready, otherwise let’s talk about tools and apps that make coding more enjoyable and productive.  
+The remainder of this document will detail my coding setup for anyone interested and will of course be entirely subjective. I am pretty proud of my go to tools but they are by no means the only way to implement this project. Skip ahead to the [Getting Started](./docs/0.0_Getting_Started) document if you are ready, otherwise let’s talk about tools and apps that make coding more enjoyable and productive.  
   
 > :memo: Note:  
 > I am not compensated in anyway by the products or companies I am about to shower with praise. I just get really passionate about my tools.  
