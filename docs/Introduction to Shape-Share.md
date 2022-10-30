@@ -31,8 +31,8 @@ Before we get started, here are some typographical conventions I will be using t
 This is code to run.  
 ```  
   
-> **note**  
+> :memo: Note  
 > This is a note  
   
-> **warning**  
+> :warning: Warning!  
 > This is a warning  
