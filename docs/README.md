@@ -8,7 +8,6 @@ tags:
 share: true  
 ---  
   
-  
 # Introduction to Shape-Share  
   
 ##  About this Tutorial  
@@ -141,3 +140,6 @@ This plugin is a must if you, like me, get started with basic **Obsidian** and t
 - [Dataview](https://github.com/blacksmithgu/obsidian-dataview) treat your Vault like a database with advanced queries that bring your notes together  as organized, sortable data tables  
   
 ## Coding and Text Editing  
+  
+  
+[Link to Next Tutorial](/docs/0.0_Getting_Started.md)
