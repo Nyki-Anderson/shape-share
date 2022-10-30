@@ -50,7 +50,10 @@ A code block will either display instructions to run or a file to be copied.
 ## Some Considerations  
 I am coding on a Macbook Pro and thus some of this tutorial will be Mac-specific. I will try to include resources for other operating systems where necessary but once you get your `Docker` container up and running, we will essentially be building in a `Linux` environment anyways.   
   
-The remainder of this document will detail my coding setup for anyone interested and will of course be entirely subjective. I am pretty proud of my go to tools but they are by no means the only way to implement this project. Skip ahead to the **doc/1.0_Docker_Containerization** document if you are ready, otherwise let’s talk about tools that will make coding so much more productive.  
+The remainder of this document will detail my coding setup for anyone interested and will of course be entirely subjective. I am pretty proud of my go to tools but they are by no means the only way to implement this project. Skip ahead to the **doc/1.0_Docker_Containerization** document if you are ready, otherwise let’s talk about tools and apps that make coding more enjoyable and productive.  
+  
+> :note: Note:  
+> I am not compensated in anyway by the products or companies I am about to shower with praise. I just get really passionate about my tools.  
   
 ## Note-Taking and Organization  
-When it comes to organizing my research and task management, there is no better tool than `Obsidian`. 
+When it comes to organizing my research and task management, I have jumped around between `Evernote`, `OneNote`, and even `Apple Reminders` (I know…). But until recently, nothing was really satisfying my need to keep a centralized brain-dump that easily kept track of all the things my ADHD brain tries to forget. In walks, `Obsidian`. If you’ve never heard of it here’s a link to their [website](https://obsidian.md). I have only been using it for a few months and I’m just now delving into the really awesome stuff that makes it a truly one-of-a-kind app.
