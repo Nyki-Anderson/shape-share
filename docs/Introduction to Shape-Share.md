@@ -73,7 +73,6 @@ I was procrastinating doing homework the other day and totally squirreled over a
 ### Obsidian Plugins  
 ```json TI:"Obsidian Plugins Installed"  
 [  
-  "table-editor-obsidian",  
   "better-word-count",  
   "obsidian-kanban",  
   "recent-files-obsidian",  
@@ -88,7 +87,7 @@ I was procrastinating doing homework the other day and totally squirreled over a
   "obsidian-html-tags-autocomplete",  
   "obsidian-metatable",  
   "obsidian-dynamic-toc",  
-  "obsidian-code-block-enhancer",  
+  "obsidian-better-code-block",  
   "tag-wrangler",  
   "fantasy-calendar",  
   "highlightr-plugin",  
@@ -101,10 +100,8 @@ I was procrastinating doing homework the other day and totally squirreled over a
   "quick-latex",  
   "obsidian-auto-link-title",  
   "cm-typewriter-scroll-obsidian",  
-  "metaedit",  
-  "metadata-menu",  
   "obsidian-hotkeys-for-templates",  
-  "obsidian-mkdocs-publisher"  
+  
 ]  
 ```  
 #### Templater  
@@ -120,7 +117,27 @@ I wasn’t hip to what a [Kanban](https://github.com/mgmeyers/obsidian-kanban) b
 Much like the auto-generated table of contents in GitHub,  [Dynamic TOC](https://github.com/Aidurber/obsidian-plugin-dynamic-toc) adds a clickable and auto-updating table of contents to your notes based on the headings used. I added this command to my notes template so I don’t even have to think about it anymore. Then when my note is complete I have a basic outline and can jump to any part of the file.  
   
 #### Better Code Block  
-The [Obsidian Better Code Block](https://github.com/stargrey/obsidian-better-codeblock) plugin adds line numbers, the name of the language specified, optional title, highlight line number, and fold default to your code blocks. It’s a nice to have when publishing.  
+The [Obsidian Better Code Block](https://github.com/stargrey/obsidian-better-codeblock) plugin adds line numbers, the name of the language specified, optional title, highlight line number, and fold default to your code blocks.   
   
+#### Fantasy Calendar  
+This Calendar plugin is obviously intended for other purposes but it is the best calendar plugin available. [Fantasy Calendar](https://github.com/fantasycalendar/obsidian-fantasy-calendar) lets you insert events and link notes directly to their due date without much trouble. I haven’t figured out how to integrate this with my Kanban boards yet but that functionality would definitely improve the plugin. For now I use it for tracking tests and other events, assigning each course I’m taking to a distinct color.  
   
+#### GitHub Publisher  
+There are other plugins to publish to your preferred static web hosting site but I prefer [GitHub Publisher](https://github.com/ObsidianPublisher/obsidian-github-publisher) because I can add my markdown READMEs to my pre-existing repositories. To push to GitHub I just use a Hotkey and it shares all updated files to my repository. You can designate which files to share and which to ignore in your frontmatter. The only downside is, a lot of the **Obsidian**-specific formatting and plugins do not get converted to GitHub flavored markdown so its not ideal but most of the basic syntax is shared by the two platforms.  
   
+#### Tag-Wrangler  
+[Tag Wrangler](https://github.com/pjeby/tag-wrangler) is aptly named as it allows you to query tags found in your frontmatter or anywhere else in your notes even if you misspelled one or two along the way. You can blanket rename any tags and every instance updates in their respective notes. You can also make whole pages dedicated to a single or multiple tags with all the links to notes sharing that tag name. Searches are case-insensitive and the plugin will warn you if you attempt to rename a tag that would have merge conflicts.  
+  
+#### Find Unlinked Files  
+This plugin is a must if you, like me, get started with basic **Obsidian** and then down the road discover new functionality that you want to retroactively fit to all your older notes. I just started using frontmatter and tagging to a serious degree, so in order to keep all my old notes relevant I needed a way to update those notes with my new system. [Find Unlinked Files](https://github.com/Vinzent03/find-unlinked-files/blob/main/README.md) is a simple note parser that can help you find orphaned notes, notes without tags, empty notes, and broken links. Never leave a note behind!   
+  
+#### Honorable Mentions  
+- [Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian) - takes the hassle out of creating markdown tables  
+- [Typewriter Scroll](https://github.com/deathau/cm-typewriter-scroll-obsidian) - keeps the view centered in the editor  
+- [Dictionary ](https://github.com/phibr0/obsidian-dictionary) - great if you’re taking a language course and need to allow autocorrect for languages than the default  
+- [Frontmatter Tag Suggest](https://github.com/jmilldotdev/obsidian-frontmatter-tag-suggest) - autocomplete tags in frontmatter  
+- [Icon Folder](https://github.com/FlorianWoelki/obsidian-icon-folder) - add icons to your folders  
+- [Tasks](https://github.com/obsidian-tasks-group/obsidian-tasks) - create advanced tasks with loads of metadata (I don’t use it but it’s popular)  
+- [Dataview](https://github.com/blacksmithgu/obsidian-dataview) treat your Vault like a database with advanced queries that bring your notes together  as organized, sortable data tables  
+  
+## Coding and Text Editing  
