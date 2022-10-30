@@ -40,7 +40,7 @@ Before we get going, here are some typographical conventions I will be using thr
 ```  
 A code block will either display instructions to run or a file to be copied.  
 ```  
-[Linked Text Will Navigate You Around This Repository ]()  
+[Linked Text Will Navigate You Around This Repository  OR Link to an External Site]()  
   
 > :memo: Note  
 > This is a note  
@@ -60,16 +60,18 @@ The remainder of this document will detail my coding setup for anyone interested
   
 When it comes to organizing my research and task management, I have jumped around between Evernote, OneNote, and even Apple Reminders (I know…). But until recently, nothing was really satisfying my need to keep a centralized brain-dump that easily kept track of all the things my ADHD brain tries to forget. In walks, **Obsidian**. If you’ve never heard of it here’s a link to their [website](https://obsidian.md). It’s free though I pay for syncing purposes. I have only been using it for a few months and I’m just now delving into the really awesome stuff that makes it a truly one-of-a-kind app.  
   
-First off, it’s a note-taking app written entirely in their own flavor of Markdown language. Similar to Github Markdown, **Obsidian** allows you to format your notes using common Markdown notation and configurable Hotkeys. When I say it’s customizable, I mean there is an open API that supports custom CSS as well Javascript commands. If you’re like me and don’t know what the heck to do with all that, the **Obsidian** community has you covered. They churn out gorgeous typesetting themes and plugins that make this app a must have for project (or school) management.   
+First off, it’s a note-taking app written entirely in their own flavor of Markdown language. Similar to Github Markdown, **Obsidian** allows you to format your notes using common Markdown notation and configurable Hotkeys. When I say it’s customizable, I mean there is an open API that supports custom **CSS** as well **Javascript** commands. If you’re like me and don’t know what the heck to do with all that, the **Obsidian** community has you covered. They churn out gorgeous typesetting themes and plugins that make this app a must have for project (or school) management.   
   
 I will definitely recommend a ton of great plugins that have improved my workflow tremendously; but what really makes **Obsidian** shine comes native with the app. You can reference other notes within your “Vault” and even link to specific parts of other notes much in the same way you create a standard hyperlink. Even better, when creating a link to another note, a drop-down menu of all the notes in your Vault helps you select the correct one. This is great for rendering clickable todo lists that take you right to the corresponding note or keeping related notes together for bigger projects. You can also link YouTube videos, pdfs, and other media directly into the note and have tons of options for annotating those files in-app.   
   
+A big feature that I just became aware of is the optional metadata frontmatter that you can append to all of your notes. Written in **YAML**, you can supply as much metadata as you want, including the title, created date, updated date, a summary, whatever you like. But the real jewel here is active tagging functionality. Instead of making a physical link to related notes, just give them all a shared tag and they are easily searchable. One of the more obscure features is a literal mind graph of all your files and how they are related to one another. With the graph you can easily see orphaned notes and make connections between files that you never considered. I don’t use it much but it might be a cool feature for you.  
+  
 Another big win for **Obsidian** is that it is not hosted on some cloud server. All your files are kept securely in folders on your local filesystem. All you do is create a Vault folder containing all your markdown notes and they are accessible in the app. Plus, it uses **Prism** syntax highlighting for code snippets and with the help of a plugin you can even run CLI commands from inside the app. Since it’s written in markdown language, you can also easily publish your notes to the hosting platform of your choice. I’m writing this tutorial in it right now. With all that out of the box, I was already sold. But there’s so much more that **Obsidian** can do for you.  
   
-I was procrastinating doing homework the other day and totally squirreled over all the plugins that **Obsidian** has to offer. I will list the ones I actually use on a daily basis and how to configure them for optimal productivity.  
+I was procrastinating doing homework the other day and totally squirreled over all the plugins that **Obsidian** has to offer. I will list all the plugins I currently have installed and deep-dive into the ones I use everyday.  
   
 ### Obsidian Plugins  
-```json  
+```json TI:"Obsidian Plugins Installed"  
 [  
   "table-editor-obsidian",  
   "better-word-count",  
@@ -105,5 +107,20 @@ I was procrastinating doing homework the other day and totally squirreled over a
   "obsidian-mkdocs-publisher"  
 ]  
 ```  
+#### Templater  
+Definitely my top used plugin, is [Templater](https://github.com/SilentVoid13/Templater) which allows you to, you guessed it, make templates! With this plugin, you can automatically create a new note outfitted with all the frontmatter, headings, and content that you need. You can also dynamically input tags and titles upon note creation by issuing a system prompt command. I have templates for todo lists, research, notes, and assignments in my school Vault. I slapped a Hotkey onto the insert template command and bang, I can start a new assignment in seconds.  
+  
+#### Kanban  
+I wasn’t hip to what a [Kanban](https://github.com/mgmeyers/obsidian-kanban) board was when I started **Obsidian** but I’m certainly a fan now. Kanban boards allow you to create workflows by moving cards to different staging boards depending on what you’re actively working on. In **Obsidian** you, simply create your boards (in my school Vault I have: Assignments, Reading, Lectures, In-Progress, Completed, and Not Finished ) and then add tasks (cards) to the boards as you see fit. You can also link notes directly to your Kanban cards so that they are just a click away. Due dates and tagging are also supported.  
+  
+#### Admonition  
+[Admonition](https://github.com/valentine195/obsidian-admonition) is one of those, you don’t know you need it until you have it kind of plugins. Admonitions are callouts with pre-formatted (or customized) icons and colors that can help you separate content from the main body of your notes. The presets are all I really need, but you can put quotes, summaries, warnings, or anything you like in these distinct callouts.  
+  
+#### Dynamic Table of Contents  
+Much like the auto-generated table of contents in GitHub,  [Dynamic TOC](https://github.com/Aidurber/obsidian-plugin-dynamic-toc) adds a clickable and auto-updating table of contents to your notes based on the headings used. I added this command to my notes template so I don’t even have to think about it anymore. Then when my note is complete I have a basic outline and can jump to any part of the file.  
+  
+#### Better Code Block  
+The [Obsidian Better Code Block](https://github.com/stargrey/obsidian-better-codeblock) plugin adds line numbers, the name of the language specified, optional title, highlight line number, and fold default to your code blocks. It’s a nice to have when publishing.  
+  
   
   
