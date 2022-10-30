@@ -13,7 +13,7 @@ share: true
   
 ##  About this Tutorial  
   
-This tutorial will take you from configuring your own :docker: `Docker` server and database to a fully building a fully interactive `PHP` web application with tons of fun functionality. All tutorial files can be found in the **docs** folder at the root of this repository and will be numerically ordered for your convenience. Follow along or pick and choose where to jump in. This project is about sharing what I’ve learned through nearly a year of trial and error and hopefully helping someone make less mistakes than I did. It’s about taking a project from zero to development and maybe even through to production.   
+This tutorial will take you from configuring your own `Docker` server and database to a fully building a fully interactive `PHP` web application with tons of fun functionality. All tutorial files can be found in the **docs** folder at the root of this repository and will be numerically ordered for your convenience. Follow along or pick and choose where to jump in. This project is about sharing what I’ve learned through nearly a year of trial and error and hopefully helping someone make less mistakes than I did. It’s about taking a project from zero to development and maybe even through to production.   
   
 When I first started out, I had no idea where to start and I struggled to find a single resource that could take me through the whole process of web development. That’s what I hope this repository will eventually become. I will be providing some of the better references I was able to find as footnotes where helpful and I will also do my best to explain why I did things a certain way or at the very least warn you of how not to do it. I am a student and by no means an authority on any of the concepts or languages used in this project. I am simply documenting my journey should it be useful to anyone else at a similar stage in their programming career.   
   
@@ -48,3 +48,9 @@ A code block will either display instructions to run or a file to be copied.
 > This is a warning  
   
 ## Some Considerations  
+I am coding on a Macbook Pro and thus some of this tutorial will be Mac-specific. I will try to include resources for other operating systems where necessary but once you get your `Docker` container up and running, we will essentially be building in a `Linux` environment anyways.   
+  
+The remainder of this document will detail my coding setup for anyone interested and will of course be entirely subjective. I am pretty proud of my go to tools but they are by no means the only way to implement this project. Skip ahead to the **doc/1.0_Docker_Containerization** document if you are ready, otherwise let’s talk about tools that will make coding so much more productive.  
+  
+## Note-Taking and Organization  
+When it comes to organizing my research and task management, there is no better tool than `Obsidian`. 
