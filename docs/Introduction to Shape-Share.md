@@ -30,3 +30,6 @@ Before we get started, here are some typographical conventions I will be using t
 | [!admonition] | Notes, Warnings, and Added Clarifications                                                |  
   
   
+```ad-note  
+Just checking if admonitions work in github.  
+```
