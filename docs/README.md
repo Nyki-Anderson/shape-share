@@ -69,7 +69,7 @@ I was procrastinating doing homework the other day and totally squirreled over a
 > In order to use community plugins you need to toggle “Restricted Mode” off in the Community Plugins settings menu. This is because **Obsidian** plugins are user developed and could include harmful code. Always verify a plugin comes from a veritable source. A good indication is how many users have the app installed already. Most plugins are available as **GitHub** repositories allowing you to check the source code. Just be careful!  
   
 ### Obsidian Plugins  
-```json  
+```json TI:"Obsidian Installed Plugins"  
 [  
   "table-editor-obsidian",  
   "better-word-count",  
@@ -111,7 +111,7 @@ I wasn’t hip to what a [Kanban](https://github.com/mgmeyers/obsidian-kanban) b
 Much like the auto-generated table of contents in GitHub,  [Dynamic TOC](https://github.com/Aidurber/obsidian-plugin-dynamic-toc) adds a clickable and auto-updating table of contents to your notes based on the headings used. I added this command to my notes template so I don’t even have to think about it anymore. Then when my note is complete I have a basic outline and can jump to any part of the file.  
   
 #### Code Mirror  
-  
+I still have an issue with this install as it’s supposed to show line numbers in preview mode as well as edit mode. I can only see them in read mode. Nonetheless, [Code Mirror](https://github.com/nothingislost/obsidian-codemirror-options) is much better syntax highlighter than any other plugin I’ve found.   
   
 #### Fantasy Calendar  
 This Calendar plugin is obviously intended for other purposes but it is the best calendar plugin available. [Fantasy Calendar](https://github.com/fantasycalendar/obsidian-fantasy-calendar) lets you insert events and link notes directly to their due date without much trouble. I haven’t figured out how to integrate this with my Kanban boards yet but that functionality would definitely improve the plugin. For now I use it for tracking tests and other events, assigning each course I’m taking to a distinct color.  
@@ -141,16 +141,12 @@ I didn’t like that neither bold nor italic text stood out in a body of text so
   
 ```css   
 /* EDITOR Bold Colour DARK THEME */  
-  
 .theme-dark .cm-s-obsidian .cm-strong, strong {  
     font-weight: 600;  
     color: cyan; !important;   
 }  
   
-  
-  
 /* PREVIEW Bold Colour DARK THEME */  
-  
 .theme-dark .markdown-preview-view .cm-strong, strong {  
     font-weight: 600;  
     color: cyan; !important;   
@@ -160,7 +156,6 @@ I didn’t like that neither bold nor italic text stood out in a body of text so
 .cm-em, em {  
   color: cyan;  
 }  
-  
 ```  
   
 ### Download Obsidian  
@@ -169,7 +164,10 @@ The [Obsidian Download](https://obsidian.md/download) page has support for Windo
 ## Development Software  
 My IDE of choice is [Visual Studio Code](https://visualstudio.microsoft.com/) and its perhaps what I’m most proud of in terms of my configuration. I   
   
-```shell TI: Installed VS Code Extensions  
+### Visual Studio Extensions Installed  
+It is difficult to remember exactly which   
+  
+```shell TI:"Installed VS Code Extensions" HL:"3"  
 code --install-extension aaron-bond.better-comments  
 code --install-extension augustocdias.tasks-shell-input  
 code --install-extension bajdzis.vscode-twig-pack  
@@ -207,6 +205,8 @@ code --install-extension timonwong.shellcheck
 code --install-extension wesbos.theme-cobalt2  
 code --install-extension xdebug.php-debug  
 ```  
+  
+  
   
 ---  
 [Link to Next Tutorial →](/docs/0.0_Getting_Started.md)
