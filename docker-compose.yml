@@ -10,7 +10,7 @@ services:
       - "${APACHE_PORTS}"
       - "${APACHE_SECURE_PORTS}"
     volumes:
-      - ./src:/var/www
+      - ./src:/var/www/local.shape-share.com:cached
       - type: bind
         source: "${APACHE_CONFIG}"
         target: "${CONTAINER_APACHE_CONFIG}"
