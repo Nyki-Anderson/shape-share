@@ -207,7 +207,7 @@ I am in love with [iTerm2](https://iterm2.com/features.html) and I use it in con
 ### Oh My Zsh! Plugins  
 Here is my short list of **oh my Zsh** plugins. You don’t need much for this zsh framework and I haven’t even scratched the surface!  
   
-```zsh  
+```Shell  
 # Plugins  
   source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  
   source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh  
