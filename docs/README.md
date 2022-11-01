@@ -36,6 +36,7 @@ Before we get going, here are some typographical conventions I will be using thr
 ```  
 A code block will either display instructions to run or a file to be copied.  
 ```  
+  
 [Linked Text Will Navigate You Around This Repository  OR Link to an External Site]()  
   
 > :memo: Note  
@@ -53,7 +54,7 @@ The remainder of this document will detail my coding setup for anyone interested
 > I am not compensated in anyway by the products or companies I am about to shower with praise. I just get really passionate about my tools.  
   
 ## Note-Taking and Organization  
-When it comes to organizing my research and task management, I have jumped around between Evernote, OneNote, and even Apple Reminders (I know…). But until recently, nothing was really satisfying my need to keep a centralized brain-dump that easily kept track of all the things my ADHD brain tries to forget. In walks, **Obsidian**. If you’ve never heard of it here’s a link to their [website](https://obsidian.md). It’s free though I pay for syncing purposes. I have only been using it for a few months and I’m just now delving into the really awesome stuff that makes it a truly one-of-a-kind app.  
+When it comes to organizing my research and task management, I have jumped around between Evernote, OneNote, and even Apple Reminders (I know…). But until recently, nothing was really satisfying my need to keep a centralized brain-dump that easily kept track of all the things my ADHD brain tries to forget. In walks **Obsidian**. If you’ve never heard of it here’s a link to their [website](https://obsidian.md). It’s free though I pay for syncing purposes. I have only been using it for a few months and I’m just now delving into the really awesome stuff that makes it a truly one-of-a-kind app.  
   
 First off, it’s a note-taking app written entirely in their own flavor of Markdown language. Similar to Github Markdown, **Obsidian** allows you to format your notes using common Markdown notation and configurable Hotkeys. When I say it’s customizable, I mean there is an open API that supports custom **CSS** as well **Javascript** commands. If you’re like me and don’t know what the heck to do with all that, the **Obsidian** community has you covered. They churn out gorgeous typesetting themes and plugins that make this app a must have for project (or school) management.   
   
@@ -140,13 +141,13 @@ There are dozens of community curated themes to choose from in **Obsidian**, mos
 I didn’t like that neither bold nor italic text stood out in a body of text so I added a short **CSS** snippet to my **.obsidian/snippets** folder to add some color to those elements as I commonly use bold and italic text to denote new vocabulary. I’ll include the **CSS**  at the end of this section. This is the only change I felt the need to make. For those of you that look for headers with different colors, if you install the [Style Settings Plugin](https://github.com/mgmeyers/obsidian-style-settings) you can choose between four variations of **Typomagical**, at least one of which has that feature.   
   
 ```css   
-/* EDITOR Bold Colour DARK THEME */  
+/* EDITOR set color of bold text */  
 .theme-dark .cm-s-obsidian .cm-strong, strong {  
     font-weight: 600;  
     color: cyan; !important;   
 }  
   
-/* PREVIEW Bold Colour DARK THEME */  
+/* PREVIEW set the color of bold text */  
 .theme-dark .markdown-preview-view .cm-strong, strong {  
     font-weight: 600;  
     color: cyan; !important;   
@@ -162,9 +163,7 @@ I didn’t like that neither bold nor italic text stood out in a body of text so
 The [Obsidian Download](https://obsidian.md/download) page has support for Windows, Mac, and some Linux architectures. Choose your installer and get to know the app settings. Fine-tuning your own perfect Vault workspace will take some time as you learn more about the interface. I’m still tweaking mine and I think to some extent this may always be the case as I venture into more advanced operations inside the app. Make it yours!  
   
 ## Development Software  
-My IDE of choice is [Visual Studio Code](https://visualstudio.microsoft.com/) and its perhaps what I’m most proud of in terms of my pure functionality and versatility. I can literally code in any language in **VS** plus code completions, support for obscure languages, LaTeX Workshop support, and its terminal command emulates my terminal emulator! More on that later. Before Obsidian I used the [Markdown Preview Github Styling](https://github.com/mjbvz/vscode-github-markdown-preview-style) and honestly, sometimes I miss it.   
-  
-The problem with **Obsidian** is that there are so many plugins that have melded into my daily lexicon, so to say, and they are all useless when I use **GitHub Publish**. I’m hoping they update the a plugin somewhere for that soon.  
+My IDE of choice is [Visual Studio Code](https://visualstudio.microsoft.com/) and its perhaps what I’m most proud of in terms of my pure functionality and versatility. I can literally code in any language in **VS** plus code completions, support for obscure languages, LaTeX Workshop support, and its terminal command emulates my terminal emulator! More on that later. Before Obsidian I used the [Markdown Preview Github Styling](https://github.com/mjbvz/vscode-github-markdown-preview-style) and honestly, sometimes I miss it. The problem with **Obsidian** is that there are so many plugins that have melded into my daily lexicon, so to say, and they are all useless when I use **GitHub Publish**. I’m hoping they update that in a plugin somewhere soon.  
   
 ### Visual Studio Theme Installed  
 I use the [Winter is Coming](https://marketplace.visualstudio.com/items?itemName=johnpapa.winteriscoming) theme in the color *Dark Blue*. It’s a nice mellow blue with darker blue accents. I like dark modes that avoid bright syntax highlighting.   
@@ -206,14 +205,18 @@ code --install-extension xdebug.php-debug
 I am in love with [iTerm2](https://iterm2.com/features.html) and I use it in conjunction with [Oh My ZSH](https://ohmyz.sh/). Just a beautiful combination. I split my terminal into three corners: one vertical that I reserve for updates, installs, and commands that can be run in my home directory, and two horizontal splits that I use for directory specific commands.  
   
 ### Oh My Zsh! Plugins  
-Here is my short list of **oh my .zsh** plugins. You don’t need much for this zsh framework and I haven’t even scratched the surface!  
+Here is my short list of **oh my Zsh** plugins. You don’t need much for this zsh framework and I haven’t even scratched the surface!  
   
-```shell  
+```shell TI:"Plugins installed via zshrc file"  
 # Plugins  
   source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  
   source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh  
   source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh  
 ```  
+  
+## Conclusion   
+So that’s my setup. I hope some of that info can give you ideas about how to stay organized and productive throughout this project. It’s always good to keep a running “tutorial” for yourself in a note-taking app in case you get busy and step away from a project or just want to remember what you did. I can’t tell you how many times I just said, “screw it” and restarted or completely went a different direction and needed a reminder. Before I started taking notes, that was always a major set-back. I will try to keep the tutorial updated when I do this, with all these tools that should be a much easier endeavor.  
+  
   
 ---  
 [Link to Next Tutorial →](/docs/0.0_Getting_Started.md)
