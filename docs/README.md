@@ -171,7 +171,7 @@ I use the [Winter is Coming](https://marketplace.visualstudio.com/items?itemName
 ### Visual Studio Extensions Installed  
 Here is a list of all of my installed extensions, not to be confused with the **extensions.json** which only shows recommended extensions. Honestly I could stand to prune some of these as I don’t even know what they are for but I knew I wanted them when I installed them. Sometimes it’s just nice to think about all the languages I will learn one day!   
   
-```zsh  
+```Shell  
 code --install-extension aaron-bond.better-comments  
 code --install-extension augustocdias.tasks-shell-input  
 code --install-extension bajdzis.vscode-twig-pack  
@@ -207,7 +207,7 @@ I am in love with [iTerm2](https://iterm2.com/features.html) and I use it in con
 ### Oh My Zsh! Plugins  
 Here is my short list of **oh my Zsh** plugins. You don’t need much for this zsh framework and I haven’t even scratched the surface!  
   
-```zsh  
+```Shell  
 # Plugins  
   source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  
   source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh  
