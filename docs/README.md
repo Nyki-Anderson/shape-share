@@ -47,7 +47,7 @@ A code block will either display instructions to run or a file to be copied.
 ## Some Considerations  
 I am coding on a Macbook Pro and thus some of this tutorial will be Mac-specific. I will try to include resources for other operating systems where necessary but once you get your **Docker** container up and running, we will essentially be building in a **Linux** environment anyways.   
   
-The remainder of this document will detail my coding setup for anyone interested and will of course be entirely subjective. I am pretty proud of my go to tools but they are by no means the only way to implement this project. Skip ahead to the [Getting Started](/docs/0.0_Getting_Started.md) document if you are ready, otherwise let’s talk about tools and apps that make coding more enjoyable and productive.  
+The remainder of this document will detail my coding setup for anyone interested and will of course be entirely subjective. I am pretty proud of my go to tools but they are by no means the only way to implement this project. Skip ahead to the [Getting Started](/docs/0.0_Getting_Started.md) document if you are ready, otherwise let’s talk about tools and apps that make coding and taking research notes more enjoyable and productive.  
   
 > :memo: Note:  
 > I am not compensated in anyway by the products or companies I am about to shower with praise. I just get really passionate about my tools.  
@@ -111,7 +111,7 @@ I wasn’t hip to what a [Kanban](https://github.com/mgmeyers/obsidian-kanban) b
 Much like the auto-generated table of contents in GitHub,  [Dynamic TOC](https://github.com/Aidurber/obsidian-plugin-dynamic-toc) adds a clickable and auto-updating table of contents to your notes based on the headings used. I added this command to my notes template so I don’t even have to think about it anymore. Then when my note is complete I have a basic outline and can jump to any part of the file.  
   
 #### Code Mirror  
-I still have an issue with this install as it’s supposed to show line numbers in preview mode as well as edit mode. I can only see them in read mode. Nonetheless, [Code Mirror](https://github.com/nothingislost/obsidian-codemirror-options) is much better syntax highlighter than any other plugin I’ve found.   
+I still have an issue with this install as it’s supposed to show line numbers in preview mode as well as edit mode. I can only see them in read mode. Nonetheless, [Code Mirror](https://github.com/nothingislost/obsidian-codemirror-options) is much better syntax highlighter than any other plugin I’ve found. Hint: I use the *Material Pale* theme which can be changed in the *Style Settings* plugin.  
   
 #### Fantasy Calendar  
 This Calendar plugin is obviously intended for other purposes but it is the best calendar plugin available. [Fantasy Calendar](https://github.com/fantasycalendar/obsidian-fantasy-calendar) lets you insert events and link notes directly to their due date without much trouble. I haven’t figured out how to integrate this with my Kanban boards yet but that functionality would definitely improve the plugin. For now I use it for tracking tests and other events, assigning each course I’m taking to a distinct color.  
@@ -162,10 +162,15 @@ I didn’t like that neither bold nor italic text stood out in a body of text so
 The [Obsidian Download](https://obsidian.md/download) page has support for Windows, Mac, and some Linux architectures. Choose your installer and get to know the app settings. Fine-tuning your own perfect Vault workspace will take some time as you learn more about the interface. I’m still tweaking mine and I think to some extent this may always be the case as I venture into more advanced operations inside the app. Make it yours!  
   
 ## Development Software  
-My IDE of choice is [Visual Studio Code](https://visualstudio.microsoft.com/) and its perhaps what I’m most proud of in terms of my configuration. I   
+My IDE of choice is [Visual Studio Code](https://visualstudio.microsoft.com/) and its perhaps what I’m most proud of in terms of my pure functionality and versatility. I can literally code in any language in **VS** plus code completions, support for obscure languages, LaTeX Workshop support, and its terminal command emulates my terminal emulator! More on that later. Before Obsidian I used the [Markdown Preview Github Styling](https://github.com/mjbvz/vscode-github-markdown-preview-style) and honestly, sometimes I miss it.   
+  
+The problem with **Obsidian** is that there are so many plugins that have melded into my daily lexicon, so to say, and they are all useless when I use **GitHub Publish**. I’m hoping they update the a plugin somewhere for that soon.  
+  
+### Visual Studio Theme Installed  
+I use the [Winter is Coming](https://marketplace.visualstudio.com/items?itemName=johnpapa.winteriscoming) theme in the color *Dark Blue*. It’s a nice mellow blue with darker blue accents. I like dark modes that avoid bright syntax highlighting.   
   
 ### Visual Studio Extensions Installed  
-It is difficult to remember exactly which   
+Here is a list of all of my installed extensions, not to be confused with the **extensions.json** which only shows recommended extensions. Honestly I could stand to prune some of these as I don’t even know what they are for but I knew I wanted them when I installed them. Sometimes it’s just nice to think about all the languages I will learn one day!   
   
 ```shell TI:"Installed VS Code Extensions" HL:"3"  
 code --install-extension aaron-bond.better-comments  
@@ -174,12 +179,7 @@ code --install-extension bajdzis.vscode-twig-pack
 code --install-extension bierner.markdown-preview-github-styles  
 code --install-extension bmewburn.vscode-intelephense-client  
 code --install-extension chrmarti.regex  
-code --install-extension dalirnet.mongod-config  
 code --install-extension eiminsasete.apacheconf-snippets  
-code --install-extension Equinusocio.vsc-community-material-theme  
-code --install-extension Equinusocio.vsc-material-theme  
-code --install-extension equinusocio.vsc-material-theme-icons  
-code --install-extension gerane.Theme-Cobalt  
 code --install-extension James-Yu.latex-workshop  
 code --install-extension johnpapa.winteriscoming  
 code --install-extension mads-hartmann.bash-ide-vscode  
@@ -191,22 +191,28 @@ code --install-extension ms-vscode.sublime-keybindings
 code --install-extension neilbrayfield.php-docblocker  
 code --install-extension phiter.phpstorm-snippets  
 code --install-extension phproberto.vscode-php-getters-setters  
-code --install-extension pkosta2005.heroku-command  
 code --install-extension richie5um2.vscode-sort-json  
 code --install-extension rifi2k.format-html-in-php  
 code --install-extension rogalmic.bash-debug  
 code --install-extension rubenverg.bootstrap-product-icons  
-code --install-extension sdras.night-owl  
 code --install-extension shakram02.bash-beautify  
 code --install-extension tal7aouy.icons  
-code --install-extension taniarascia.new-moon-vscode  
 code --install-extension tecosaur.latex-utilities  
 code --install-extension timonwong.shellcheck  
-code --install-extension wesbos.theme-cobalt2  
 code --install-extension xdebug.php-debug  
 ```  
   
+## Terminal Emulator  
+I am in love with [iTerm2](https://iterm2.com/features.html) and I use it in conjunction with [Oh My ZSH](https://ohmyz.sh/). Just a beautiful combination.  
   
+### Here is my short list of **oh my .zsh** plugins. You don’t need much for this zsh framework and I haven’t even scratched the surface!  
+  
+```shell  
+# Plugins  
+  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  
+  source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh  
+  source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh  
+```  
   
 ---  
 [Link to Next Tutorial →](/docs/0.0_Getting_Started.md)
