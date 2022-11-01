@@ -171,7 +171,7 @@ I use the [Winter is Coming](https://marketplace.visualstudio.com/items?itemName
 ### Visual Studio Extensions Installed  
 Here is a list of all of my installed extensions, not to be confused with the **extensions.json** which only shows recommended extensions. Honestly I could stand to prune some of these as I don’t even know what they are for but I knew I wanted them when I installed them. Sometimes it’s just nice to think about all the languages I will learn one day!   
   
-```zsh  
+```Shell  
 code --install-extension aaron-bond.better-comments  
 code --install-extension augustocdias.tasks-shell-input  
 code --install-extension bajdzis.vscode-twig-pack  
