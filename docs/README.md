@@ -203,9 +203,10 @@ code --install-extension xdebug.php-debug
 ```  
   
 ## Terminal Emulator  
-I am in love with [iTerm2](https://iterm2.com/features.html) and I use it in conjunction with [Oh My ZSH](https://ohmyz.sh/). Just a beautiful combination.  
+I am in love with [iTerm2](https://iterm2.com/features.html) and I use it in conjunction with [Oh My ZSH](https://ohmyz.sh/). Just a beautiful combination. I split my terminal into three corners: one vertical that I reserve for updates, installs, and commands that can be run in my home directory, and two horizontal splits that I use for directory specific commands.  
   
-### Here is my short list of **oh my .zsh** plugins. You don’t need much for this zsh framework and I haven’t even scratched the surface!  
+### Oh My Zsh! Plugins  
+Here is my short list of **oh my .zsh** plugins. You don’t need much for this zsh framework and I haven’t even scratched the surface!  
   
 ```shell  
 # Plugins  
