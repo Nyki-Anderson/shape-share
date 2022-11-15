@@ -1,9 +1,20 @@
-FROM mysql/mysql-server:8.0.30
+FROM mariadb:10.9
 
-LABEL description="Initialize Database"
-
-# Initialize Database
-COPY ./init_scripts/dev_db_instance.sql /docker-entrypoint-initdb.d/initdb.sql
+RUN apt-get update \
+    && apt-get install mariadb-client pwgen \
+    && rm -rf /var/lib/apt/lists/*
 
 # Configuration Files
-COPY ./my.cnf.d/client_ssl.cnf ./my.cnf.d/server_ssl.cnf ./my.cnf.d/encrypt.cnf ./my.cnf.d/my.cnf  /etc/mysql/my.cnf.d/
+COPY ./my.cnf.d/*.cnf /etc/mysql/my.cnf.d/
+
+EXPOSE 3306
+
+VOLUME ["./mysql_data/:${DOCKER_MYSQL_DATA}"]
+VOLUME ["./my.cnf.d/:${DOCKER_MYSQL_CONFIG}"]
+VOLUME ["./ssl/:${DOCKER_MYSQL_SSL}"]
+VOLUME ["./log/:${DOCKER_MYSQL_LOGS}"]
+
+RUN chmod +x db.sh
+COPY db.sh /scripts/db.sh
+RUN chmod +x db.sh
+ENTRYPOINT ["/scripts/run.sh"]

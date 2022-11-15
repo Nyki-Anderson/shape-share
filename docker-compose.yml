@@ -1,88 +1,107 @@
-version: '3.9'
+version: "3.9"
 
 services:  
-  server:
-    container_name: server
+  apache:
+    container_name: apache
     build: 
-      context: ./.docker/server/
+      context: "${APACHE}"
       dockerfile: Dockerfile
+    hostname: "www.${DOMAIN_NAME}"
     ports:
       - "${APACHE_PORTS}"
       - "${APACHE_SECURE_PORTS}"
+    expose:
+      - 443
     volumes:
-      - ./src:/var/www/local.shape-share.com:cached
-      - type: bind
-        source: "${APACHE_CONFIG}"
-        target: "${CONTAINER_APACHE_CONFIG}"
-      - type: bind
-        source: "${PHP_CONFIG}"
-        target: "${CONTAINER_PHP_CONFIG}"
+      - "${APP_ROOT}:${DOCKER_APP_ROOT}${DOMAIN_NAME}"
+      - "${APACHE_CONFIG}:${DOCKER_APACHE_CONFIG}:ro"
+      - "${APACHE_SSL}:${DOCKER_APACHE_SSL}:ro" 
+      - "${APACHE_LOGS}:${DOCKER_APACHE_LOG}"
+    environment:
+      SERVER_NAME: "${DOMAIN_NAME}"
+      REDIRECT_HTTP_TO_HTTPS: "true"
+      ENABLE_HSTS: "true"
+      ENABLE_MOD_PROXY: "true"
+    restart: always
     networks:
-      - php_net
+      - frontend
+
+  php:
+    container_name: php
+    build:
+      context: "${PHP}"
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - "${APP_ROOT}:/var/www/html/${DOMAIN_NAME}"
+      - "${PHP_CONFIG}:${DOCKER_PHP_CONFIG}"
+      - "${PHP_LOGS}:${DOCKER_PHP_LOGS}"
+    environment:
+      PMA_HOST: "${DOMAIN_NAME}"
+      PMA_PORT: "${PHP_PORTS}"
+      PMA_USER: "${DOCKER_SECRETS}db_user"
+      PMA_PASSWORD: "${DOCKER_SECRETS}db_password"
+      MYSQL_PASSWORD: "${DOCKER_SECRETS}db_password"
+      MYSQL_ROOT_PASSWORD: "${DOCKER_SECRETS}db_root_password"
+    ports:
+      - "${PHP_PORTS}"
+    depends_on:
+      - apache
+    networks:
+      - frontend
+      - backend
+    secrets: 
+      - db_root_password
 
   db:
-    container_name: mysql
-    build:
-      context: ./.docker/db/
+    container_name: mariadb
+    build: 
+      context: "${MYSQL}"
       dockerfile: Dockerfile
     environment:
-      - MYSQL_ROOT_PASSWORD="${DOCKER_SECRETS_DIR} mysql_root_password"
-      - MYSQL_PASSWORD="${DOCKER_SECRETS_DIR}mysql_password"
-      - MYSQL_USER="${MYSQL_USER}"
-      - MYSQL_DATABASE="${MYSQL_DATABASE}"
+      MYSQL_USER_FILE: "${DOCKER_SECRETS}db_user"
+      MYSQL_PASSWORD_FILE: "${DOCKER_SECRETS}db_password"
+      MYSQL_DATABASE_FILE: "${DOCKER_SECRETS}db_database"
+      MYSQL_ROOT_USER_FILE: "${DOCKER_SECRETS}db_root_user" 
+      MYSQL_ROOT_PASSWORD_FILE: "${DOCKER_SECRETS}db_root_password"
+      MYSQL_ROOT_HOST: "${DOMAIN_NAME}"
+      SERVER_KEY: "${MYSQL_SERVER_KEY}"
+      SERVER_CERT: "${MYSQL_SERVER_CERT}"
+      CA_CERT: "${MYSQL_CA_CERT}"
     volumes:
-      - type: bind
-        source: "${MYSQL_DATA_DIR}"
-        target: "${CONTAINER_DB_DATA_DIR}"
-      - "${MYSQL_CONFIG}:${CONTAINER_MYSQL_CONFIG}:ro"
-      - type: bind
-        source: "${SSL_DIR}/certs/mysql"
-        target: "${CONTAINER_SSL_DIR}/certs/mysql"
+      - "${MYSQL_DATA_DIR}:${DOCKER_MYSQL_DATA}"
+      - "${MYSQL_CONFIG}:${DOCKER_MYSQL_CONFIG}"
+      - "${MYSQL_SSL}:${DOCKER_MYSQL_SSL}"
     ports: 
       - "${MYSQL_PORTS}"
-    networks:
-      - mysql_net
-    restart: on-failure
-    secrets:
-      - mysql_root_password
-      - mysql_password
-    command: [ "mysqld",
-      "--character-set-server=utf8mb4",
-      "--collation-server=utf8mb4_unicode_ci",
-      "--bind-address=0.0.0.0",
-      "--log-error-verbosity",
-      "--require_secure_transport=ON",
-      "--ssl-ca=${SHAPE_SHARE_CA}",
-      "--ssl-cert=${MYSQL_SERVER_CERT}",
-      "--ssl-key=${MYSQL_SERVER_KEY}",
-      "--default_authentication_plugin=mysql_native_password" ]
-
-  adminer:
-    image: adminer:4.8.1
-    container_name: adminer
-    depends_on:
-      - db
-    ports:
-      - "${ADMINER_PORTS}"
-    networks:
-      - mysql_net
     restart: always
+    depends_on:
+      - php
+    networks: 
+      - backend
+    secrets:
+      - db_user
+      - db_password
+      - db_database
+      - db_root_user
+      - db_root_password
 
 networks:
-  mysql_net:
-    name: mysql_net
-  php_net:
-    name: php_net
+  frontend:
+    driver: bridge
+  backend: 
+    driver: bridge
 
 secrets:
-  mysql_password:
-    file: "${PASSWORD_FILE}db_password.txt"
-  mysql_root_password:
-    file: "${PASSWORD_FILE}db_root_password.txt"
-
-
-
-
-
-
-
+  db_password:
+    file: "${SECRETS}db_password.txt"
+  db_user:
+    file: "${SECRETS}db_root_password.txt"
+  db_host:
+    file: "${SECRETS}db_host.txt"
+  db_database:
+    file: "${SECRETS}db_database.txt"
+  db_root_user:
+    file: "${SECRETS}db_root_user.txt"
+  db_root_password:
+    file: "${SECRETS}db_root_password.txt"
