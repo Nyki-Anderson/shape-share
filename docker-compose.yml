@@ -6,52 +6,69 @@ services:
     build: 
       context: "${APACHE}"
       dockerfile: Dockerfile
-    hostname: "www.${DOMAIN_NAME}"
+    hostname: "${DOMAIN_NAME}"
     ports:
       - "${APACHE_PORTS}"
       - "${APACHE_SECURE_PORTS}"
     expose:
-      - 443
+      - "${APACHE_SECURE_PORTS}"
     volumes:
-      - "${APP_ROOT}:${DOCKER_APP_ROOT}${DOMAIN_NAME}"
-      - "${APACHE_CONFIG}:${DOCKER_APACHE_CONFIG}:ro"
-      - "${APACHE_SSL}:${DOCKER_APACHE_SSL}:ro" 
-      - "${APACHE_LOGS}:${DOCKER_APACHE_LOG}"
+      - "${APP_SRC}:${DOCKER_APP_ROOT}shape-share/"
+      - "./.docker/apache/httpd.conf:/etc/apache2/httpd.conf"
+      - "${APACHE_CONFIG}:${DOCKER_APACHE_CONFIG}"
+      - "${APACHE_LOGS}:${DOCKER_APACHE_LOGS}"
     environment:
+      APP_ROOT: "${APP_SRC}"
       SERVER_NAME: "${DOMAIN_NAME}"
       REDIRECT_HTTP_TO_HTTPS: "true"
       ENABLE_HSTS: "true"
       ENABLE_MOD_PROXY: "true"
     restart: always
+    depends_on:
+      - php-fpm
+      - db
     networks:
+      - backend
       - frontend
 
-  php:
+  php-fpm:
     container_name: php
     build:
       context: "${PHP}"
       dockerfile: Dockerfile
     restart: always
     volumes:
-      - "${APP_ROOT}:/var/www/html/${DOMAIN_NAME}"
+      - "${APP_SRC}:/var/www/html/shape-share/"
       - "${PHP_CONFIG}:${DOCKER_PHP_CONFIG}"
       - "${PHP_LOGS}:${DOCKER_PHP_LOGS}"
     environment:
-      PMA_HOST: "${DOMAIN_NAME}"
-      PMA_PORT: "${PHP_PORTS}"
-      PMA_USER: "${DOCKER_SECRETS}db_user"
-      PMA_PASSWORD: "${DOCKER_SECRETS}db_password"
-      MYSQL_PASSWORD: "${DOCKER_SECRETS}db_password"
-      MYSQL_ROOT_PASSWORD: "${DOCKER_SECRETS}db_root_password"
-    ports:
-      - "${PHP_PORTS}"
-    depends_on:
-      - apache
+      APP_ROOT: "${APP_SRC}"
     networks:
       - frontend
       - backend
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: phpmyadmin
+    ports:
+        - "${PHPMYADMIN_PORTS}"
+    domainname: local.shape-share.com
+    volumes:
+      - "$PHPMYADMIN/config.inc.php:/etc/phpmyadmin/config.user.inc.php"
+    environment:
+      PMA_ABSOLUTE_URI: "local.shape-share.com:8081/phpmyadmin"
+      PMA_HOSTS: "${DOMAIN_NAME}:8081"
+      PMA_USER: "${MYSQL_USER}"
+      PMA_PMADB: "${MYSQL_DATABASE}"
+      PMA_PASSWORD_FILE: "${DOCKER_SECRETS}db_password"
+      HIDE_PHP_VERSION: On
+    depends_on:
+      - db
+    networks:
+      - backend
+    restart: unless-stopped
     secrets: 
-      - db_root_password
+      - db_password
 
   db:
     container_name: mariadb
@@ -59,9 +76,9 @@ services:
       context: "${MYSQL}"
       dockerfile: Dockerfile
     environment:
-      MYSQL_USER_FILE: "${DOCKER_SECRETS}db_user"
+      MYSQL_USER: "${MYSQL_USER}"
       MYSQL_PASSWORD_FILE: "${DOCKER_SECRETS}db_password"
-      MYSQL_DATABASE_FILE: "${DOCKER_SECRETS}db_database"
+      MYSQL_DATABASE: "${MYSQL_DATABASE}"
       MYSQL_ROOT_USER_FILE: "${DOCKER_SECRETS}db_root_user" 
       MYSQL_ROOT_PASSWORD_FILE: "${DOCKER_SECRETS}db_root_password"
       MYSQL_ROOT_HOST: "${DOMAIN_NAME}"
@@ -76,13 +93,11 @@ services:
       - "${MYSQL_PORTS}"
     restart: always
     depends_on:
-      - php
+      - php-fpm
     networks: 
       - backend
     secrets:
-      - db_user
       - db_password
-      - db_database
       - db_root_user
       - db_root_password
 
@@ -99,8 +114,6 @@ secrets:
     file: "${SECRETS}db_root_password.txt"
   db_host:
     file: "${SECRETS}db_host.txt"
-  db_database:
-    file: "${SECRETS}db_database.txt"
   db_root_user:
     file: "${SECRETS}db_root_user.txt"
   db_root_password:

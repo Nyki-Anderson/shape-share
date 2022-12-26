@@ -1,7 +1,7 @@
 FROM mariadb:10.9
 
 RUN apt-get update \
-    && apt-get install mariadb-client pwgen \
+    && apt-get install mariadb-client pwgen openssl ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
 # Configuration Files
@@ -14,7 +14,7 @@ VOLUME ["./my.cnf.d/:${DOCKER_MYSQL_CONFIG}"]
 VOLUME ["./ssl/:${DOCKER_MYSQL_SSL}"]
 VOLUME ["./log/:${DOCKER_MYSQL_LOGS}"]
 
-RUN chmod +x db.sh
-COPY db.sh /scripts/db.sh
-RUN chmod +x db.sh
-ENTRYPOINT ["/scripts/run.sh"]
+#RUN chmod +x db.sh
+#COPY db.sh /scripts/db.sh
+#RUN chmod +x db.sh
+#ENTRYPOINT ["/scripts/run.sh"]
